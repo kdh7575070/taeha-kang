@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a1e1d64-1489-4086-ae18-a09b418e099c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XMfN714tUsltoWxnoFqy1o0WI8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../W1D4" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_BS" />
+      <recent name="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_URL" />
+      <recent name="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_CSS" />
+      <recent name="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_FILE" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\RNU\PycharmProjects\W1DAY03\src" />
+      <recent name="C:\Users\RNU\PycharmProjects\W1DAY03\data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.bs-naver (1)">
+    <configuration name="bs-movie (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="W1DAY03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/EX_BS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/EX_BS/bs-movie.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bs-naver (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="W1DAY03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/EX_BS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/EX_BS/bs-naver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="bs_getall" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="W1DAY03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_BS\bs_getall.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex_path" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="W1DAY03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_URL\ex_path.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ex_path2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="W1DAY03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\RNU\PycharmProjects\W1DAY03\src\EX_URL\ex_path2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.bs-naver (1)" />
+        <item itemvalue="Python.bs-movie (1)" />
+        <item itemvalue="Python.bs_getall" />
+        <item itemvalue="Python.ex_path" />
+        <item itemvalue="Python.ex_path2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a1e1d64-1489-4086-ae18-a09b418e099c" name="Default Changelist" comment="" />
+      <created>1580860840891</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580860840891</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2699" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580944341904">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="779" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580864292619" />
+    <state x="2699" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580944341904" />
+    <state x="2603" y="169" key="#download-forecast-argv" timestamp="1580874092738">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2603" y="169" key="#download-forecast-argv/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580874092738" />
+    <state x="292" y="120" key="FileChooserDialogImpl" timestamp="1580981141139">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="292" y="120" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1580981141139" />
+    <state width="1002" height="65" key="GridCell.Tab.0.bottom" timestamp="1580988731292">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="1002" height="65" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1580988731292" />
+    <state width="1533" height="436" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580865098952" />
+    <state width="1533" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580976377132" />
+    <state width="1002" height="65" key="GridCell.Tab.0.center" timestamp="1580988731292">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="1002" height="65" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1580988731292" />
+    <state width="1533" height="436" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580865098952" />
+    <state width="1533" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580976377132" />
+    <state width="1002" height="65" key="GridCell.Tab.0.left" timestamp="1580988731292">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="1002" height="65" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1580988731292" />
+    <state width="1533" height="436" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580865098952" />
+    <state width="1533" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580976377132" />
+    <state width="1002" height="65" key="GridCell.Tab.0.right" timestamp="1580988731292">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="1002" height="65" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1580988731292" />
+    <state width="1533" height="436" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580865098952" />
+    <state width="1533" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580976377132" />
+    <state x="30" y="0" key="SettingsEditor" timestamp="1580982701630">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="30" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1580982701630" />
+    <state x="2383" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580876069797" />
+    <state x="2579" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1580944104773">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2579" y="369" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580944104773" />
+    <state x="2543" y="225" key="search.everywhere.popup" timestamp="1580873099760">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580873099760" />
+  </component>
+</project>

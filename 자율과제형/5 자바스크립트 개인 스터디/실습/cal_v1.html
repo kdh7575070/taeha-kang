@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="js2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+
+    <title>Document</title>
+</head>
+
+<body onload="today();">
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+            <h3 id="headc" style="text-align: center;">Calendar 2.0 ver-1</h3><br>
+                <div class="table100 ver6 m-b-110">
+                    <table data-vertable="ver6" style="text-align: center;">
+                        <thead>
+                            <tr class="row100">
+                                <td id="left" onclick="inputs(this.id)">&lt</td>
+                                <td id="today" colspan="5"></td>
+                                <td id="right" onclick="inputs(this.id)">&gt</td>
+                            </tr>
+                        </thead>
+                        <tbody id="mytbody">
+                            <tr class="row100">
+                                <td class="column100 column2" data-column="column2" >일</td>
+                                <td class="column100 column3" data-column="column3" >월</td>
+                                <td class="column100 column4" data-column="column4" >화</td>
+                                <td class="column100 column5" data-column="column5" >수</td>
+                                <td class="column100 column6" data-column="column6" >목</td>
+                                <td class="column100 column7" data-column="column7" >금</td>
+                                <td class="column100 column8" data-column="column8" >토</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>

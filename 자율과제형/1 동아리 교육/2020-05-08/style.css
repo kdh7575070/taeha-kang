@@ -1,0 +1,100 @@
+html, body{
+    margin: 0;
+    /* 바깥여백 */
+    padding: 0;
+    /* 안쪽여백 */
+}
+
+@font-face { font-family: 'KyoboHand'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.card{
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
+    margin-left: 40%; 
+    /* 중간정도로 카드를 밀어주기 */
+    margin-top: 5%;
+}
+
+header{
+    border-bottom: 1px solid black; 
+    /* 아랫부분에만 경계선추가 */
+    height: 10%;
+    /* 내부여백 - 글자 위에서 떼기 */
+    display: flex;
+    /* 헤더내부를 상자처럼사용 */
+    align-items: center;
+    font-family: 'KyoboHand';
+    font-size: large;
+}
+
+header img{
+        height: 80%;
+        margin-left: 1px;
+        margin-top: 1px;
+        
+        /* 높이에 맞게 사진이 조절되도록 */
+}
+
+.photo{
+    border-bottom: 1px solid black;
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    /* 자동으로 잘라준다 -왜안먹히지밑에가*/
+}
+
+.photo img{
+    height: 120%;
+    width: 100%;
+    margin-bottom: 20%;
+    /* 사진 위로 올리고 싶으면??*/
+}
+
+.article{
+    height: 30%;
+    width: 100%;
+    padding: 1%;
+}
+
+/* .article button{ 보다는 좀더 하위로 */
+#section1 button{
+    background-color: white;
+    border: 0; /* 1px solid white; */
+    outline : 0;
+}
+
+/* 클래스는 .(여러개의 특징 묶은 것)으로 표시 */
+/* 아이디는 #(하나만 존재하는 것)으로 표시 */
+
+#leftIcons{
+    margin-left:2px;
+}
+
+#rightIcons{
+    float: right;
+    text-align: right;
+    margin-right: 3%;
+}
+
+#section1{
+    height: 20%;
+}
+#section2{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    font-family: 'KyoboHand';
+    font-size: small;
+}
+#section2 img{
+    height: 100%;
+    margin-left: 1px;
+}
+
+#section3{
+    height: 20%;
+    font-family: 'KyoboHand';
+    font-size: small;
+    padding: 1%;
+}

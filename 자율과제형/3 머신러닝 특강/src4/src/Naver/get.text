@@ -1,0 +1,1231 @@
+<html lang="ko"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="referrer" contents="always">
+<meta property="og:title" content="네이버페이">
+<meta property="og:url" content="https://pay.naver.com/about">
+<meta property="og:image" content="https://img.pay.naver.net/static/images/customer/og/naverpay.png">
+<meta property="og:description" content="네이버 ID로 간편구매, 네이버페이">
+<title>네이버페이</title>
+<link rel="shortcut icon" href="https://ssl.pstatic.net/static.checkout/layout/202002131135/images/customer/favicon.ico">
+<link type="text/css" rel="stylesheet" href="https://ssl.pstatic.net/static.checkout/layout/202002131135/css/customer/chk_n_common.css">
+<script type="text/javascript" language="javascript" charset="utf-8">
+	document.domain = "naver.com";
+</script>
+<style id="gnb_style" type="text/css">@charset "UTF-8";
+/* NTS UIT Development Office YJH 140717 */
+a.gnb_my, .gnb_icon, #gnb .gnb_my_interface, #gnb .gnb_ico_num .gnb_ico_new, #gnb .gnb_ico_num .gnb_ico_new .gnb_count, .gnb_lst .ico_arrow, a.gnb_my .filter_mask, .gnb_my_lyr, .gnb_my_li .gnb_my_content .gnb_mask, .gnb_my_li .gnb_my_content .gnb_change, .gnb_my_li .gnb_my_content .gnb_edit_lst li, .gnb_my_li .gnb_my_content .gnb_pay_check em, #gnb .gnb_my_li .gnb_my_community a.gnb_pay span, .gnb_notice_li .gnb_notice_lyr, .gnb_notice_li .svc_list .gnb_ico_mail, .gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_list .gnb_btn_remove i, .gnb_notice_li .gnb_error .gnb_ico_error, .gnb_ly_alert .gnb_btn_close i, .gnb_first_visit, .gnb_search_box, .gnb_search_box .gnb_del_txt, .gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new, .gnb_svc_more .svc_btnwrp button {background: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_v14.png) no-repeat -999px -999px;}
+.gnb_favorite_area, .gnb_search_area, .gnb_banner, .gnb_linkwrp{background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr2_v2.png) no-repeat -999px -999px}
+#gnb .gnb_my_li .gnb_my_community a, .gnb_notice_li .gnb_notice_all, a.gnb_service_all, .gnb_svc_more .svc_btns{display:block;height:38px;border-top:1px solid #ebebeb;background-color:#f8f8f8;text-align:center;font-weight:bold;text-decoration:none;letter-spacing:-1px;line-height:38px}
+#gnb .gnb_my_li .gnb_my_community a:visited, .gnb_notice_li .gnb_notice_all:visited, a.gnb_service_all:visited, .gnb_svc_more .svc_btns:visited{color:#444}
+.gnb_login_li, .gnb_my_li, .gnb_notice_li, .mail_li, .gnb_service_li{float:left;margin-right:2px;overflow:visible}
+.gnb_login_li a, .gnb_my_li a, .gnb_notice_li a, .mail_li a, .gnb_service_li a{position:relative;z-index:100}
+a.gnb_my, .gnb_icon{position:relative}
+#gnb{position:relative;z-index:2147483646;font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important;color:#444;font-size:12px;letter-spacing:0 !important;line-height:normal !important;text-align:left !important}
+#gnb div, #gnb p, #gnb span, #gnb em, #gnb strong, #gnb h1, #gnb h2, #gnb h3, #gnb h4, #gnb h5, #gnb h6, #gnb ul, #gnb ol, #gnb li, #gnb dl, #gnb dt, #gnb dd, #gnb table, #gnb th, #gnb td, #gnb form, #gnb fieldset, #gnb legend, #gnb input, #gnb textarea, #gnb button, #gnb label{font-family:'나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important}
+#gnb a, #gnb label, #gnb button{cursor:pointer}
+#gnb a, #gnb a:visited, #gnb a:active, #gnb a:focus{color:#444}
+#gnb a:hover{color:#444;text-decoration:underline}
+#gnb input::-ms-clear{display:none}
+#gnb em{font-style:normal}
+#gnb ul{list-style:none}
+#gnb .blind{display:block;overflow:hidden;position:absolute;top:-1000em;left:0;width:1px;height:1px;margin:0;padding:0;font-size:0;line-height:0}
+#gnb .gnb_my_interface{padding:5px;position:absolute;top:12px;right:8px;display:block;width:17px;height:16px;background-position:-90px 5px}
+#gnb .gnb_my_interface:hover{background-position:-90px -20px}
+#gnb .gnb_pad_lyr{position:absolute}
+#gnb .gnb_ico_num{display:block;position:absolute;top:1px;width:40px;text-align:center}
+#gnb .gnb_ico_num .gnb_ico_new{height:15px;display:inline-block;background-position:-331px 0;zoom:1}
+#gnb .gnb_ico_num .gnb_ico_new .gnb_count{position:relative;top:0;right:-5px;height:15px;margin:0;padding:0 4px 0 1px;display:inline-block;*display:inline;vertical-align:top;background-position:100% 0;text-indent:-2px;font-family:tahoma !important;font-weight:bold;color:#fff;zoom:1}
+#gnb .gnb_ico_num .gnb_ico_new .plus{margin:1px -1px 0 2px;font-size:8px;display:inline-block;color:#fff;vertical-align:top}
+:root #gnb .gnb_pad_lyr{opacity:1 !important;background:#fff}
+.gnb_lst{margin:0;padding:0;zoom:1}
+.gnb_lst:after{display:block;clear:both;content:''}
+.gnb_lst ul{margin:0;padding:0}
+.gnb_lst .ico_arrow{display:none;position:absolute;left:50%;top:27px;width:10px;height:8px;margin-left:-5px;background-position:-175px -10px}
+.gnb_lyr_opened .gnb_my_lyr, .gnb_lyr_opened .gnb_service_lyr, .gnb_lyr_opened .gnb_notice_lyr, .gnb_lyr_opened .ico_arrow{display:block !important}
+.gnb_login_li{height:23px;padding:5px 7px 0 0}
+.gnb_btn_login, .gnb_bg, .gnb_bdr{display:inline-block;width:46px;height:20px;font-size:12px}
+.gnb_btn_login{position:relative}
+.gnb_bg{background-color: #fff;opacity: 0.05;filter: alpha(opacity=5);}
+.gnb_bdr{position:absolute;top: -1px;left: -1px;width: 46px;height: 20px;border: 1px solid #000;opacity: 0.12;filter: alpha(opacity=12);}
+.gnb_txt{position:absolute;top:0;left:0;width:45px;height:20px;padding-left:1px;line-height:21px;color:#777;text-align:center}
+.gnb_btn_login:hover{text-decoration:none !important}
+.gnb_account .gnb_btn_login{width:54px;margin:-1px 0 0 4px;vertical-align:top}
+.gnb_account .gnb_bdr{width:52px}
+.gnb_account .gnb_txt{width:53px}
+.gnb_my_li{margin-right:7px}
+.gnb_my_namebox{padding:2px 9px 0 0;background-repeat:no-repeat;background-position:100% 50%;zoom:1}
+.gnb_my_namebox:after{display:block;clear:both;content:''}
+a.gnb_my{float:left;display:block;font-size:0;vertical-align:middle}
+a.gnb_my .filter_mask {position: absolute;top: -1px;left: -1px;z-index: 1;width: 28px;height: 28px;background-position: -260px -60px;}
+a.gnb_my img{vertical-align:top;border-radius:16px}
+a.gnb_my .gnb_name{margin-right:-1px;padding-left:5px;display:inline-block;height:28px;line-height:28px;vertical-align:top;font-size:11px;color:#444}
+a.gnb_my:visited{color:#444}
+a.gnb_my:hover, a.gnb_my:active, a.gnb_my:visited, a.gnb_my:focus{text-decoration:none !important}
+a.gnb_my:hover .gnb_name{text-decoration:underline}
+a.gnb_my .ico_arrow{top:25px;margin-left:8px}
+.gnb_my_namebox a.gnb_emp{float:left;display:inline-block;height:28px;margin-left:3px;line-height:28px;font-size:11px;color:#777 !important}
+.gnb_my_lyr{display:none;position:absolute;top:26px;right:-8px;padding:9px 5px 4px 4px;width:316px;height:172px;background-position:-2px -1310px;z-index:10}
+.gnb_my_lyr.gnb_groupid{height:144px;background-position:-2px -1500px}
+.gnb_my_lyr.gnb_groupid .gnb_my_content{height:80px}
+.gnb_my_lyr.gnb_groupid.gnb_longid1{height:144px;background-position:-2px -1664px}
+.gnb_my_lyr.gnb_groupid.gnb_longid2{height:144px;background-position:-2px -1828px}
+.gnb_my_lyr.gnb_longid1{width:318px;background-position:-2px -1118px}
+.gnb_my_lyr.gnb_longid2{width:348px;background-position:-2px -926px}
+.gnb_my_li .gnb_my_content{zoom:1;height:108px;padding:15px 0 10px 15px}
+.gnb_my_li .gnb_my_content:after{display:block;clear:both;content:''}
+.gnb_my_li .gnb_my_content .gnb_img_area{float:left;position:relative;display:block;width:80px}
+.gnb_my_li .gnb_my_content .gnb_img_area img{vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_mask{position:absolute;top:0;left:0;display:block;width:80px;height:80px;background-position:-70px -60px}
+.gnb_my_li .gnb_my_content .gnb_change{position:absolute;bottom:-2px;left:-2px;display:block;width:28px;height:28px;background-position:-140px 0px}
+.gnb_my_li .gnb_my_content .gnb_change:hover{background-position:-140px -30px}
+.gnb_my_li .gnb_my_content .gnb_txt_area{float:left;width:212px;margin:5px 0 0 9px}
+.gnb_longid1 .gnb_my_content .gnb_txt_area{width:210px}
+.gnb_longid2 .gnb_my_content .gnb_txt_area{width:235px}
+.gnb_my_li .gnb_my_content .gnb_account{margin-bottom:3px;font-size:0}
+.gnb_my_li .gnb_my_content .gnb_name{color:#777;font-size:14px}
+.gnb_my_li .gnb_my_content .gnb_name a{display:inline-block;vertical-align:top;font-weight:bold;color:#444}
+.gnb_my_li .gnb_my_content a.gnb_mail_address{font-family:tahoma;color:#777 !important;font-size:14px}
+.gnb_my_li .gnb_my_content .gnb_edit_lst{zoom:1;margin-top:9px !important}
+.gnb_my_li .gnb_my_content .gnb_edit_lst:after{display:block;clear:both;content:''}
+.gnb_my_li .gnb_my_content .gnb_edit_lst li{float:left;padding-left:8px;margin-left:8px;background-position:-290px -25px}
+.gnb_my_li .gnb_my_content .gnb_edit_lst li.gnb_info{padding-left:0;margin-left:0;background:none}
+.gnb_my_li .gnb_my_content .gnb_edit_lst a{color:#019a30 !important;text-decoration:underline;letter-spacing:-1px}
+.gnb_my_li .gnb_my_content .gnb_pay_check{height:16px;margin:16px -4px 0 0 !important}
+@media screen and (min-width: 0\0) { .gnb_my_li .gnb_my_content .gnb_pay_check{margin-top:17px} }
+.gnb_my_li .gnb_my_content .gnb_pay_check em{display:inline-block;width:16px;height:16px;background-position:-300px -309px;margin:0 4px 0 0;overflow:hidden;font-size:0;line-height:0;vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_pay_check a{font-size:14px;letter-spacing:-1px;line-height:16px;vertical-align:top}
+.gnb_my_li .gnb_my_content .gnb_pay_check span{padding-right:5px}
+.gnb_my_li .gnb_my_content .gnb_pay_check strong{font-family:tahoma;letter-spacing:0;word-spacing:-30px}
+.gnb_my_li .gnb_my_content .gnb_pay_check a, .gnb_my_li .gnb_my_content .gnb_pay_check span, .gnb_my_li .gnb_my_content .gnb_pay_check strong{font-size:14px;color:#019a30 !important}
+#gnb .gnb_my_li .gnb_my_community{clear:both;zoom:1}
+#gnb .gnb_my_li .gnb_my_community:after{display:block;clear:both;content:''}
+#gnb .gnb_my_li .gnb_my_community a{float:left;width:106px;margin-right: 0;border-right:1px solid #ebebeb}
+#gnb .gnb_my_li .gnb_my_community a.gnb_pay{width:102px;border-right:0;line-height:0}
+#gnb .gnb_my_li .gnb_my_community a.gnb_pay span{display:inline-block;width:41px;height:16px;background-position:-300px -334px;margin:11px auto 0;font-size:0;line-height:0}
+#gnb .gnb_my_li .gnb_my_community a:active, #gnb .gnb_my_li .gnb_my_community a:focus, #gnb .gnb_my_li .gnb_my_community a:visited{text-decoration:none !important}
+#gnb .gnb_my_li .gnb_my_community a:hover{text-decoration:underline !important}
+#gnb .gnb_my_lyr.gnb_longid1 .gnb_my_community a{width:105px}
+#gnb .gnb_my_lyr.gnb_longid1 .gnb_my_community a.gnb_pay{width:106px}
+#gnb .gnb_my_lyr.gnb_longid2 .gnb_my_community a{width:115px}
+#gnb .gnb_my_lyr.gnb_longid2 .gnb_my_community a.gnb_pay{width:116px}
+#gnb.gnb_one .gnb_my_community a, #gnb.gnb_one_small .gnb_my_community a{margin-right: 0 !important;}
+.gnb_notice_li a.gnb_notice{display:block;width:15px;height:17px;padding:7px 9px 4px;text-decoration:none !important}
+.gnb_notice_li a.gnb_notice .gnb_ico_num{left:1px;top:0}
+.gnb_notice_li a.gnb_notice .gnb_icon{display:block;width:15px;height:17px;background-position:-3px -60px}
+.gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-38px -60px;text-decoration:none !important}
+.gnb_notice_li .gnb_notice_lyr{display:none;position:absolute;top:26px;right:-7px;width:297px;height:330px;padding:9px 4px 4px;background-position:-2px -584px;z-index:10;overflow:hidden}
+.gnb_notice_li .svc_scroll{height:291px;overflow:scroll;overflow-x:hidden;position:relative;zoom:1}
+.gnb_notice_li .svc_panel{width:100%;height:330px;overflow:hidden}
+.gnb_notice_li .svc_head{position:relative;height:36px;padding-left:15px;line-height:20px;border-bottom:1px solid #eaeaea;zoom:1}
+.gnb_notice_li .svc_head .gnb_tit{color:#6b6d70;margin-right:1px;line-height:36px}
+.gnb_notice_li .svc_head .task_right{position:absolute;right:8px;top:8px;font-size:0}
+.gnb_notice_li .svc_head .task_right button{height:20px;padding:0 6px;margin-left:4px;border:1px solid #ddd;color:#888;background-color:#fff;font-family:'나눔고딕', NanumGothic;font-size:12px;letter-spacing:-1px;line-height:18px;*line-height:16px;overflow:visible}
+.gnb_notice_li .svc_list .gnb_btn_remove i, .gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_noti .gnb_ico_mail, .gnb_notice_li .svc_blank .svc_msg_box, .gnb_notice_li .svc_blank .gnb_v_guide{display:inline-block;*display:inline;*zoom:1}
+.gnb_notice_li .svc_list{margin-top:-1px}
+.gnb_notice_li .svc_list li{position:relative;padding:7px 34px 7px 15px;border-top:1px solid #eaeaea;line-height:18px}
+.gnb_notice_li .svc_list .gnb_new{background:#ffffd8}
+.gnb_notice_li .svc_list .gnb_unread .gnb_subject{color:#444}
+.gnb_notice_li .svc_list .gnb_unread .d_cnt{color:#ff630e}
+.gnb_notice_li .svc_list .gnb_unread a:hover .gnb_subject, .gnb_notice_li .svc_list .gnb_unread .gnb_unread a:hover .d_cnt{color:#390}
+.gnb_notice_li .svc_list .gnb_unread .svc_name{color:#444}
+.gnb_notice_li .svc_list a.gnb_list_cover{text-decoration:none !important;display:block;position:relative;zoom:1}
+.gnb_notice_li .svc_list a:hover .gnb_subject{text-decoration:underline}
+.gnb_notice_li .svc_list .gnb_subject{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;color:#adadad}
+.gnb_notice_li .svc_list .d_cnt{font-family:tahoma;font-size:10px}
+.gnb_notice_li .svc_list .gnb_info{color:#adadad}
+.gnb_notice_li .svc_list .svc_name{margin-right:3px;color:#adadad}
+.gnb_notice_li .svc_list .cchr{margin-right:3px}
+.gnb_notice_li .svc_list .dona{position:absolute;top:8px;right:34px;text-decoration:underline}
+.gnb_notice_li .svc_list .dona a{color:#adadad}
+.gnb_notice_li .svc_list .dona a:hover{color:#390}
+.gnb_notice_li .svc_list .gnb_ico_mail{width:14px;height:15px;font-size:0;line-height:0;color:#fff;vertical-align:top}
+.gnb_notice_li .svc_list .gnb_ico_mail.gnb_yes{background-position:-245px -17px}
+.gnb_notice_li .svc_list .gnb_ico_mail.gnb_no{background-position:-245px 4px}
+.gnb_notice_li .svc_list .gnb_btn_remove{position:absolute;right:4px;top:50%;z-index:100;margin-top:-13px;padding:10px;line-height:6px;font-size:0;background:none !important;border:0 !important}
+.gnb_notice_li .svc_list .gnb_btn_remove span, .gnb_notice_li .svc_list .gnb_btn_remove i{display:block !important;width:7px;height:7px;font-size:0;line-height:0;color:transparent;white-space:nowrap;overflow:hidden;vertical-align:top;background-position:-175px 0}
+.gnb_notice_li .svc_blank{position:absolute;top:104px;left:0;width:100%;white-space:nowrap;height:100px;font-size:0;text-align:center}
+.gnb_notice_li .svc_blank .svc_msg_box{white-space:normal;font-size:12px;width:100%}
+.gnb_notice_li .svc_blank .gnb_tit{display:block;color:#2f3743;font-size:14px;margin:0 0 15px}
+.gnb_notice_li .svc_blank .gnb_tit strong{font-weight:normal;color:#390}
+.gnb_notice_li .svc_blank .gnb_desc{line-height:19px;color:#2f3743;margin-bottom:7px}
+.gnb_notice_li .svc_blank .gnb_desc a, .gnb_notice_li .svc_blank .gnb_link{color:#390;text-decoration:underline}
+.gnb_notice_li .svc_blank .gnb_v_guide{vertical-align:middle;height:100%;width:0}
+.gnb_notice_li .svc_blank .gnb_link_wrap{text-align:center}
+.gnb_notice_li .svc_blank .gnb_link_wrap .gnb_link{display:block;width:40px;margin:0 auto !important;text-align:center}
+.gnb_notice_li .svc_loading{background:url(https://ssl.pstatic.net/static/www/2014/loading.gif) no-repeat #fff center center;position:absolute;top:33px;left:0;width:100%;height:245px}
+.gnb_notice_li .gnb_error{position:absolute;top:81px;left:2px;width:100%;color:#444;text-align:center}
+.gnb_notice_li .gnb_error .gnb_ico_error{display:inline-block;width:57px;height:57px;background-position:-280px -190px}
+.gnb_notice_li .gnb_error .gnb_tit{font-size:14px;margin:15px 0 11px}
+.gnb_notice_li .gnb_error .gnb_desc{margin-bottom:13px;line-height:18px}
+.gnb_notice_li .gnb_error .gnb_link{text-decoration:underline}
+.gnb_ly_alert{position:absolute;top:110px;left:13px;background-color:#fff;border:1px solid #b7b9bc;width:260px;padding:34px 0 20px;zoom:1;z-index:100}
+.gnb_ly_alert .gnb_msg{text-align:center;line-height:17px;margin-bottom:14px;color:#2f3743}
+.gnb_.ly_alert .gnb_btn_close{position:absolute;right:2px;top:0;*overflow:visible}
+.gnb_ly_alert .gnb_btns{text-align:center}
+.gnb_ly_alert .gnb_btns button{height:27px;line-height:27px;*line-height:22px;font-weight:bold;font-size:12px;padding:0 8px;color:#2f3743;border:1px solid #ddd;background-color:white}
+.gnb_ly_alert .gnb_btns button:first-child{margin-right:4px}
+.gnb_ly_alert .gnb_btn_close{position:absolute;right:2px;top:0;width:35px;border:0;background:none;cursor:pointer;border-radius:0;padding:10px}
+.gnb_ly_alert .gnb_btn_close i{display:block;width:15px;height:15px;font:0/0 a;color:transparent;white-space:nowrap;overflow:hidden;vertical-align:top;background-position:-240px -60px}
+.mail_li a.gnb_mail{display:block;width:20px;height:15px;padding:7px 9px 6px;text-decoration:none !important}
+.mail_li a.gnb_mail .gnb_icon{display:block;width:20px;height:15px;background-position:0px -95px}
+.mail_li a.gnb_mail:hover .gnb_icon{background-position:-35px -95px;text-decoration:none !important}
+.mail_li .gnb_ico_num{left:6px;top:0}
+.gnb_service_li{margin-right:0}
+.gnb_service_li a.gnb_service{display:block;width:16px;height:16px;padding:7px 9px 5px}
+.gnb_service_li a.gnb_service .gnb_icon{display:block;width:16px;height:16px;background-position:-2px -130px}
+.gnb_service_li a.gnb_service:hover .gnb_icon{background-position:-37px -130px;text-decoration:none !important}
+.gnb_service_li .gnb_service_lyr{display:none;position:absolute;top:27px;right:-7px;z-index:10}
+.gnb_favorite_search{width:301px;letter-spacing:-1px}
+.gnb_response .gnb_favorite_search{display:none}
+.gnb_favorite_area{height:93px;padding:8px 4px 0;background-position:0 0}
+.gnb_favorite_lstwrp{position:relative;padding:22px 1px 15px 15px;border-bottom:1px solid #ebebeb}
+.gnb_favorite_lstwrp .gnb_my_interface{top:3px !important;right:3px !important}
+.gnb_first_visit{position:absolute;top:0;left:0;width:293px;height:92px;background-position:0 -310px;z-index:200}
+.gnb_first_visit .gnb_close{position:absolute;top:0;right:0;display:block;width:32px;height:32px}
+.gnb_favorite_lst{zoom:1}
+.gnb_favorite_lst:after{display:block;clear:both;content:''}
+.gnb_favorite_lst li{float:left;width:65px;text-align:center;white-space:nowrap}
+.gnb_favorite_lst a{display:inline-block;text-align:center;font-weight:bold}
+.gnb_favorite_lst .gnb_add a{display:block;test-align:center;}
+.gnb_favorite_lst .gnb_add a span.ic_add{display: block;width: 36px;height: 36px;margin: 0 auto 4px;background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: 0px 0px;background-repeat: no-repeat;width: 36px;height: 36px;vertical-align: top;}
+.gnb_favorite_lst .gnb_add a:hover span.ic_add{background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: -42px 0px;background-repeat: no-repeat;width: 36px;height: 36px;vertical-align: top;}
+.gnb_favorite_lst img{display:block;margin:0 auto 4px;vertical-align:top}
+.gnb_search_area{position:relative;z-index:200;padding:18px 4px 17px;background-position:-301px 0;background-repeat:repeat-y}
+.gnb_search_box{position:relative;z-index:101;margin:0 12px 16px 0;padding-left:10px;display:block;width:270px;height:35px;background-position:10px -190px}
+.gnb_search_box.over{background-position:10px -230px}
+.gnb_search_box.fcs{background-position:10px -270px}
+.gnb_search_box.fcs input{width:200px;font-size:16px;font-weight:bold;color:#444;outline:0}
+.gnb_search_box input{float:left;display:block;width:210px;height:22px;margin-top:6px;padding-left:10px;font-family:'나눔고딕',NamumGothic;letter-spacing:-1px;color:#adadad;font-size:13px;border:0;line-height:22px;background:transparent}
+.gnb_search_box .gnb_del_txt{position:absolute;top:8px;right:32px;display:block;width:17px;height:17px;background-position:-190px 0px}
+.gnb_search_box .gnb_del_txt:hover{background-position:-190px -20px}
+.gnb_search_box .gnb_pop_input{position:absolute;top:34px;left:10px;width:268px;height:170px;*height:172px;border:1px solid #cbc5c5;border-top:0;background:#fff;overflow-x:hidden;overflow-y:scroll;z-index:110}
+.gnb_search_box .gnb_pop_lst{padding:4px 0 2px}
+.gnb_search_box .gnb_pop_lst a{display:block;padding:6px 0 6px 10px;font-weight:bold}
+.gnb_search_box .gnb_pop_lst .on{background-color:#f5f5f5}
+.gnb_search_lstwrp{zoom:1;height:118px;padding-left:12px}
+.gnb_search_lstwrp:after{display:block;clear:both;content:''}
+.gnb_search_lstwrp .gnb_search_lst{float:left;width:69px;border-left:1px solid #eaeaea}
+.gnb_search_lstwrp .gnb_search_lst.gnb_first{width:64px;border:0}
+.gnb_search_lstwrp li{padding:12px 0 0 8px}
+.gnb_search_lstwrp li.gnb_first{font-weight:bold;padding-top:0}
+.gnb_search_lstwrp li a{display:inline-block;vertical-align:top}
+.gnb_banner{height:47px;margin:0;padding:0 18px;background-position:-301px 0;background-repeat:repeat-y}
+.gnb_banner .gnb_service_event{display:inline-block;border-top:1px solid #ebebeb}
+.gnb_linkwrp{padding:0 4px 4px;background-position:-602px 0}
+a.gnb_service_all:hover, a.gnb_service_all:visited, a.gnb_service_all:active, a.gnb_service_all:focus{text-decoration:none}
+.gnb_svc_more{display:none;position:absolute;top:4px;right:303px;width:589px;overflow:hidden;zoom:1;z-index:1000}
+.gnb_svc_more:after{display:block;clear:both;content:''}
+.gnb_response .gnb_svc_more{right:2px}
+.gnb_bg_top{height:6px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) no-repeat}
+.gnb_bg_btm{position:relative;height:6px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) no-repeat -1282px 0}
+.gnb_svc_more .gnb_svc_hd{position:relative;padding:0 18px 2px 23px;letter-spacing:-1px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0}
+.gnb_svc_more .gnb_svc_hd .gnb_svc_tit{display:block;padding:12px 0 13px;border-bottom:1px solid #ebebeb;font-size:14px;color:#222}
+.gnb_svc_more .gnb_svc_hd .link{position:absolute;top:14px;right:19px;font-size:12px;color:#444}
+.gnb_svc_more .gnb_svc_hd .link a{color:#444 !important;line-height:16px !important}
+.gnb_svc_more .gnb_svc_lstwrp{position:relative;height:283px;overflow:hidden;padding:15px 15px 0 20px;letter-spacing:-1px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0;zoom:1}
+.gnb_svc_more .gnb_svc_lstwrp:after{display:block;clear:both;content:''}
+.gnb_svc_more .gnb_svc_lstwrp li{height:15px;margin-bottom:5px;color:#6b6d70;white-space:nowrap;line-height:15px}
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event label{color:#444;font-weight:bold}
+.gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic_gnb_new{display:inline-block;width:11px;height:11px;background-position:-215px 0px;margin:2px 0 0 4px;font-size:0;line-height:0;vertical-align:top}
+@media screen and (min-width: 0\0) { .gnb_svc_more .gnb_svc_lstwrp li.gnb_event em.ic{margin-top:3px} }
+.gnb_svc_more .gnb_svc_lstwrp .gnb_input_check{width:13px;height:13px;margin:2px 3px 0 3px;padding:0;vertical-align:top}
+.gnb_svc_more .gnb_svc_lstwrp label{vertical-align:0px}
+.gnb_svc_more .gnb_svc_lstwrp .gnb_disabled strong{color:#a8acb0}
+.gnb_svc_more .gnb_svc_lstwrp .gnb_disabled li{color:#cbcbcb}
+.gnb_svc_more .gnb_svc_lst1{float:left;width:328px;height:280px}
+.gnb_svc_more .gnb_svc_lst1 ul{float:left;width:102px;min-height:260px;padding:5px 0 0 10px;border-left:1px solid #eee}
+.gnb_svc_more .gnb_svc_lst1 ul.gnb_first{padding-left:0;border:0}
+.gnb_svc_more .svc_lst2{float:left;position:relative;width:221px;border:1px solid #eee;background:#fbfbfb;zoom:1}
+.gnb_svc_more .svc_lst2:after{display:block;clear:both;content:''}
+.gnb_svc_more .svc_spc{float:left;position:relative;width:100px;min-height:254px;padding:9px 0 0 10px}
+.gnb_svc_more .svc_spc.gnb_first{border-right:1px solid #eee}
+.gnb_svc_more .svc_spc strong{height:20px;color:#2f3743;line-height:16px}
+.gnb_svc_more .svc_spc a:visited{color:#2f3743}
+.gnb_svc_more .svc_spc ul{padding:8px 0}
+.gnb_svc_more .svc_spc li{margin-bottom:0;padding-bottom:5px;color:#848689}
+.gnb_svc_more .svc_stroy{width:89px;margin-top:-5px;padding:12px 0 0;border-top:1px solid #eee}
+.gnb_svc_more .svc_btns{position:relative;height:33px;overflow:hidden;padding-top:5px;line-height:normal}
+.gnb_svc_more .svc_btnwrp{position:relative;*height:39px;background:url(https://ssl.pstatic.net/static/common/gnb/2014/bg_svclyr1_v2.png) repeat-y -641px 0;padding:0 2px 0 4px}
+.gnb_svc_more .svc_btnwrp button{display:inline-block;width:60px;height:25px;border:0;vertical-align:top}
+.gnb_svc_more .svc_btnwrp .gnb_save{background-position:0 -160px}
+.gnb_svc_more .svc_btnwrp .gnb_close{margin-left:1px;background-position:-65px -160px}
+.gnb_svc_more .svc_btnwrp .gnb_return{position:absolute;top:5px;left:15px;background-position:-130px -160px}
+.gnb_type2 .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-155px -120px}
+.gnb_type2 .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-155px -140px}
+.gnb_type2 .gnb_service_li .gnb_service .gnb_icon{background-position:-200px -120px}
+.gnb_type2 .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-200px -140px}
+.gnb_type2 .mail_li a.gnb_mail .gnb_icon{background-position:-175px -120px}
+.gnb_type2 .mail_li a.gnb_mail:hover .gnb_icon{background-position:-175px -140px}
+.gnb_dark .gnb_my_li .gnb_my .gnb_name, .gnb_dark .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+.gnb_dark .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-220px -140px}
+.gnb_dark .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-220px -120px}
+.gnb_dark .mail_li a.gnb_mail .gnb_icon{background-position:-238px -141px}
+.gnb_dark .mail_li a.gnb_mail:hover .gnb_icon{background-position:-238px -121px}
+.gnb_dark .gnb_service_li .gnb_service .gnb_icon{background-position:-261px -140px}
+.gnb_dark .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-261px -120px}
+.gnb_dark_type2 .gnb_my_li .gnb_my .gnb_name, .gnb_dark_type2 .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+.gnb_dark_type2 .gnb_notice_li a.gnb_notice .gnb_icon{background-position:-220px -120px}
+.gnb_dark_type2 .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-220px -140px}
+.gnb_dark_type2 .mail_li a.gnb_mail .gnb_icon{background-position:-238px -121px}
+.gnb_dark_type2 .mail_li a.gnb_mail:hover .gnb_icon{background-position:-238px -141px}
+.gnb_dark_type2 .gnb_service_li .gnb_service .gnb_icon{background-position:-261px -120px}
+.gnb_dark_type2 .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-261px -140px}
+.gnb_dark .gnb_notice_li a.gnb_notice, .gnb_dark_type2 .gnb_notice_li a.gnb_notice {width: 17px;height: 19px;padding: 6px 8px 3px;}
+.gnb_dark .gnb_notice_li a.gnb_notice .gnb_icon, .gnb_dark_type2 .gnb_notice_li a.gnb_notice .gnb_icon {width: 17px;height: 19px;}
+.gnb_dark .mail_li a.gnb_mail, .gnb_dark_type2 .mail_li a.gnb_mail {width: 22px;height: 16px;padding: 7px 8px 4px;}
+.gnb_dark .mail_li a.gnb_mail .gnb_icon, .gnb_dark_type2 .mail_li a.gnb_mail .gnb_icon {width: 22px;height: 16px;}
+.gnb_dark .gnb_service_li a.gnb_service, .gnb_dark_type2 .gnb_service_li a.gnb_service {width: 18px;height: 18px;padding: 6px 8px 4px;}
+.gnb_dark .gnb_service_li .gnb_service .gnb_icon, .gnb_dark_type2 .gnb_service_li .gnb_service .gnb_icon {width: 18px;height: 18px;}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_txt{color:#fff}
+#gnb.gnb_one .gnb_login_li, #gnb.gnb_one_small .gnb_login_li {height: 28px;}
+#gnb.gnb_one .gnb_login_li .gnb_btn_login, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login, #gnb.gnb_one .gnb_login_li .gnb_bg, #gnb.gnb_one_small .gnb_login_li .gnb_bg, #gnb.gnb_one .gnb_login_li .gnb_bdr, #gnb.gnb_one_small .gnb_login_li .gnb_bdr, #gnb.gnb_one .gnb_login_li .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_txt {width: 53px;height: 23px;}
+#gnb.gnb_one .gnb_login_li .gnb_btn_login .gnb_txt, #gnb.gnb_one_small .gnb_login_li .gnb_btn_login .gnb_txt {top: -1px;width: 53px;height: 23px;line-height: 28px;font-size: 11px;}
+#gnb.gnb_one .gnb_login_li, #gnb.gnb_one_small .gnb_login_li, #gnb.gnb_one .gnb_my_li, #gnb.gnb_one_small .gnb_my_li, #gnb.gnb_one .gnb_notice_li, #gnb.gnb_one_small .gnb_notice_li, #gnb.gnb_one .mail_li, #gnb.gnb_one_small .mail_li, #gnb.gnb_one .gnb_service_li, #gnb.gnb_one_small .gnb_service_li{margin-right: 0;margin-left: 0; background: url(https://ssl.pstatic.net/static/common/gnb/bg_one_line.png) repeat-y right 0;}
+#gnb.gnb_one .gnb_login_li a, #gnb.gnb_one_small .gnb_login_li a, #gnb.gnb_one .gnb_my_li a, #gnb.gnb_one_small .gnb_my_li a, #gnb.gnb_one .gnb_notice_li a, #gnb.gnb_one_small .gnb_notice_li a, #gnb.gnb_one .mail_li a, #gnb.gnb_one_small .mail_li a, #gnb.gnb_one .gnb_service_li a, #gnb.gnb_one_small .gnb_service_li a {margin-right: 1px;}
+#gnb.gnb_one .gnb_login_li.hover .gnb_service, #gnb.gnb_one_small .gnb_login_li.hover .gnb_service, #gnb.gnb_one .gnb_login_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_login_li.hover .gnb_notice, #gnb.gnb_one .gnb_login_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_login_li.hover .gnb_mail, #gnb.gnb_one .gnb_login_li.hover .gnb_service, #gnb.gnb_one_small .gnb_login_li.hover .gnb_service, #gnb.gnb_one .gnb_my_li.hover .gnb_service, #gnb.gnb_one_small .gnb_my_li.hover .gnb_service, #gnb.gnb_one .gnb_my_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_my_li.hover .gnb_notice, #gnb.gnb_one .gnb_my_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_my_li.hover .gnb_mail, #gnb.gnb_one .gnb_my_li.hover .gnb_service, #gnb.gnb_one_small .gnb_my_li.hover .gnb_service, #gnb.gnb_one .gnb_notice_li.hover .gnb_service, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_service, #gnb.gnb_one .gnb_notice_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_notice, #gnb.gnb_one .gnb_notice_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_mail, #gnb.gnb_one .gnb_notice_li.hover .gnb_service, #gnb.gnb_one_small .gnb_notice_li.hover .gnb_service, #gnb.gnb_one .mail_li.hover .gnb_service, #gnb.gnb_one_small .mail_li.hover .gnb_service, #gnb.gnb_one .mail_li.hover .gnb_notice, #gnb.gnb_one_small .mail_li.hover .gnb_notice, #gnb.gnb_one .mail_li.hover .gnb_mail, #gnb.gnb_one_small .mail_li.hover .gnb_mail, #gnb.gnb_one .mail_li.hover .gnb_service, #gnb.gnb_one_small .mail_li.hover .gnb_service, #gnb.gnb_one .gnb_service_li.hover .gnb_service, #gnb.gnb_one_small .gnb_service_li.hover .gnb_service, #gnb.gnb_one .gnb_service_li.hover .gnb_notice, #gnb.gnb_one_small .gnb_service_li.hover .gnb_notice, #gnb.gnb_one .gnb_service_li.hover .gnb_mail, #gnb.gnb_one_small .gnb_service_li.hover .gnb_mail, #gnb.gnb_one .gnb_service_li.hover .gnb_service, #gnb.gnb_one_small .gnb_service_li.hover .gnb_service {background: url(https://ssl.pstatic.net/static/common/gnb/bg_one_hover.png) repeat 0 0;}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name {margin: 0 0 0 4px;}
+#gnb.gnb_one .gnb_my_li .gnb_my .gnb_name, #gnb.gnb_one_small .gnb_my_li .gnb_my .gnb_name{margin:0 0 0 4px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice{width:17px;height:19px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice .gnb_icon, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice .gnb_icon{width:17px;height:19px;background-position:-284px -119px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice:hover .gnb_icon, #gnb.gnb_one_small .gnb_notice_li a.gnb_notice:hover .gnb_icon{background-position:-284px -119px}
+#gnb.gnb_one .mail_li a.gnb_mail, #gnb.gnb_one_small .mail_li a.gnb_mail{width:21px;height:17px}
+#gnb.gnb_one .mail_li a.gnb_mail .gnb_icon, #gnb.gnb_one_small .mail_li a.gnb_mail .gnb_icon{width:21px;height:17px;background-position:-302px -120px}
+#gnb.gnb_one .mail_li a.gnb_mail:hover .gnb_icon, #gnb.gnb_one_small .mail_li a.gnb_mail:hover .gnb_icon{background-position:-302px -120px}
+#gnb.gnb_one .gnb_service_li .gnb_service, #gnb.gnb_one_small .gnb_service_li .gnb_service{width:17px;height:17px}
+#gnb.gnb_one .gnb_service_li .gnb_service .gnb_icon, #gnb.gnb_one_small .gnb_service_li .gnb_service .gnb_icon{width:17px;height:17px;background-position:-324px -120px}
+#gnb.gnb_one .gnb_service_li .gnb_service:hover .gnb_icon, #gnb.gnb_one_small .gnb_service_li .gnb_service:hover .gnb_icon{background-position:-324px -120px}
+#gnb.gnb_one .gnb_my_lyr, #gnb.gnb_one_small .gnb_my_lyr, #gnb.gnb_one .gnb_notice_lyr, #gnb.gnb_one_small .gnb_notice_lyr, #gnb.gnb_one .gnb_service_lyr, #gnb.gnb_one_small .gnb_service_lyr {right: 7px;}
+#gnb.gnb_one .gnb_ico_num, #gnb.gnb_one_small .gnb_ico_num{width:34px;top:10px;right:3px;left:auto;vertical-align:top}
+#gnb.gnb_one .gnb_ico_num .gnb_ico_new, #gnb.gnb_one_small .gnb_ico_num .gnb_ico_new{vertical-align:top;height:13px;background-position:-332px -60px;}
+#gnb.gnb_one .gnb_ico_num .gnb_count, #gnb.gnb_one_small .gnb_ico_num .gnb_count {height: 13px;padding: 0 6px 0 2px;background-position: 100% -60px;font-size: 10px;font-weight: normal;}
+#gnb.gnb_one .gnb_ico_num .plus, #gnb.gnb_one_small .gnb_ico_num .plus{margin:1px 0 0 2px}
+#gnb.gnb_one .ico_arrow{top:48px}
+#gnb.gnb_one .gnb_my_lyr, #gnb.gnb_one .gnb_notice_lyr{top:47px}
+#gnb.gnb_one .gnb_service_lyr{top:48px;}
+#gnb.gnb_one .gnb_login_li{padding:16px 21px 10px 1px}
+#gnb.gnb_one .gnb_my_li{padding:12px 20px 12px 2px}
+#gnb.gnb_one .gnb_my_li .ico_arrow{top:34px}
+#gnb.gnb_one .gnb_notice_li a.gnb_notice{padding:18px 19px 17px 19px}
+#gnb.gnb_one .mail_li a.gnb_mail{padding:19px 17px 18px 17px}
+#gnb.gnb_one .gnb_service_li .gnb_service{padding:19px 19px 18px 19px}
+#gnb.gnb_one_small .ico_arrow{top:33px}
+#gnb.gnb_one_small .gnb_my_lyr, #gnb.gnb_one_small .gnb_notice_lyr{top:32px}
+#gnb.gnb_one_small .gnb_service_lyr{top:33px}
+#gnb.gnb_one_small .gnb_login_li{padding:7px 12px 4px 2px}
+#gnb.gnb_one_small .gnb_my_li{padding:5px 20px 4px 2px}
+#gnb.gnb_one_small .gnb_my_li .ico_arrow{top:27px}
+#gnb.gnb_one_small .gnb_notice_li a.gnb_notice{padding:10px 11px 10px 12px}
+#gnb.gnb_one_small .mail_li a.gnb_mail{padding:11px 10px 11px 9px}
+#gnb.gnb_one_small .gnb_service_li .gnb_service{padding:11px 12px 11px 11px}
+#gnb.gnb_one_small .gnb_ico_num{top:5px;right:6px;width:24px}
+#gnb.gnb_one_flat .gnb_login_li,
+#gnb.gnb_one_flat .gnb_my_li,
+#gnb.gnb_one_flat .gnb_notice_li,
+#gnb.gnb_one_flat .mail_li,
+#gnb.gnb_one_flat .gnb_service_li {border-color: #e0e0e0;}
+#gnb.gnb_one_flat .gnb_notice_li.hover,
+#gnb.gnb_one_flat .mail_li.hover,
+#gnb.gnb_one_flat .gnb_service_li.hover {background-color: rgba(0, 0, 0, 0.04);}
+#gnb.gnb_one_flat .gnb_service_li .gnb_service .gnb_icon,
+#gnb.gnb_one_flat .gnb_service_li .gnb_service:hover .gnb_icon {background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: -84px -24px;background-repeat: no-repeat; width: 16px;height: 16px;vertical-align: top; margin: 0 1px;}
+#gnb.gnb_one_flat .mail_li a.gnb_mail .gnb_icon,
+#gnb.gnb_one_flat .mail_li a.gnb_mail:hover .gnb_icon {background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: 0px -42px;background-repeat: no-repeat;width: 20px;height: 16px;vertical-align: top;margin: 0 1px;}
+#gnb.gnb_one_flat .gnb_notice_li a.gnb_notice .gnb_icon,
+#gnb.gnb_one_flat .gnb_notice_li a.gnb_notice:hover .gnb_icon {background-image: url(https://ssl.pstatic.net/static/common/gnb/one/sp_gnb_4b16e6.png);background-position: -84px 0px;background-repeat: no-repeat;width: 16px;height: 18px;vertical-align: top;margin: 0 1px;}
+#gnb.gnb_one_flat .gnb_my_li .gnb_my .gnb_name,
+#gnb.gnb_one_flat .gnb_login_li .gnb_btn_login .gnb_txt {color: #777;}</style><script src="https://ssl.pstatic.net/static.gn/js/clickcrD.js" id="gnb_clickcrD" charset="utf-8"></script></head>
+<body>
+    <div id="wrap">
+
+    <!-- u_skip -->
+    <div id="u_skip">
+    </div>
+    <!-- //u_skip -->
+
+    <!-- header -->
+    <div id="header">
+	    <div class="hd_inner">
+		<script type="text/javascript">
+			var nsc="checkout.all";
+			var gnb_service="checkout";
+			var gnb_template="gnb_utf8";
+			var gnb_logout=encodeURIComponent("https://pay.naver.com/about");
+			var gnb_brightness=2;
+			var gnb_item_hide_option=0;
+		</script>
+		<div class="gnb_sc">
+			<div class="site">
+				<dl>
+				<dt class="blind">패밀리사이트</dt>
+				<dd>
+					<a href="https://www.naver.com/" class="s_link1"><span>NAVER</span></a><!--N=a:GNB.naver-->
+					<a href="http://shopping.naver.com" class="s_link2"><span>지식쇼핑</span></a><!--N=a:GNB.shopping-->
+				</dd>
+				</dl>
+			</div>
+			<div class="chkout_gnb_wrap">
+				<dl class="link">
+				<dt class="blind">네이버페이링크</dt>
+				<dd>
+					<a href="https://shopping.naver.com/cart">
+						장바구니
+					</a><!--N=a:GNB.cart-->
+				</dd>
+				</dl>
+				<!-- GNB -->
+				<div id="gnb" class="gnb_dark"><strong class="blind">사용자 링크</strong><ul class="gnb_lst" id="gnb_lst" style="display: block;"><li class="gnb_login_li" id="gnb_login_layer" style="display: none;"><a class="gnb_btn_login" href="https://nid.naver.com/nidlogin.login" id="gnb_login_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span class="gnb_txt">로그인</span></a></li><li class="gnb_my_li" id="gnb_my_layer" style="display: inline-block;"><div class="gnb_my_namebox" id="gnb_my_namebox" style="background-image: url(&quot;https://ssl.pstatic.net/static/common/gnb/2014/ico_arrow_wh.gif&quot;);"><a href="javascript:;" class="gnb_my" onclick="gnbUserLayer.clickToggle(); return false;"><img id="gnb_profile_img" src="https://phinf.pstatic.net/contact/20170911_185/1505126195709IvoWA_JPEG/%C4%B8%C3%B3.JPG?type=s80" width="26" height="26" alt="내 프로필 이미지" style="display: inline-block;"><span id="gnb_profile_filter_mask" class="filter_mask" style="display: inline-block;"></span> <span class="gnb_name" id="gnb_name1">다모</span><em class="blind">내정보 보기</em><span class="ico_arrow"></span></a><a href="#" class="gnb_emp" id="gnb_emp" style="display: none;">(임직원혜택)</a></div><div class="gnb_my_lyr" id="gnb_my_lyr"><div class="gnb_my_content"><div class="gnb_img_area"><span class="gnb_mask"></span><img src="https://phinf.pstatic.net/contact/20170911_185/1505126195709IvoWA_JPEG/%C4%B8%C3%B3.JPG?type=s160" width="80" height="80" alt="프로필 이미지"><a href="https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType" class="gnb_change"><span class="blind">프로필 사진 변경</span></a></div><div class="gnb_txt_area"><p class="gnb_account"><span class="gnb_name" id="gnb_name2"><a class="gnb_nick" href="https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType">다모</a>님</span><a class="gnb_btn_login" href="https://nid.naver.com/nidlogin.logout?returl=https%3A%2F%2Fpay.naver.com%2Fabout" id="gnb_logout_button"><span class="gnb_bg"></span><span class="gnb_bdr"></span><span class="gnb_txt">로그아웃</span></a></p><a href="https://mail.naver.com" class="gnb_mail_address">scanf_dream@naver.com</a><ul class="gnb_edit_lst"><li class="gnb_info"><a href="https://nid.naver.com/user2/help/myInfo.nhn?menu=home">내정보</a></li><li class="gnb_secure" id="gnb_secure_lnk"><a href="https://nid.naver.com/user2/help/myInfo.nhn?m=viewSecurity&amp;menu=security">보안설정</a></li></ul><p class="gnb_pay_check" id="gnb_pay_check"><em>N Pay</em><a href="http://pay.naver.com" id="gnb_pay_point"><span>내 페이포인트</span></a></p></div></div><div class="gnb_my_community"><a href="http://blog.naver.com/MyBlog.nhn" class="gnb_blog">내 블로그</a><a href="http://section.cafe.naver.com" class="gnb_cafe">가입한 카페</a><a href="http://pay.naver.com" class="gnb_pay"><span>N Pay</span></a></div><a href="#" class="gnb_my_interface" style="display:none"><span class="blind">환경설정</span></a></div><iframe id="gnb_my_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="top:34px;right:-4px;width:320px;height:174px;display:none;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li><li class="gnb_notice_li" id="gnb_notice_layer" style="display: inline-block;"><a href="javascript:;" class="gnb_notice" onclick="gnbNaverMeLayer.clickToggle(); return false;"><span class="blind">알림</span><span class="gnb_icon"></span><em class="gnb_ico_num" id="gnb_me_menu" style="display: block;"><span class="gnb_ico_new"><span class="gnb_count" id="gnb_me_count" style="display: inline-block;">1</span></span></em><span class="ico_arrow"></span></a><div class="gnb_notice_lyr" id="gnb_notice_lyr"><div class="svc_noti svc_panel"><div class="svc_scroll"><div class="svc_head"><strong class="gnb_tit">전체 알림</strong><div class="task_right"><button onclick="gnbNaverMeLayer.deleteReadList(this, event);" id="gnb_btn_read_noti_del">읽은 알림 삭제</button><button onclick="gnbNaverMeLayer.showDeleteAlert();" id="gnb_btn_all_noti_del">모두 삭제</button></div></div><div class="svc_body" id="gnb_naverme_layer"></div></div><div class="gnb_ly_alert" id="gnb_ly_alert" style="display: none;"><p class="gnb_msg"><strong>알림을 모두 삭제하시겠습니까?</strong></p><div class="gnb_btns"><button id="ly_alert_confirm" onclick="gnbNaverMeLayer.deleteAllList(this, event);">확인</button><button onclick="gnbNaverMeLayer.hideDeleteAlert();">취소</button></div><button class="gnb_btn_close" onclick="gnbNaverMeLayer.hideDeleteAlert();"><i>레이어 닫기</i></button></div><a href="https://noti.naver.com/index.nhn" class="gnb_notice_all">내 알림 전체보기</a></div></div><iframe id="gnb_notice_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="top:34px;right:-4px;width:299px;height:332px;display:none;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li><li class="mail_li" id="gnb_mail_layer" style="display: inline-block;"><a href="https://mail.naver.com" class="gnb_mail"><span class="blind">메일</span><span class="gnb_icon"></span><em class="gnb_ico_num" id="gnb_mail_menu" style="display: block;"><span class="gnb_ico_new"><span class="gnb_count" id="gnb_mail_count" style="display: inline-block;">99<span class="plus">+</span></span></span></em></a></li><li class="gnb_service_li" id="gnb_service_layer" style="display: inline-block;"><a href="javascript:;" class="gnb_service" onclick="gnbMoreLayer.clickToggle(); return false;"><span class="blind">서비스 더보기</span><span class="gnb_icon"></span><span class="ico_arrow"></span></a><div class="gnb_service_lyr" id="gnb_service_lyr"><div class="gnb_favorite_search" id="gnb_favorite_search"><div class="gnb_favorite_area"><div class="gnb_favorite_lstwrp"><div class="gnb_first_visit" style="display:none"><span class="blind">나만의 즐겨찾기를 추가해 보세요!</span><a href="#" class="gnb_close"><span class="blind">닫기</span></a></div><strong class="blind">즐겨찾는 서비스</strong><ul class="gnb_favorite_lst" id="gnb_favorite_lst"><li class="gnb_add"><a href="#"><span class="ic_add"></span>추가</a></li><li class="gnb_add"><a href="#"><span class="ic_add"></span>추가</a></li><li class="gnb_add"><a href="#"><span class="ic_add"></span>추가</a></li><li class="gnb_add"><a href="#"><span class="ic_add"></span>추가</a></li></ul><a href="#" class="gnb_my_interface" onclick="gnbMoreLayer.clickToggleWhole(); return false;"><span class="blind">즐겨찾기 설정</span></a></div></div><div class="gnb_search_area"><div class="gnb_search_box" onmouseover="gnb_search.mouseOver(this);" onmouseout="gnb_search.mouseOut(this);"><input id="gnb_svc_search_input" type="text" title="서비스 검색" value="더 많은 서비스를 간편하게 시작하세요!" onfocus="gnb_search.clearInput(this);" onblur="gnb_search.resetInput(this);" onkeydown="gnb_search.keyDown(event);" onkeyup="gnb_search.keyUp(event);"><a href="#" class="gnb_del_txt" id="gnb_del_txt" style="display:none"><span class="blind">삭제</span></a><div class="gnb_pop_input" id="gnb_pop_input" tabindex="0" onfocus="gnb_search.searchPopOnMouse = true; return false;" onfocusout="gnb_search.searchPopOnMouse = false; return false;" onmouseover="gnb_search.searchPopOnMouse = true; return false;" onmouseout="gnb_search.searchPopOnMouse = false; return false;" style="display:none"><ul class="gnb_pop_lst"></ul></div></div><div id="gnb_search_lstwrp" class="gnb_search_lstwrp"><ul class="gnb_search_lst gnb_first"><li class="gnb_first"><a href="http://cafe.naver.com/">카페</a></li><li><a href="http://news.naver.com/">뉴스</a></li><li><a href="http://map.naver.com/">지도</a></li><li><a href="http://sports.news.naver.com/">스포츠</a></li><li><a href="http://game.naver.com/">게임</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://section.blog.naver.com/">블로그</a></li><li><a href="http://post.naver.com/main.nhn">포스트</a></li><li><a href="http://dic.naver.com/">사전</a></li><li><a href="http://kin.naver.com/">지식iN</a></li><li><a href="http://weather.naver.com/">날씨</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="https://mail.naver.com/">메일</a></li><li><a href="http://stock.naver.com/">증권</a></li><li><a href="http://land.naver.com/">부동산</a></li><li><a href="https://vibe.naver.com/today/">VIBE</a></li><li><a href="http://book.naver.com">책</a></li></ul><ul class="gnb_search_lst"><li class="gnb_first"><a href="http://shopping.naver.com/">쇼핑</a></li><li><a href="http://comic.naver.com/">웹툰</a></li><li><a href="http://movie.naver.com/">영화</a></li><li><a href="http://cloud.naver.com/">클라우드</a></li><li><a href="http://auto.naver.com/">자동차</a></li></ul></div></div><div class="gnb_banner"><a href="https://campaign.naver.com/npay/rediret/index.nhn" class="gnb_service_event"><img id="gnb_promo" alt="이벤트 참여하면 포인트 적립!" width="265" height="47" src="https://ssl.pstatic.net/static/common/gnb/banner/promo_npay_200108.png"></a></div><div class="gnb_linkwrp"><a href="http://www.naver.com/more.html" class="gnb_service_all" id="gnb_service_all">전체 서비스 보기</a></div></div><div class="gnb_svc_more" id="gnb_svc_more" style=""><strong class="blind">네이버 주요 서비스</strong><div class="gnb_bg_top"></div><div class="gnb_svc_hd" id="gnb_svc_hd" tabindex="0"><strong class="gnb_svc_tit">바로가기 설정</strong><span class="link"><a href="http://www.naver.com/more.html">전체 서비스 보기</a></span></div><div class="gnb_svc_lstwrp"><div class="gnb_svc_lst1"><ul class="gnb_first"><li><input type="checkbox" id="nsvc_game" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_game">게임</label></li><li><input type="checkbox" id="nsvc_weather" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_weather">날씨</label></li><li><input type="checkbox" id="nsvc_shopping" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_shopping">네이버쇼핑</label></li><li><input type="checkbox" id="nsvc_navercast" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_navercast">네이버캐스트</label></li><li><input type="checkbox" id="nsvc_cloud" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cloud">네이버클라우드</label></li><li class="gnb_event"><input type="checkbox" id="nsvc_naverpay" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_naverpay">네이버페이<em class="ic_gnb_new">New</em></label></li><li><input type="checkbox" id="nsvc_news" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_news">뉴스</label></li><li><input type="checkbox" id="nsvc_comic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_comic">만화/웹툰</label></li><li><input type="checkbox" id="nsvc_memo" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_memo">메모</label></li><li><input type="checkbox" id="nsvc_mail" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_mail">메일</label></li><li><input type="checkbox" id="nsvc_music" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_music">뮤직</label></li><li><input type="checkbox" id="nsvc_land" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_land">부동산</label></li><li><input type="checkbox" id="nsvc_bookmark" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_bookmark">북마크</label></li></ul><ul class=""><li><input type="checkbox" id="nsvc_blog" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_blog">블로그</label></li><li><input type="checkbox" id="nsvc_dic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_dic">사전</label></li><li><input type="checkbox" id="nsvc_software" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_software">소프트웨어</label></li><li><input type="checkbox" id="nsvc_sports" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_sports">스포츠</label></li><li><input type="checkbox" id="nsvc_ya9" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_ya9">야구9단</label></li><li><input type="checkbox" id="nsvc_movie" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_movie">영화</label></li><li><input type="checkbox" id="nsvc_office" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_office">오피스</label></li><li><input type="checkbox" id="nsvc_novel" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_novel">웹소설</label></li><li><input type="checkbox" id="nsvc_auto" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_auto">자동차</label></li><li><input type="checkbox" id="nsvc_contact" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_contact">주소록</label></li><li><input type="checkbox" id="nsvc_finance" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_finance">증권(금융)</label></li><li><input type="checkbox" id="nsvc_map" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_map">지도</label></li><li><input type="checkbox" id="nsvc_kin" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_kin">지식iN</label></li></ul><ul class=""><li><input type="checkbox" id="nsvc_terms" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_terms">지식백과</label></li><li><input type="checkbox" id="nsvc_book" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_book">책</label></li><li><input type="checkbox" id="nsvc_cafe" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cafe">카페</label></li><li><input type="checkbox" id="nsvc_calendar" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_calendar">캘린더</label></li><li><input type="checkbox" id="nsvc_photo" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_photo">포토갤러리</label></li><li><input type="checkbox" id="nsvc_nstore" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_nstore">N스토어</label></li><li><input type="checkbox" id="nsvc_navertv" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_navertv">네이버TV</label></li></ul></div><div class="svc_lst2"><div class="svc_spc gnb_first"><strong><a href="http://dic.naver.com/">어학사전</a></strong><ul class=""><li><input type="checkbox" id="nsvc_krdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_krdic">국어사전</label></li><li><input type="checkbox" id="nsvc_endic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_endic">영어/영영사전</label></li><li><input type="checkbox" id="nsvc_hanja" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_hanja">한자사전</label></li><li><input type="checkbox" id="nsvc_jpdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_jpdic">일어사전</label></li><li><input type="checkbox" id="nsvc_cndic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_cndic">중국어사전</label></li><li><input type="checkbox" id="nsvc_frdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_frdic">프랑스어사전</label></li><li><input type="checkbox" id="nsvc_dedic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_dedic">독일어사전</label></li><li><input type="checkbox" id="nsvc_rudic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_rudic">러시아어사전</label></li><li><input type="checkbox" id="nsvc_vndic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_vndic">베트남어사전</label></li><li><input type="checkbox" id="nsvc_spdic" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_spdic">스페인어사전</label></li><li><input type="checkbox" id="nsvc_papago" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_papago">파파고</label></li></ul></div><div class="svc_spc"><strong>인기/신규서비스</strong><ul class=""><li><input type="checkbox" id="nsvc_grafolio" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_grafolio">그라폴리오</label></li><li><input type="checkbox" id="nsvc_post" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_post">포스트</label></li><li><input type="checkbox" id="nsvc_luncherapp" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_luncherapp">도돌런처</label></li><li><input type="checkbox" id="nsvc_band" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_band">밴드</label></li><li><input type="checkbox" id="nsvc_line" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_line">라인</label></li><li class="gnb_event"><input type="checkbox" id="nsvc_vibe" name="selmenu" class="gnb_input_check" value=""> <label for="nsvc_vibe">VIBE<em class="ic_gnb_new">New</em></label></li></ul></div></div></div><div class="svc_btnwrp"><div class="svc_btns"><button class="gnb_save" onclick="if(gnbFavorite.addService()){gnbMoreLayer.clickToggleWhole()} return false;"><strong class="blind">확인</strong></button><button class="gnb_close" onclick="gnbFavorite.cancel(); return false;"><span class="blind">취소</span></button><button class="gnb_return" onclick="gnbFavorite.resetService(); return false;" "=""><span class="blind">초기 설정으로 변경</span></button></div></div><div class="gnb_bg_btm"></div></div></div><iframe id="gnb_service_lyr_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="display:none;top:34px;right:297px;width:585px;height:385px;opacity:0;-ms-filter:alpha(opacity=0)"></iframe><iframe id="gnb_svc_more_iframe" title="빈 프레임" class="gnb_pad_lyr" name="padding" width="0" height="0" scrolling="no" frameborder="0" style="display:none;top:34px;right:-4px;width:295px;height:385px;opacity:0;-ms-filter:alpha(opacity=0)"></iframe></li></ul></div>
+				<script type="text/javascript" charset="utf-8" src="https://static.nid.naver.com/template/gnb_utf8.nhn?2020022510"></script>
+				<!-- //GNB -->
+			</div>
+		</div>
+<!--    소개     -->
+<!--  마이페이지 -->
+
+<!--  결제내역  -->
+<!--  포인트  -->
+<!--  송금    -->
+<!--  선물함    -->
+<!--  판매·정산  -->
+<!-- 이벤트·쿠폰 -->
+<!-- 문의·리뷰 -->
+
+
+		<div class="lnb_sc">
+			<h1 class="sta">
+				<a href="https://pay.naver.com" class="logo_naver"><span>N</span></a><!--N=a:LNB.pay-->
+				<a href="https://pay.naver.com" class="logo_chkout"><span>Pay</span></a><!--N=a:LNB.pay-->
+			</h1>
+			<div class="lnb">
+				<ul>
+				<li><a href="https://order.pay.naver.com/home" class="menu1"><span>결제내역</span></a><!--N=a:LNB.order--></li>
+				<li><a href="https://order.pay.naver.com/home?tabMenu=POINT_TOTAL" class="menu2"><span>포인트</span></a><!--N=a:LNB.point--></li>
+				<li><a href="https://pay.naver.com/send/p/list/s" class="menu3"><span>송금</span></a><!--N=a:LNB.send--></li>
+				<li><a href="https://pay.naver.com/mygift/d" class="menu8"><span>선물함</span></a><!--N=a:LNB.gift--></li>
+				<li><a href="https://event2.pay.naver.com/event/benefit/list" class="menu5"><span>이벤트·쿠폰</span></a><!--N=a:LNB.event--></li>
+				<li><a href="https://pay.naver.com/shoppingInquiry/inquiryList" class="menu6"><span>문의·리뷰</span></a><!--N=a:LNB
+				.review--></li>
+				</ul>
+			</div>
+		</div>		
+	
+	    </div>
+    </div> 
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="container">
+        <!-- content -->
+        <div id="content">
+	<link type="text/css" rel="stylesheet" href="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/css/terms/terms.css">
+	<link type="text/css" rel="stylesheet" href="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/css/setting/setting.css">
+
+<div class="bottom_line">
+	<h3 class="tit_terms"><span class="blind">네이버페이 이용 동의</span></h3>
+	<p class="tit_txt point_green">네이버파이낸셜 주식회사의 네이버페이 서비스 이용을 위한 최초 1회의 동의가 필요합니다.</p>
+    <br>
+	<div>
+		네이버페이가 네이버에서 분리되어 네이버파이낸셜 주식회사로 새롭게 시작하게 되었습니다. (2019. 11. 1)<br>
+		안정적인 결제 서비스를 바탕으로 앞으로 혁신적인 금융 서비스 영역에서도 최선을 다하겠습니다.
+	</div>
+</div>
+
+<div class="all_chk">
+	<input type="checkbox" id="allCheckUp" class="chk_terms"><label for="allCheckUp"><strong>이용약관, 개인정보 수집, 네이버-네이버파이낸셜 간 개인정보 제공에 모두 동의합니다.</strong></label>
+	<p class="desc_all">모두 동의하기에는 선택 동의도 포함되어 있으며 아래에서 개별적으로 동의를 선택하실 수 있습니다.</p>
+</div>
+
+<div class="terms_area bottom_line">
+	<h5 class="sub_tit">네이버 개인정보 수집 및 이용 동의<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 네이버 개인정보 수집 및 이용 동의 -->
+네이버주식회사는 네이버 회원 계정으로 네이버페이를 이용한 상품 및 디지털 콘텐츠 구매가 발생할 때에 아래와 같이 개인정보를 수집 및 이용합니다.<br><br>
+1. 수집하는 개인정보<br>
+배송지 정보(배송상품 구매 시 : 수령인명, 주소, (휴대)전화번호, E쿠폰 구매 시 : 이름, 네이버 아이디 또는 휴대전화번호), 구매정보, 결제정보(환불 계좌정보,현금영수증 신청정보, 결제휴대전화번호, 가상카드번호 등)<br><br>
+2. 개인정보의 수집 및 이용목적<br>
+상품 또는 콘텐츠 구매에 따른 서비스 제공, 이용자 문의 사항 또는 민원 처리, 분쟁조정을 위한 기록 보존을 위해 개인정보를 이용합니다.<br>
+네이버 서비스 이용, 이벤트 참여 시 네이버페이 포인트 지급 등 서비스 이용에 따른 혜택 제공을 위해 개인정보를 이용합니다.<br>
+이용자에게 유용한 콘텐츠 제공과 검색 서비스 제공 등 기존 서비스(광고 포함)에 더하여, 인구통계학적 분석, 서비스 방문 및 이용기록의 분석, 지인 및 관심사에 기반한 이용자간 관계의 형성, 개인정보 및 관심사 등에 기반한 맞춤형 서비스 제공과 같이 기존 서비스를 개선하고, AI 기술 등을 결합한 신규 서비스 요소를 발굴하기 위하여 개인정보를 이용합니다.<br>
+이벤트 정보 및 참여기회 제공, 광고성 정보 제공 등 마케팅 및 프로모션 목적으로 개인정보를 이용합니다.<br>
+법령 및 이용약관을 위반하는 회원에 대한 이용 제한 조치, 부정 이용 행위를 포함하여 서비스의 원활한 운영에 지장을 주는 행위에 대한 방지 및 제재, 계정 도용 및 부정거래 방지, 약관 개정 등 고지사항 전달, 분쟁조정을 위한 기록 보존, 민원처리 등 이용자 보호 및 서비스 운영을 위하여 개인정보를 이용합니다.<br>
+보안, 프라이버시, 안전 측면에서 이용자가 안심하고 이용할 수 있는 서비스 이용환경 구축을 위해 개인정보를 이용합니다.<br><br>
+3. 개인정보의 보유 및 이용기간<br>
+수집한 개인정보는 네이버 탈퇴 시 지체없이 삭제합니다. 단, 관계 법령의 규정에 의하여 일정 기간 보존이 필요한 경우에는 해당 기간만큼 보관 후 삭제합니다.<br><br>
+네이버 회원은 위 개인정보의 수집 및 이용 동의를 거부할 권리가 있으나, 거부 시 네이버페이를 이용한 상품 및 디지털 콘텐츠 구매가 불가능합니다. 그 밖의 내용은 네이버 개인정보 처리방침을 따릅니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree1" name="chkAgree" class="chk_terms"><label for="chkAgree1">네이버 개인정보 수집 및 이용에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">네이버 개인정보 제공 동의<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 네이버 개인정보 제공 동의 -->
+네이버 회원 계정으로 네이버파이낸셜 서비스를 이용하는 경우, 편리하고 안전한 네이버 서비스 제공을 위해 아래와 같이 네이버파이낸셜주식회사에 개인정보를 제공합니다.<br><br>
+1. 개인정보를 제공받는 자<br>
+네이버파이낸셜 주식회사<br><br>
+2. 제공하는 개인정보 항목<br>
+네이버 아이디, 이름, 생년월일, 성별, 프로필 정보, 암호화된 동일인 식별정보(CI), 중복가입확인정보(DI)와 DI 해시값, 내/외국인 여부, 이메일 주소, 휴대전화번호, 가입 통신사, IP 주소, 서비스 이용기록(가입일자, 네이버페이에 중복가입한 네이버 아이디 목록 등)<br><br>
+3. 개인정보를 제공받는 자의 개인정보 이용목적<br>
+회원가입, 개인 식별, 본인 확인, 고객 상담, 분쟁 조정, 회원탈퇴 처리 등 회원관리를 위하여 개인정보를 이용합니다.<br>
+상품 및 서비스의 구매 또는 판매에 따른 배송, 정산, 채권∙채무 계약의 이행 등을 위하여 개인정보를 이용합니다.<br>
+서비스 이용에 필요한 계좌 확인 및 등록, 송금, 선물하기, 쿠폰∙QR 코드 및 바코드를 이용한 결제 등 간편 결제 및 송금 서비스 제공을 위하여 개인정보를 이용합니다.<br>
+이용자에게 유용한 콘텐츠 제공과 검색 서비스 제공 등 기존 서비스(광고 포함)에 더하여, 인구통계학적 분석, 서비스 방문 및 이용기록의 분석, 지인 및 관심사에 기반한 이용자간 관계의 형성, 개인정보 및 관심사 등에 기반한 맞춤형 서비스 제공과 같이 기존 서비스를 개선하고, AI 기술 등을 결합한 신규 서비스 요소를 발굴하기 위하여 개인정보를 이용합니다.<br>
+법령 및 이용약관을 위반하는 회원에 대한 이용 제한 조치, 부정 이용 행위를 포함하여 서비스의 원활한 운영에 지장을 주는 행위에 대한 방지 및 제재, 계정 도용 및 부정거래 방지, 약관 개정 등 고지사항 전달, 분쟁조정을 위한 기록 보존, 민원처리 등 이용자 보호 및 서비스 운영을 위하여 개인정보를 이용합니다.<br>
+이벤트 정보 및 참여기회 제공, 광고성 정보 제공 등 마케팅 및 프로모션 소식을 전달하기 위하여 개인정보를 이용합니다.<br>
+보안, 프라이버시, 안전 측면에서 이용자가 안심하고 이용할 수 있는 서비스 이용환경 구축을 위해 개인정보를 이용합니다.<br><br>
+4. 개인정보를 제공받는 자의 개인정보 보유 및 이용기간<br>
+네이버파이낸셜 서비스 해지 시 지체없이 삭제합니다. 단, 관계 법령의 규정에 의하여 일정 기간 보존이 필요한 경우에는 해당 기간만큼 보관 후 삭제합니다.<br><br>
+네이버 회원은 위 개인정보 제공 동의를 거부할 권리가 있으나, 거부 시 네이버페이를 이용한 상품 및 디지털 콘텐츠 구매가 불가능합니다. 그 밖의 내용은 네이버파이낸셜 개인정보 처리방침을 따릅니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree2" name="chkAgree" class="chk_terms"><label for="chkAgree2">네이버 개인정보 제공에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">네이버페이 이용약관<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 네이버페이 이용약관 -->
+제 1장 네이버페이 서비스<br><br>
+제 1 조 (목적)<br>
+이 약관은 네이버파이낸셜(주)(이하 “회사”)가 제공하는 네이버페이 서비스의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.<br><br>
+제 2 조 (용어의 정의)<br>
+①이 약관에서 사용하는 용어의 의미는 다음과 같습니다.<br>
+1.“네이버페이 서비스”라 함은 가맹점회원이 운영하는 가게나 웹사이트(이하 "쇼핑몰"), 판매회원이 운영하는 웹사이트(이하 "스마트스토어"), 네이버 유료 서비스 또는 네이버페이 안전결제가 제공되는 제휴업체에서 이용회원이 재화 또는 용역 등(이하 "상품")을 구입하는 경우(이하 “구매”) 및 이용회원의 네이버 아이디로 상품을 거래・결제하는 경우에 이를 용이하게 할 수 있도록 회사가 각 제공하는 통신판매 또는 통신판매중개서비스, 결제서비스, 전자지급결제대행서비스 및 결제대금 보호서비스, 송금 서비스, 통합조회서비스를 총칭합니다.<br>
+2.“회원”이라 함은 다음 각 목의 자를 말하며, 가맹점회원과 판매회원을 통칭하여 “판매자회원”이라 합니다.<br>
+가.이용회원: 이 약관 제6조에 따라 회사와 이용계약을 체결하여 회사가 제공하는 네이버페이 서비스를 이용하는 자<br>
+나.가맹점회원: 네이버페이 가맹점 이용약관 또는 가맹계약(약관)에 따라 회사와 이용계약을 체결하여 네이버페이 서비스를 통하여 이용회원과 상품을 거래하는 쇼핑몰 운영 사업자<br>
+다.판매회원: 스마트스토어 판매이용약관에 따라 회사와 이용계약을 체결하여 네이버페이 서비스를 이용해 스마트스토어 내에서 상품을 판매하는 자<br>
+라.안전결제 판매회원: 회사에서 정한 본인인증 절차를 완료한 후 네이버 주식회사의 블로그나 카페 서비스 내에서 혹은 회사와 제휴된 타 사이트에서 물품을 판매하는 이용회원을 말합니다.<br>
+3.“네이버 유료 서비스”라 함은 네이버페이 서비스를 통해 유료로 이용 가능한 네이버가 제공하는 각종 온라인 디지털콘텐츠 및 제반 서비스를 말합니다.<br>
+4.“결제대금 보호서비스”란 네이버페이 서비스에서 이용회원이 결제한 결제대금의 보호를 위하여 회사가 일정 기간 동안 결제대금을 예치하고 배송이 완료되는 등 구매가 확정된 후 상품 대금을 판매자회원에게 지급하는 서비스를 말합니다.<br>
+5.“네이버페이 안전결제”라 함은 안전결제 판매회원으로부터 상품을 구매한 이용회원이 네이버페이 서비스를 이용해 결제를 할 경우 제공되는 결제대금 보호서비스를 말합니다.<br>
+6.“네이버페이 사용처”라 함은 네이버페이 서비스를 이용하여 상품의 결제, 네이버페이 포인트의 적립이 가능한 사용처를 말합니다.<br>
+7.“수취인”이라 함은 상품을 실제로 수신자를 말하며, 이용회원과 동일인이거나 다른 사람일 수 있습니다.<br>
+8.“리뷰”라 함은 이용회원이 상품의 구매 또는 이용 후 상품에 대한 종합적인 평가를 기록한 글, 이미지, 영상물 등의 네이버페이 서비스 내에 등록하는 게시물을 말합니다.<br>
+9.“구매확정 기간”이라 함은 이용회원이 상품 거래에 대하여 구매 종료의 의사표시(구매확정, 구매거절, 반품, 교환)를 하여야 하는 기간으로 회사가 인지하고 있는 수취인의 상품수령일부터 7일(7일 중 영업일 3일 미만인 경우 3영업일)이 되는 날 또는 그에 부합하는 조치가 된 것으로 볼 수 있는 날로 "회사"가 공지를 통해 정한 날을 의미합니다.<br>
+10.“네이버페이 포인트”란 이용회원이 직접 유상 결제 또는 다른 이용회원으로부터 송금 받은 송금 잔고를 네이버페이 포인트로 전환 하는 등의 다양한 방법으로 충전하거나, 상품 구매 또는 이벤트 등을 통해서 적립 받아 네이버페이 사용처에서 사용할 수 있는 전자적 지급수단을 말합니다.<br>
+11.“네이버페이 간편결제”란 이용회원이 카드나 계좌 등 결제수단의 관련 정보를 매번 입력할 필요 없이 관련 정보의 한번 등록만으로 상품 결제가 가능한 서비스로서 정보가 등록된 결제수단의 종류에 따라 "카드간편결제"와 "계좌간편결제"로 구분됩니다.<br>
+12.“송금”이란 이용회원이 네이버페이 서비스에서 회사가 제공하는 다양한 방법을 통해 송금 잔고를 송금 받는 사람에게 이전하는 방식으로 일정 범위의 금원을 전송하고, 송금 받는 사람은 이를 회사가 사전에 정한 방식으로 등록한 본인의 계좌(이하 “결제/송금용 계좌”)를 통해 현금으로 인출하거나 네이버페이 포인트로 전환하여 사용할 수 있도록 제공되는 서비스를 말합니다.<br>
+13.“송금 잔고”란 이용회원이 결제/송금용 계좌를 통해 일정한 범위의 금원을 전송할 수 있도록 생성되는 전자적 지급수단을 말합니다.<br>
+14.“네이버페이 비밀번호”란 네이버페이 서비스 이용 시 필요로 하는 인증 수단으로서 회원이 본인임을 사전에 확인하고 스스로 설정하여 회사에 등록한 영문과 숫자 등의 조합을 말합니다.<br>
+15.“해외결제 서비스”라 함은 이용회원이 해외 쇼핑몰에서 상품결제를 할 수 있도록 해주는 결제서비스를 말합니다.<br>
+16.”해외 쇼핑몰”이라 함은 가맹점회원이 외국에서 운영하는 가게나 웹사이트를 말합니다.<br>
+17.“자동충전”이라 함은 네이버페이 포인트로 해외결제 서비스 이용 시 네이버페이 포인트 보유액이 결제금액보다 부족한 경우 부족액 상당액을 이용회원이 기 등록한 충전수단으로 자동충전하는 것을 말합니다.<br>
+18.“자동충전 최소금액”이라 함은 자동충전의 최소 단위 금액을 말하며, 최소 단위 금액은 회사의 정책에 따릅니다.<br>
+19.“통합조회서비스”란 이용회원이 금융기관이나 다른 회사 등에서 개설,이용,가입하거나 발급받은 계좌,카드 등에 관한 정보를 네이버페이 서비스를 통해 조회할 수 있도록 하는 서비스를 말합니다.<br>
+②이 약관에서 사용하는 용어 중 본 조에서 정하지 아니한 것은 네이버페이 서비스 웹페이지 안내 및 관계법령에서 정하는 바에 따르며, 그 외에는 일반 상관례에 따릅니다.<br><br>
+제 3 조 (약관의 명시 및 효력변경)<br>
+①회사는 이 약관의 내용을 이용회원이 쉽게 알 수 있도록 네이버페이 서비스의 화면 내 또는 별도의 연결화면에 게시하거나 팝업화면 등으로 제공합니다.<br>
+②회사는 전자상거래등에서의소비자보호에관한법률, 약관의규제에관한법률, 정보통신망이용촉진및정보보호등에관한법률 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br>
+③회사가 이 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 제 1항의 방식에 따라 그 개정약관을 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만, 이용회원에게 불리한 약관의 개정의 경우에는 적용일자 30일 이전에 공지하며, 공지 외에 일정기간 이용회원의 전자우편 등의 전자적 수단을 통해 통지합니다.<br>
+④회사가 전항에 따라 개정약관을 공지 또는 통지하면서 이용회원에게 30일 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 이용회원이 명시적으로 거부의사를 표명하지 아니한 경우 이용회원이 개정약관에 동의한 것으로 봅니다.<br>
+⑤이용회원이 개정약관의 내용에 동의하지 않는 경우 회사는 해당 이용회원에 대하여 개정약관의 내용을 적용할 수 없으며, 이 경우 이용회원은 이용계약을 해지할 수 있습니다. 다만, 회사가 개정약관에 부동의 한 이용회원에게 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 회사는 해당 이용회원과의 이용계약을 해지할 수 있습니다.<br><br>
+제 4 조 (약관 외 준칙)<br>
+①회사는 필요한 경우 특정 서비스에 관하여 적용될 사항을 위해 개별약관이나 이용정책을 정하여 운영할 수 있으며, 해당 내용은 홈페이지 등을 통해 공지합니다.<br>
+②본 약관에서 정하지 아니한 사항은 전자상거래등에서의소비자보호에관한법률, 정보통신망이용촉진및정보보호등에관한법률, 전자금융거래법 등 관련 법령 및 개별약관, 이용정책에서 정한 바에 따릅니다.<br>
+③전자지급결제대행서비스 및 결제대금 보호서비스, 네이버페이 안전결제 서비스, 통합조회서비스와 관련해서는 전자금융거래이용약관이 우선 적용됩니다.<br>
+④회원은 항상 개별약관이나 이용정책의 내용에 변경이 있는지 여부를 주시하여야 하며, 변경사항의 공지가 있을 시에는 이를 확인하여야 합니다.<br><br>
+제 5 조 (대리 및 보증의 부인)<br>
+①회사는 이용회원과 판매자회원 간의 편리한 상품의 거래와 송금을 위한 시스템을 운영 및 관리, 제공할 뿐이며, 판매자회원 또는 이용회원을 대리하지 않습니다. 또한, 판매자회원과 이용회원 사이에 성립된 상품 거래와 송금에 관련한 책임과 판매자회원 및 이용회원이 제공한 정보에 대한 책임은 해당 판매자회원 및 이용회원이 직접 부담하여야 합니다.<br>
+②회사는 네이버페이 서비스를 통하여 이루어지는 판매자회원과 이용회원 간의 상품의 거래와 관련하여 판매의사 또는 구매의사의 존부 및 진정성, 상품의 품질, 완전성, 안전성, 적법성 및 타인의 권리에 대한 비침해성, 이용회원 또는 판매자회원이 입력한 정보 및 그 정보를 통하여 링크된 URL에 게재된 자료의 진실성 또는 적법성 등 일체에 대하여 보증하지 아니하며, 이와 관련한 일체의 위험은 해당 판매자회원 또는 이용회원이 전적으로 부담합니다.<br>
+③회사는 판매자회원과 이용회원 간의 상품의 거래와 관련하여 직접 상품을 판매 또는 구매하지 않으며, 단지 판매자회원과 이용회원간의 거래의 편의성을 증진시키는 도구만을 개발 및 제공합니다.<br><br>
+제 6 조 (네이버페이 서비스 이용계약 체결)<br>
+①네이버페이 서비스 이용계약은 이용회원이 되고자 하는 자(이하 “가입신청자”)가 회사가 요구하는 항목들을 사실대로 기재하고 이 약관에 동의한 다음 회원가입신청을 하면, 회사가 이러한 신청을 승낙하여 신청절차 상에서 가입완료가 표시된 시점에 성립됩니다.<br>
+②회사는 원칙적으로 전 항에 따른 회원가입신청에 대하여 승낙함을 원칙으로 합니다. 다만, 다음 각 호의 사유가 있는 경우, 신청에 대하여는 승낙을 하지 않거나 사후에 이용계약을 해지할 수 있습니다.<br>
+1.가입신청자가 네이버 주식회사가 제공하는 네이버 서비스(이하 “네이버”) 회원이 아닌 경우<br>
+2.실명 인증 된 네이버 아이디 3개를 초과하여 가입하는 경우<br>
+3.가입신청자가 이 약관의 위반 등의 사유로 이전에 회원자격이 상실 또는 이용계약이 해지되었던 <br>
+4.실명이 아니거나 타인의 명의를 이용한 경우<br>
+5.허위의 정보를 기재하거나, 회사가 제시하는 내용을 기재하지 않은 경우 또는 오기 등이 있는 경우<br>
+6.만 14세 미만 미성년자가 법정대리인 동의 없이 신청하거나, 사업자 또는 법인 명의로 신청하는 경우<br>
+7.이용정지를 당한 회원이 그 이용정지 기간 중에 이용계약을 임의 해지하고 재 신청을 하는 경우<br>
+8.가입신청자의 귀책사유로 인하여 승낙이 불가능하거나 기타 회사가 정한 제반 사항을 위반하여 신청하는 경우<br>
+9.기타 이 약관에 위배되거나 위법 또는 부당한 가입신청임이 확인된 경우<br>
+③제1항에 따른 신청에 있어 회사는 전문기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다.<br>
+④회사는 서비스 관련설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우에는 승낙을 유보할 수 있습니다.<br>
+⑤본 조 제2항과 제4항에 따라 회사가 회원가입신청의 승낙을 하지 아니하거나 유보한 경우 부득이한 사유가 없을 경우 가입신청자에게 알리는 것을 원칙으로 합니다.<br><br>
+제 7 조 (이용계약의 해제, 해지 등)<br>
+①이용회원은 언제든지 이용계약 해지 신청을 할 수 있으며, 회사는 관련법 등이 정하는 바에 따라 이를 즉시 처리하여야 합니다.<br>
+②이용회원이 이용계약을 해지할 경우, 회사는 관련법 및 개인정보처리방침에 따라 이용회원 정보를 보유하는 경우를 제외하고는 해지 즉시 이용회원의 모든 데이터를 삭제합니다.<br>
+③이용계약 해지로 인해 발생한 불이익에 대한 책임은 이용회원 본인이 부담하여야 하며, 이용계약이 종료되면 회사는 이용회원에게 부가적으로 제공한 각종 무상혜택을 회수할 수 있습니다.<br>
+④회사는 회원에게 다음 각 호에 해당하는 사유가 발생하거나 확인된 경우 이용계약을 해지할 수 있습니다.<br>
+1.이용회원이 네이버페이 서비스의 원활한 진행을 방해하는 행위를 하거나 시도한 경우<br>
+2.이용회원이 고의로 회사의 영업을 방해한 경우<br>
+3.다른 회원의 권리나 명예, 신용 기타 정당한 이익을 침해하거나 대한민국 법령 또는 선량한 풍속 기타 사회질서에 위배되는 행위를 한 경우<br>
+4.이용회원이 이 약관에 위배되는 행위를 한 경우<br>
+5.이용회원이 회사가 인정하지 아니하는 방법 혹은 부정하게 타인의 아이디를 이용하여 네이버페이 포인트 또는 쿠폰 등을 취득 또는 사용하는 경우<br>
+6.회원이 악의적으로 마이너스(-) 네이버페이 포인트를 발생시킨 것으로 판단되는 경우<br>
+7.회원에게 제6조에서 정한 이용계약의 승낙거부사유가 있음이 확인된 경우<br>
+8.기타 회사가 합리적인 판단에 기하여 서비스의 제공을 거부할 필요가 있다고 인정할 경우<br>
+⑤회사가 이용계약을 해지하는 경우 회사는 이용회원에게 전자우편 등으로 해지 사유를 밝혀 해지의사를 통지합니다. 이 경우 회사는 해지를 하기 전에 상당한 기간을 정하여 이용회원에게 이의 신청의 기회를 부여합니다. 다만, 이 약관 및 운영정책에서 정하는 사유가 있을 경우에는 별도의 이의 신청 기간을 부여하지 않을 수 있습니다.<br>
+⑥회사가 이용계약을 해지하더라도 이용계약의 해지 이전에 이미 체결된 이용회원과 판매자회원간의 상품 거래계약의 완결에 관해서는 이 약관이 계속 적용됩니다. 단, 본 조 제4항 5호의 사유로 이용계약이 해지되는 경우 회사는 해당 거래에 사용된 네이버페이 포인트 또는 쿠폰의 환수에 대한 책임을 부담하지 아니하며, 이용회원은 해당 네이버페이 포인트 및 쿠폰에 해당하는 비용을 스스로 부담하여야 합니다.<br>
+⑦이용계약이 회사에 의해 해지되는 경우 이용회원의 재이용 신청에 대하여 회사는 그 승낙을 거절할 수 있습니다.<br>
+⑧이용계약이 종료됨으로써 발생한 손해는 이용계약 종료사유에 대해 귀책사유가 있는 이용회원이 책임을 부담하여야 하고, 회사는 관련 법령에 규정이 없는 한 책임을 지지 않습니다.<br><br>
+제 8 조 (회사의 의무)<br>
+①회사는 관련법과 이 약관이 금지하거나 미풍양속에 반하는 행위를 하지 않으며, 계속적이고 안정적으로 네이버페이 서비스를 제공하기 위하여 최선을 다하여 노력합니다.<br>
+②회사는 회원이 안전하게 네이버페이 서비스를 이용할 수 있도록 개인정보(신용정보 포함)보호를 위한 보안시스템을 갖추며, 개인정보처리방침을 공지하고 이를 준수합니다.<br>
+③회사는 서비스 이용과 관련하여 이용회원으로부터 제기된 의견이나 불만이 정당하다고 인정할 경우에는 이를 처리하여야 합니다. 이용회원이 제기한 의견이나 불만사항에 대해서는 게시판을 활용하거나 전자우편 등을 통하여 이용회원에게 처리과정 및 결과를 전달합니다.<br><br>
+제 9 조 (이용회원의 의무)<br>
+①이용회원은 상품을 구매하기 전에 반드시 상품의 상세 내용과 거래의 조건을 정확하게 확인한 후 구매를 하여야 합니다. 이용회원은 구매하려는 상품의 내용과 거래의 조건을 확인하지 않고 구매하여 발생한 모든 손실, 손해에 대한 책임을 부담하여야 합니다.<br>
+②이용회원은 이 약관 및 회사가 네이버페이 서비스 화면에서 고지하는 내용을 준수하여야 하며, 약관 및 고지내용을 위반하거나 이행하지 아니하여 발생하는 모든 손실, 손해에 대하여 책임을 부담합니다.<br>
+③이용회원은 상품구매시 스스로의 책임하에 상품을 구매하여야 하며, 회사는 판매자회원의 상품 내용과 거래 조건에 대해서 어떠한 보증이나 책임도 부담하지 않습니다.<br>
+④이용회원은 구매한 상품에 청약철회의 원인이 발생한 경우 수령한 상품을 임의로 사용하거나 훼손되도록 방치하여서는 아니 됩니다. 이용회원은 청약철회 상품의 임의사용이나 상품보관의 미흡으로 인하여 발생한 상품의 훼손에 대하여 합당한 비용을 부담합니다.<br>
+⑤이용회원은 판매자회원과 상품 구매 절차에서 분쟁이 발생한 경우 분쟁의 해결을 위하여 성실히 임하여야 하며, 분쟁해결의 불성실로 인하여 판매자회원과 회사에 발생한 모든 손실, 손해를 부담하여야 합니다.<br>
+⑥이용회원은 상품의 구매 시 반드시 본인 명의의 결제수단을 사용하여야 하며, 타인의 결제수단의 임의사용을 하여서는 안됩니다. 타인의 결제수단을 임의 사용함으로써 발생하는 회사, 결제수단의 적법한 소유자, 전자결제대행 또는 중개서비스 사업자 판매자회원의 손실과 손해에 대한 모든 책임은 이용회원에게 있습니다.
+⑦상품의 결제와 관련하여 이용회원이 입력한 정보 및 그 정보와 관련하여 발생한 책임과 불이익은 전적으로 이용회원이 부담하여야 합니다.<br>
+⑧이용회원은 결제 시 정당하고, 적법한 사용권한을 가지고 있는 결제수단을 사용하여야 하며, 회사는 그 여부를 확인할 수 있습니다. 또한 회사는 이용회원 결제수단의 적법성 등에 대한 확인이 완료될 때까지 거래진행을 중지하거나 해당 거래를 취소할 수 있습니다.<br>
+⑨이용회원은 회사가 네이버페이 서비스를 안전하게 제공할 수 있도록 회사에 협조하여야 하며, 회사가 이용회원의 이 약관 위반행위를 발견하여 이용회원에게 해당 위반행위에 대하여 소명을 요청할 경우 이용회원은 회사의 요청에 적극 응하여야 합니다.<br>
+⑩회사가 이용회원의 네이버페이 서비스 이용 편의를 위해 제휴업체로부터 정보를 제공받아 게재하거나 제3자가 제공하는 방식으로 네이버페이 서비스 사이트 내 또는 링크 방식으로 참조용 정보나 콘텐츠를 제공하는 경우라도, 이용회원은 자신의 판단과 책임으로 결정하여 상품을 구매하여야 하며 회사는 어떠한 경우에도 이용회원의 구매결정에 대하여 책임을 부담하지 않습니다.<br>
+⑪이용회원은 회사가 정하고 인정하는 방식에 따라 네이버페이 포인트 또는 쿠폰 등을 사용하여야 합니다.<br>
+⑫미성년자가 네이버페이 서비스를 이용하여 상품 구매 시 법정대리인이 해당 계약에 대하여 동의를 하여야 정상적인 상품 구매계약이 체결될 수 있습니다. 관련하여 회사는 계약체결 후 추인을 얻지 않으면 미성년자 본인 또는 법정대리인이 그 계약을 취소할 수 있다는 내용을 계약체결 전에 고지하는 조치를 취합니다. 그 밖에 미성년자의 거래에 관한 상세한 사항은 관련 법령이 정한 바에 의합니다.<br><br>
+제 10 조 (이용회원의 금지행위)<br>
+①회사는 네이버페이 서비스의 신뢰성을 제고하고 안전한 거래가 이뤄질 수 있도록 아래와 같은 행위를 금지합니다.<br>
+1.회사가 제공하는 네이버페이 서비스 이용방법에 의하지 아니하고 비정상적인 방법으로 네이버페이 서비스를 이용하거나 시스템에 접근하는 행위<br>
+2.타인의 명의, 카드정보, 계좌정보 등을 도용하여 회사가 제공하는 네이버페이 서비스를 이용하는 행위<br>
+3.상품 거래를 가장하여 자금을 융통하는 것과 같이 여신전문금융업법 등 법령에 의하여 금지된 방법으로 비정상적인 결제를 하는 행위<br>
+4.회사가 정하지 않은 비정상적인 방법으로 네이버페이 포인트 또는 쿠폰을 취득하거나 사용하는 행위<br>
+5.회사가 게시한 정보의 무단 변경 또는 회사가 정한 정보 이외의 정보(컴퓨터 프로그램 등) 등의 송신 또는 게시 행위<br>
+6.회사 및 기타 제3자의 저작권 등 지식재산권 침해행위<br>
+7.회사 및 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위<br>
+8.외설 또는 폭력적인 메시지, 화상, 음성, 기타 공서양속에 반하는 정보를 서비스에 공개 또는 게시하는 행위<br>
+9.구매의사 없는 반복적인 구매행위<br>
+10.오프라인이나 다른 사이트에서 발생한 구매에 대해 네이버페이 포인트 등을 부당하게 확보할 목적으로 네이버페이 서비스를 통하여 구매가 발생하는 것처럼 가장하여 구매주문을 하는 행위<br>
+11.기타 불법적이거나 부당한 행위<br>
+②회사는 이용회원이 본 조의 금지행위를 행하는 경우 네이버페이 서비스 이용을 제한할 수 있으며, 이 경우 발생하는 모든 책임은 이용회원이 부담합니다. 회사는 필요한 경우 이용회원의 금지행위 사실을 관련 정부기관 또는 사법기관에 통지할 수 있습니다.<br><br>
+제 11 조 (네이버페이 서비스 이용제한 등)<br>
+①회사는 네이버페이 서비스를 통한 거래의 안정성과 신뢰성을 위하여 아래 각 호의 사유가 발생하는 경우 이용회원의 네이버페이 서비스 이용을 정지하거나 이용계약을 해지할 수 있습니다.<br>
+1.이 약관 제 10조의 금지행위에 해당하는 경우<br>
+2.네이버 회원자격이 정지되거나 상실하는 경우<br>
+3.이 약관에서 규정한 사항이나 별도페이지에 규정한 이용정책을 위반한 경우<br>
+②네이버페이 서비스의 이용이 정지된 이용회원은 해당 기간 동안 네이버페이 서비스를 이용할 수 없으며 기 적립된 네이버페이 포인트, 쿠폰 등도 사용이 불가합니다. 이용제한의 구체적인 기준 등에 대해서는 운영정책에서 정합니다.<br>
+③회사는 이용회원이 해당 사유를 소명하거나 거래 상대방의 양해가 있었음을 소명하는 등 회사가 정하는 기준을 충족하는 경우 제1항의 이용정지 조치를 해소할 수 있습니다.<br><br>
+제 12 조 (개인정보)<br>
+①회사는 이용회원이 안전하게 네이버페이 서비스를 이용할 수 있도록 이용회원의 개인정보보호를 위하여 개인정보보호정책을 실시하며, 이에 따라 이용회원의 개인정보를 보호 할 의무가 있습니다. 회사의 개인정보보호정책은 회사의 홈페이지 또는 네이버페이 서비스에 링크된 화면을 통하여 확인할 수 있습니다.<br>
+②회사는 네이버페이 서비스를 통하여 주문 및 결제가 이루어진 경우 거래 당사자간 원활한 의사소통 및 배송, 상담 등 거래 이행을 위하여 관련된 정보를 필요한 범위 내에서 거래 당사자에게 제공할 수 있습니다.<br><br>
+제 13 조 (결제대금 보호서비스의 이용)<br>
+①회사는 네이버페이 서비스에서 제공하는 전자상거래 서비스의 신뢰성을 제고하고 회원간 안전한 거래가 이루어질 수 있도록 결제대금 보호서비스를 제공합니다.<br>
+②결제대금 보호서비스를 이용하는 이용회원은 상품의 배송 완료 시 회사에 구매확정, 교환 또는 반품의 의사표시를 하여야 합니다.<br>
+③배송완료 또는 그에 부합하는 조치가 된 것으로 볼 수 있는 날이 되었음에도 구매확정기간 내에 이용회원로부터 교환 또는 반품의 의사표시가 없는 경우 회사는 구매확정의 의사가 있는 것으로 간주하여 익일에 자동구매확정 처리(이하 '자동구매확정')를 할 수 있습니다.<br>
+④회사는 이용회원의 구매확정의 의사가 있거나 구매확정의 의사가 있다고 간주되는 경우 전자상거래 등에서의 소비자보호에 관한 법률의 관련 규정에 따라 대금을 상품의 판매회원에게 송금하거나 결제대금 보호서비스사업자에게 송금을 요청할 수 있습니다.<br>
+⑤구매가 확정되고 판매자회원에게 정산이 완료시점에 결제대금 보호서비스가 종료되며, 이후 청약철회, 취소, 해제, 무효 등의 사유가 발생하는 경우 이용회원은 판매자회원과 직접 청약철회, 취소, 해제 및 결제대금 환불 등에 관한 절차를 진행함을 원칙으로 합니다.<br>
+⑥회사의 결제대금 보호서비스는 판매자회원 또는 이용회원을 대리하는 것이 아니며, 상품의 구매와 관련하여 판매자회원의 의무나 이용회원의 의무를 대행하는 것이 아닙니다.<br><br>
+제 14 조 (배송)<br>
+①배송 소요기간은 입금확인일 익일을 기산일로 하여 배송완료 되기까지의 기간을 말합니다. 공휴일 및 기타 휴무일 또는 천재지변 등 불가항력적인 사유가 발생한 경우 그 해당기간은 배송 소요기간에서 제외됩니다.<br>
+②배송과 관련하여 판매자회원과 이용회원, 배송업체, 금융기관 등과의 사이에 분쟁 등이 발생한 경우에는 해당 당사자간에 해결을 원칙으로 하고, 회사는 이에 대하여 관여하지 않으며 어떠한 책임도 부담하지 않습니다.<br><br>
+제 15 조 (반품/교환/환불/취소)<br>
+①이용회원은 구매한 상품에 대해 판매자회원이 주문확인하기 전까지 구매를 취소할 수 있으며, 배송 중인 경우에는 취소가 아닌 반품절차에 따라 처리됩니다.<br>
+②이용회원이 결제방법을 무통장(가상계좌)입금으로 선택한 경우에는 상품을 주문한 후 2영업일(토요일, 공휴일 제외)이내에 입금하지 않을 경우 주문취소로 간주되며, 해당 주문은 자동 취소됩니다.<br>
+③이용회원이 상품에 대한 결제를 완료한 후라도 판매자회원의 주문확인 이전에 취소신청 접수 시 특별한 사정이 없는 한 즉시 취소처리가 완료됩니다.<br>
+④이용회원은 전자상거래 등에서의 소비자보호에 관한 법률에 따라, 구매한 상품에 대해 배송 받은 후 7일 이내에 반품 또는 교환을 요청할 수 있으며, 이 경우 회사는 판매자회원에게 관련 법령에 의한 반품 등의 절차를 이행하도록 안내합니다. 반품에 관한 일반적인 사항은 전자상거래 등에서의 소비자보호에 관한 법률 등 관련 법령이 판매자회원이 이용회원에게 제시한 조건보다 우선합니다. 단, 이용회원이 해당 상품에 대하여 구매확정을 하는 경우에는 회사의 시스템을 통한 반품 신청은 제한될 수 있어 고객센터나 판매자회원를 통해 반품 신청하여야 합니다.<br>
+⑤제4항에도 불구하고, 해외결제 서비스의 경우 해외 쇼핑몰 소재지국의 법령이 적용되며 국내법의 적용이 제한될 수 있습니다.<br>
+⑥일반적으로 반품에 소요되는 비용은 반품에 대한 귀책사유가 있는 자에게 귀속됩니다. 즉 이용회원의 단순변심인 경우는 이용회원이 반품비용을 부담하며, 상품의 하자로 인한 반품의 경우는 판매자회원이 해당비용을 부담합니다.<br>
+⑦본 조 제3항에 따른 반품 신청 시 네이버페이 서비스에서 제공하는 반송서비스를 이용하지 않거나 반품사유에 관하여 판매자회원에게 정확히 통보하지 않을 시 반품처리 및 환불이 지연될 수 있습니다.<br>
+⑧반품에 소요되는 비용을 이용회원이 부담하여야 하는 경우 반품에 소요되는 비용의 추가 결제가 이루어지지 않으면 환불이 지연될 수 있습니다.<br>
+⑨이용회원이 상품에 대하여 교환신청을 하더라도 판매자회원에게 교환할 상품의 재고가 없는 경우에는 교환이 불가능하며, 이 경우에 해당 교환신청은 반품으로 처리될 수 있습니다.<br>
+⑩결제대금의 환불은 판매자회원이 상품을 이상 없이 반환 받은 날로부터 3영업일 이내에 대금의 결제와 동일한 방법(네이버페이 포인트, 신용카드 결제취소 등)으로 이루어집니다. 단, 네이버페이 포인트 결제의 경우, 결제 취소 시 한도 초과로 인한 환불 대기 등의 사유로 환불이 지연될 수 있습니다.<br>
+⑪현금결제대금의 환불은 상품을 반환 받은 날로부터 3영업일 이내에 이용회원이 지정한 환불방법에 따라 이용회원이 지정하는 계좌(탈퇴한 회원의 경우 탈퇴하기 전 최종적으로 지정한 계좌)​로 직접 환불처리되거나 회사가 환불정산액으로 분류하여 일정기간 보관합니다. 이용회원은 환불정산액을 원하는 바에 따라 자신이 지정한 계좌로 입금 받아 이를 현금으로 출금하거나 네이버페이 포인트로 전환해서 사용할 수 있습니다.환불정산액의 운영 및 출금에 관한 세부적인 사항은 회사의 정책에 따릅니다.<br>
+⑫신용카드나 휴대폰을 통한 결제대금 환불 시 결제수단의 전자결제대행사업자, 전자결제대행 또는 중개서비스 사업자의 정책 상 특정기간이 지나 동일한 결제수단의 취소가 불가능한 경우에는 환불정산액으로 환불이 진행됩니다.<br>
+⑬이용회원은 다음 각 호의 경우에는 환불 또는 상품교환을 요청할 수 없습니다.<br>
+1.이용회원의 귀책사유로 인하여 상품이 멸실 • 훼손된 경우<br>
+2.이용회원의 상품 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우<br>
+3.시간의 경과에 의하여 재판매가 곤란할 정도로 상품의 가치가 현저히 감소한 경우<br>
+4.복제가 가능한 상품의 포장을 훼손한 경우<br>
+5.환불 또는 교환을 인정하는 경우 판매자회원에게 회복할 수 없는 중대한 피해가 예상되는 경우<br>
+⑭특정기간까지 주문이 정상적으로 종료되지 못할 경우 회사는 거래관계의 확정을 위하여 이용회원의 의사에 명시적으로 반하지 않는 한 해당 주문을 임의로 구매확정 내지 주문 취소 및 환불 처리할 수 있으며, 처리 15일전 관련 내용을 이용회원에게 통보하여야 합니다. 단, 이용회원이 이를 원치 않을 경우 이의를 제기할 수 있습니다.<br><br>
+제 16 조 (네이버페이 송금)<br>
+①이용회원은 은행 등의 금융기관에 계좌를 개설하고 이를 네이버 아이디와 연계하여 등록한 후 관련 법령이 지정하는 자동이체 출금 동의와 소정의 확인 및 인증 절차를 거쳐 송금 서비스를 이용할 수 있습니다.<br>
+②네이버 아이디와 연계하여 등록된 이용회원의 자동이체 출금 동의가 완료된 계좌인 “결제/송금용 계좌”는 이용회원 간의 송금 이외에 네이버페이 간편결제에서도 이용할 수 있습니다.<br>
+③송금 받는 사람은 이용회원이 송금을 보낼 당시에는 이용회원이 아니더라도 송금 잔고를 본인의 계좌로 전송 받거나 네이버페이 포인트로 전환하기 위해서는 네이버페이 서비스 이용계약을 체결하여야 합니다.<br>
+④송금 받는 사람은 송금 알림을 받았을 경우 송금 받는 방식에 대해 의사표시를 해야 합니다.<br>
+⑤송금 받는 사람이 서비스에서 정해진 기간 내에 의사표시를 하지 않았을 경우, 회사는 송금 절차를 취소하고 송금 보낸 이용회원의 결제/송금용 계좌로 환불합니다. 다만, 송금한 이용회원의 결제/송금용 계좌가 환불 받을 수 없는 상태인 경우는 환불정산액으로 보관합니다.<br><br>
+제 17 조 (네이버페이 간편결제)<br>
+①이용회원이 계좌를 등록하거나 회사가 정한 방법으로 제휴된 카드사의 카드번호를 등록한 경우에 네이버페이 간편결제를 이용할 수 있습니다.<br>
+②네이버페이 간편결제는 제휴된 은행과 카드사의 계좌 혹은 카드를 정상적으로 발급받아 소지한 이용회원에 한해 이용 가능하며, 네이버페이 간편결제를 위해 계좌나 카드번호를 연계하여 등록하는 과정에서 사전에 정해진 방법으로 인증을 완료해야 합니다. 일부 제휴사의 경우 제휴사의 서비스 웹페이지 혹은 연결된 화면을 통해서 별도의 동의/가입이 필요한 경우에는 해당 절차를 완료해야 이용 가능합니다.<br>
+③네이버페이 간편결제는 네이버페이 사용처에서만 사용 가능하며, 사용처와의 계약 또는 사용처의 정책에 따라 일부 결제수단의 사용이 제한될 수 있습니다.<br><br>
+제 18 조 (통합조회서비스)<br>
+①회사는 통합조회서비스 이용 신청 및 정보수집 동의 등 필요 요건을 구비한 이용회원에 대하여 통합조회서비스를 제공할 수 있습니다. 단, 이용회원이 이용하는 금융기관 등의 보안 및 인증 기준 등에 따라 서비스 제공이 불가능할 수도 있습니다.<br>
+②통합조회서비스는 이용회원이 이용하는 다른 회사나 금융기관이 생성한 정보에 기초하여 제공되므로 회사는 그 정보의 정확성을 보장하지 아니합니다.<br>
+③통합조회서비스를 통해 열람 가능한 다른 회사 혹은 금융기관,정보(계좌,카드 등)의 구체적인 항목은 회사가 정책으로 정할 수 있습니다.<br>
+④이용회원은 회사가 제공하는 별도의 메뉴를 통하여 통합조회서비스 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다.<br><br>
+제 19 조 (네이버페이 비밀번호)<br>
+①회사는 네이버페이 비밀번호를 대체하는 인증방법으로 지문, 음성 등을 추가로 제공할 수 있으며, 대체 인증방법을 선택 혹은 이용할 수 있는 이용회원의 PC, 모바일 등의 단말기에서 사용할 수 <br>
+②회사는 네이버페이 이용회원의 구매 이력과 회사에서 정한 기준에 따라 네이버페이 비밀번호를 포함하여 인증 과정을 생략하거나 네이버페이 비밀번호 이외의 추가 인증을 요구할 수 있습니다.<br>
+③네이버페이 비밀번호 관리에 관한 일체의 책임은 이용회원 본인에게 있습니다. 자신의 비밀번호를 제3자에게 대여 또는 양도하거나 이와 유사한 행위를 하여서는 아니 되며, 비밀번호의 관리를 소홀히 하여 발생하는 모든 책임은 이용회원 본인에게 있습니다.<br>
+④이용회원은 자신의 비밀번호가 부정하게 사용된 경우에 즉시 자신의 비밀번호를 바꾸고 그 사실을 회사에 통보하여야 합니다.<br><br>
+제 20 조 (네이버페이 포인트)<br>
+①회사는 이용회원이 상품의 구매, 상품평의 작성, 이벤트 참여 등 네이버페이 서비스를 이용하는 경우, 회사의 정책에 따라 이용회원에게 네이버페이 포인트를 무상 적립해줄 수 있습니다.<br>
+②이용회원은 네이버페이 서비스를 통하여 판매자회원과 거래 시 단독으로 또는 다른 결제 수단과 함께 네이버페이 포인트를 사용할 수 있습니다.<br>
+③"회사"는 이용회원이 네이버페이 사용처에서 상품을 구매할 경우, 상품의 특성이나 네이버페이 사용처와의 계약 또는 사용처의 정책에 따라 결제수단을 제한할 수 있습니다.<br>
+④이용회원은 회사가 정한 결제수단을 이용하여 네이버페이 포인트를 유상 충전하여 사용할 수 있습니다.<br>
+⑤외국에서 해외결제 서비스 이용 시 네이버페이 포인트 보유액이 결제금액보다 부족한 경우 그 부족액만큼(단, 부족액이 자동충전 최소금액보다 적은 경우에는 자동충전 최소금액만큼) 자동으로 충전됩니다.<br>
+⑥네이버페이 포인트의 부여 및 사용에 관한 상세한 사항은 회사가 정한 정책에 따르며, 회사는 네이버페이 서비스 페이지에 관련 링크 등을 통하여 이를 이용회원에게 안내합니다.<br>
+⑦무상으로 적립 받은 네이버페이 포인트는 현금으로 전환하거나 환불이 불가하고, 유상으로 충전한 경우는 충전취소나 충전한 결제수단으로 취소가 안 되는 경우는 본인의 계좌로 입금 받아 이를 통해 현금으로 인출할 수 있습니다.<br>
+⑧다음 각 호에 해당하는 경우 해당 네이버페이 포인트가 소멸됩니다.<br>
+1.네이버페이 포인트의 소멸시효가 경과하는 경우<br>
+2.네이버페이 서비스의 이용계약이 해지되는 경우 기 보유한 무상의 네이버페이 포인트<br>
+⑨이용회원은 네이버페이 포인트를 본인의 거래에 대해서만 사용할 수 있으며, "회사"가 정한 방식에 의하여 "회사"의 시스템을 통해서만 양도할 수 있습니다.<br>
+⑩이용회원이 부당 또는 부정하게 네이버페이 포인트를 취득한 경우 이용회원은 네이버페이 포인트를 사용할 수 없으며 회사는 이를 회수할 수 있습니다.<br>
+⑪회사는 아래와 같은 거래 건을 네이버페이 포인트의 정상적인 운영을 방해하는 재판매를 위한 거래행위로 간주하여 해당 회원의 네이버페이 포인트 적립을 제한하거나 취소할 수 있습니다.<br>
+1.특정 상품군에 대하여 반복적인 구매를 지속적으로 진행하는 경우<br>
+2.고액의 상품군을 반복 지속적으로 구매하는 경우<br>
+3.가전, 유아동 물품, 식품 등의 상품을 대량으로 구매하는 경우<br>
+4.기타 회사가 정하는 일정 규모 이상의 거래 건으로 재판매를 위한 거래로 합리적으로 의심되는 경우<br>
+​⑫이용회원이 상품 구매나 이벤트 등을 통하여 회사로부터 무상으로 제공받은 네이버페이 포인트는 회사에서 정한 기한내에만 이용이 가능합니다.<br>
+⑬구매를 통해 적립된 네이버페이 포인트는 해당 구매가 취소될 경우 회사에 의해 환수될 수 있습니다.<br>
+⑭네이버페이 포인트의 소멸시효는 마지막 적립, 충전일 또는 사용일로부터 10년입니다.<br><br>
+제 20조의 2(해외결제 서비스)<br>
+①해외결제 서비스 이용에 동의한 회원은 회사와 이용계약을 체결한 해외 쇼핑몰에서 해외결제 서비스를 이용할 수 있습니다. 단, 법령 및 회사 정책에 따라 해외 쇼핑몰에서는 일부 결제수단이 제한될 수 있습니다.<br>
+②회원이 해외결제 서비스를 이용하는 경우에는 외국환 거래규정 등에서 정한 사항을 준수하여야 합니다.<br>
+③ 해외결제 서비스 이용 시 상품가격은 가맹점의 현지통화를 가맹점이 정한 환율로[대외결제 대행은행의 최초고시 매매기준율이 적용되어] 원화로 환산하여 회원에게 청구됩니다. 만약, 이용회원이 해외에서 사용한 결제내역을 취소할 경우 환율변동에 따른 손익은 회사가 부담합니다.<br><br>
+제 21 조 (쿠폰)<br>
+①회사는 이용회원이 네이버페이 서비스를 통하여 상품을 구매하는 경우, 회사의 정책에 따라 이용회원에게 일정액 또는 일정비율을 할인 받을 수 있는 쿠폰을 부여할 수 있습니다.<br>
+②회사는 판매자회원, 상품의 품목, 거래금액 등에 따라 쿠폰의 사용을 제한할 수 있습니다.<br>
+③쿠폰의 부여 및 사용에 관한 상세한 사항은 회사가 정한 정책에 따르며, 회사는 네이버페이 서비스 페이지를 통하여 이를 이용회원에게 안내합니다.<br>
+④이용회원은 쿠폰을 명시된 사용 기간 내만 사용할 수 있습니다.<br>
+⑤이용회원은 쿠폰을 본인의 거래에 대해서만 사용할 수 있으며, 어떠한 경우라도 쿠폰을 타인에게 매매 또는 양도하거나, 실질적으로 매매 또는 양도와 동일하게 볼 수 있는 행위를 하여서는 아니 됩니다.<br>
+⑥이용회원이 부당 또는 부정하게 쿠폰을 취득한 경우 이용회원은 쿠폰을 사용할 수 없으며, 회사는 이를 회수할 수 있습니다.<br><br>
+제 22 조 (리뷰)<br>
+①이용회원은 네이버페이 서비스를 통해 구매한 상품의 리뷰를 등록할 수 있으며, 리뷰의 저작권은 해당 리뷰의 작성자에게 귀속합니다.<br>
+②리뷰 등록으로 인해 저작권 침해 등 이용회원과 제3자 사이에 분쟁이 발생하는 경우 이와 관련한 일체의 책임은 해당 리뷰를 등록한 이용회원에게 있습니다.<br>
+③회사는 이용회원이 등록한 리뷰가 다음 각 호에 해당한다고 판단되는 경우 사전 통보 없이 해당 리뷰를 삭제하거나 열람을 제한할 수 있으며, 이용회원의 서비스 이용을 중지 또는 해지 할 수 있습니다.<br>
+1.타인의 권리나 명예, 신용, 기타 정당한 이익을 침해하는 경우<br>
+2.사회 공공질서나 미풍양속에 위배되는 경우<br>
+3.범죄행위와 관련된 내용을 포함하는 경우<br>
+4.허위 또는 과장 광고 내용을 포함하는 경우<br>
+5.불법물, 음란물 또는 청소년유해매체물의 게시, 등록 또는 이와 관련된 물품을 홍보하거나 사이트를 링크하는 경우<br>
+6.정보통신기기의 오작동을 일으킬 수 있는 악성코드나 데이터를 포함하는 경우<br>
+7.관련 법령에서 정하거나 정당한 권한을 가진 정부기관 등의 요청 등이 있는 경우<br>
+8.회사가 제공하는 서비스의 원활한 진행을 방해하는 것으로 판단되는 경우<br>
+④회사는 판매자회원의 요청에 따라 이용회원이 등록한 리뷰를 판매자회원의 쇼핑몰 또는 스마트스토어 내에 노출할 수 있도록 제공하거나 협조할 수 있습니다. 단, 회사는 판매자회원이 본인의 쇼핑몰 또는 스마트스토어에서 리뷰를 운영하는 것에 관여하지 않으며, 이에 대하여 어떠한 책임도 부담하지 않습니다.<br>
+⑤회사는 리뷰를 검색결과나 프로모션 등 네이버페이 서비스와 관련된 목적 범위 내에서 무상으로 사용할 수 있으며, 회사의 사용목적에 따라 필요한 범위 내에서 일부 수정, 복제, 편집하여 사용할 수 있습니다. 단, 이용회원은 언제든지 고객센터 및 신고하기 등을 통해 해당 리뷰에 대해 삭제, 비공개 등의 조치를 요청할 수 있습니다.<br><br>
+제 23 조 (저작권정책)<br>
+①회사는 네이버페이 서비스를 이용함에 있어 저작권자의 저작권 보호를 위한 정책을 수립하여 운영하며 이용회원은 회사의 저작권 정책을 준수하여야 합니다.<br>
+②이용회원이 네이버페이 서비스를 이용하면서 작성한 각종 게시물의 저작권은 이를 작성한 회원 본인에게 있으며, 해당 게시물이 타인의 저작권을 침해하는 경우 그에 대한 책임은 회원 본인이 부담합니다.<br>
+③이용회원이 작성한 리뷰 등의 게시글은 회사 정책에 따라 일정기간 노출되며 해당 기간 경과 후 삭제조치 될 수 있습니다.<br>
+④회사가 작성한 저작물에 대한 저작권 기타 지식재산권은 회사에 귀속합니다.<br>
+⑤이용회원은 네이버페이 서비스를 이용함으로써 얻은 정보를 회사의 사전 승낙 없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 이용하거나 제3자에게 이용하게 하는 경우 그에 대한 책임은 이용회원 본인에게 있습니다.<br>
+⑥이용회원은 네이버페이 서비스 내에서 자신의 저작권이 침해된 경우 회사가 운영하는 신고센터 제도를 이용하여 신고 및 필요조치를 요청할 수 있고, 회사는 관련법에 따라 조치를 취합니다.<br>
+⑦회사는 다음과 같은 경우 사전통보 없이 게시물을 삭제하거나 게시자에 대하여 네이버페이 서비스 내 특정서비스의 이용제한, 네이버페이 서비스 이용계약의 해지 등의 조치를 할 수 있습니다.<br>
+1.대한민국의 법령을 위반하는 내용을 포함하는 경우<br>
+2.타인의 권리나 명예, 신용 기타 정당한 이익을 침해하는 경우<br>
+3.정보통신기기의 오작동을 일으킬 수 있는 악성코드나 데이터를 포함하는 경우<br>
+4.사회 공공질서나 미풍양속에 위배되는 경우<br>
+5.회사가 제공하는 서비스의 원활한 진행을 방해하는 것으로 판단되는 경우<br><br>
+제 24 조 (회원등급 및 평가제도)<br>
+①회사는 네이버페이 서비스를 이용하여 상품을 거래한 경우에 부과되는 점수를 기준으로 회원등급 및 등급에 따른 일정 혜택 등을 부여할 수 있습니다. 회원등급 및 그에 따른 혜택 등에 대하여는 네이버페이 서비스 이용실적, 기타 회사가 정하는 운영정책에서 정한 기준에 따라 부여되며, 상세한 내역은 해당 서비스 화면에 게재하거나 네이버페이 서비스 페이지에 공지합니다.<br>
+②이용회원이 자신에게 부여된 등급 구성요소에 대하여 이의를 제기하는 경우 회사는 소명내용, 해당 회원의 거래실적 등 제반 상황을 감안하여 등급 구성요소의 전부 또는 일부를 조정할 수 있습니다.<br>
+③이용회원의 등급은 네이버페이 서비스 이용 시의 참고자료로 활용될 뿐이며, 이용회원의 신용을 보증하거나 금융 상의 신용상태를 의미하는 것은 아닙니다.<br>
+④이용회원이 회원등급 및 회원평가제도의 목적과 취지에 위반하는 행위를 하는 경우 회사는 해당 등급의 삭제 및 해당 회원에 대한 서비스 이용 정지 조치 등을 취할 수 있습니다.<br><br>
+제 25 조 (해외 구매대행, 해외 직배송)<br>
+①이용회원이 해외구매대행, 해외직배송 상품을 구매하는 경우, 해외배송의 특성상 상품이 발송되기 전까지 구매를 취소할 수 있으며, 상품이 이미 발송된 경우에는 취소요청이 거절될 수 있습니다.<br>
+②상품하자 등으로 인한 교환/반품의 경우 이용회원은 배송완료 후 일주일 이내에 그러한 사유에 대해 증빙을 제시하여 교환/반품신청을 하여야 합니다.<br>
+③교환/반품사유가 이용회원의 단순변심이나 귀책사유로 인한 경우는, 왕복 배송비를 이용회원이 부담하여야 합니다.<br>
+④해외구매대행, 해외직배송 상품 가격에는 관세가 포함되어 있을 수 있고, 관세가 포함되어 있지 않은 상품의 경우에도 상품 종류, 가액, 구매 목적(국내 판매 목적 구매 등) 등에 따라 추후 관세가 부과될 수 있으며 이와 관련하여 관세청으로부터 수입신고 절차 및 관세 납부 절차의 통지를 받으실 수 있습니다.<br>
+⑤회사는 전항의 수입신고 및 관세 납부 등을 위하여 관세청으로부터 이용회원의 거래내역 및 개인정보의 제공을 요청 받을 경우, 해당 정보를 관세청에 제공할 수 있습니다.<br>
+⑥본 조에서 달리 규정된 사항을 제외하고는, 해외배송, 구매대행 상품 구매에 있어서도 이 약관의 제반 내용이 동일하게 적용됩니다.<br><br>
+제 26 조 (안전거래센터)<br>
+①회사는 타인 권리에 대한 침해, 법령 위반 등 이용회원이 네이버페이 서비스를 이용함에 있어 발생할 수 있는 거래의 안전과 관련된 법적 문제를 조정 및 처리하기 위하여 안전거래센터를 운영합니다.<br>
+②회사의 안전거래센터는 다음과 같은 역할을 합니다.<br>
+1.판매자회원에 의한 매매부적합물의 판매 발견 시 이에 대한 조치<br>
+2.회사의 이용규칙에 대한 모니터링 및 조치<br>
+3.타인의 권리를 침해하는 행위에 대한 조치<br>
+4.기타 거래의 안전 또는 법령을 위반하는 행위에 대한 조치<br>
+③안전거래센터의 조정 및 처리에 대하여 이용회원은 신의성실의 원칙에 따라 성실히 응하여야 합니다.<br><br>
+제 27 조 (민원처리 및 분쟁조정)<br>
+①회사는 이용회원과 판매자회원 간의 상품 거래에 관여하지 않으며, 이에 대하여 어떠한 책임도 부담하지 않는 것을 원칙으로 합니다. 다만, 이용회원과 판매자회원 간 또는 이용회원과 제3자 사이의 민원 및 분쟁이 발생할 경우, 회사는 합리적인 범위 내에서 이를 조정할 수 있습니다.<br>
+②회사가 민원처리 및 분쟁조정을 하는 경우 회사는 제3자의 입장에서 공정하게 조정에 임합니다.<br>
+③회사의 분쟁조정에 대하여 이용회원은 신의성실원칙에 따라 성실히 응하여야 합니다.<br><br>
+제 28 조 (네이버페이 서비스의 중단)<br>
+①회사는 통신, 전력 등의 공급이 중단되는 불가피한 경우는 물론 정보통신설비의 보수점검, 증설, 교체, 이전 등의 유지 관리 업무를 수행하기 위해 필요한 경우 7일 이전에 공지 후 네이버페이 서비스의 제공을 일시적으로 중단할 수 있습니다. 다만, 불가피하게 사전 공지를 할 수 없는 경우 회사는 사후 공지할 수 있습니다.<br>
+②회사는 천재지변, 전쟁, 폭동, 테러, 해킹, DDOS 등 불가항력적 사유로 네이버페이 서비스가 중단된 경우 즉시 이러한 사실을 공지하되, 만일 정보통신설비의 작동불능 등의 불가피한 사유로 인해 사전공지가 불가능한 경우에는 이러한 사정이 해소된 이후 즉시 공지합니다.<br>
+③회사는 파산 또는 회생절차 개시 등 정상적인 영업활동이 곤란하여 네이버페이 서비스를 지속할 수 없는 때에는 이용회원에게 이를 통지한 날로부터 30일이 경과한 때부터 네이버페이 서비스를 중단할 수 있습니다.<br>
+④회사는 본 조 제1항 내지 제2항의 사유가 발생한 경우 최대한 빠른 시간 내에 네이버페이 서비스를 재개하도록 최선의 노력을 다합니다.<br>
+⑤회사는 본 조에 따른 네이버페이 서비스의 중단에 대하여 어떠한 책임도 부담하지 않습니다.<br><br>
+제 29 조 (회사의 면책)<br>
+①판매자회원과 이용회원 간에 이루어지는 상품의 거래와 관련하여 발생하는 상품의 배송, 청약철회 또는 교환, 반품 및 환불 등의 거래진행은 거래의 당사자인 판매자회원와 이용회원 각각의 책임 하에 이루어집니다. 회사는 판매자회원와 이용회원간의 상품 거래에 관여하지 않으며, 이에 대하여 어떠한 책임도 부담하지 않습니다.<br>
+②회사는 이용회원의 귀책사유로 인한 네이버페이 서비스 이용의 장애에 대하여 책임을 지지 않습니다.<br>
+③이용회원이 자신의 개인정보 및 계정(아이디, 네이버 로그인 비밀번호, 네이버페이 비밀번호) 등을 타인에게 제공하거나, 이용회원의 관리소홀로 유출됨으로써 발생하는 피해에 대해서 회사는 책임을 지지 않습니다.<br>
+④회사의 네이버페이 서비스 화면에서 링크, 배너 등을 통하여 연결된 제3자와 이용회원간에 이루어진 거래에 회사는 개입하지 않으며, 해당 거래에 대하여 책임을 지지 않습니다.<br>
+⑤회사는 네이버페이 서비스 화면에 표시되는 판매자회원 또는 제3자가 제공하는 상품 및 정보 등의 정확성, 적시성, 타당성 등에 대하여 보증하지 않으며, 그와 관련하여 어떠한 책임도 부담하지 아니 합니다.<br><br>
+제 30 조 (통지)<br>
+①회사는 이 약관과 관련한 통지 시 이용회원이 제공한 전자우편주소, (휴대)전화번호, 로그인 시 동의창 등의 수단으로 할 수 있습니다.<br>
+②회사는 전체 또는 다수의 이용회원에 대한 통지의 경우 홈페이지에 게시함으로써 개별 통지를 갈음할 수 있습니다. 다만, 서비스 이용에 중대한 영향을 주는 사항에 대해서는 전항의 통지 수단 중 2개 이상의 방법으로 통지합니다.<br>
+③본 조에 따라 회사가 발송하는 전자우편이 이용회원의 수신 거부 또는 이용회원이 제공한 전자우편주소 등이 사실과 부합하지 않아 발행하는 오류 등에 대해서 회사는 책임지지 않습니다.<br><br>
+제 31 조 (준거법 및 재판관할)<br>
+①약관과 관련된 사항에 대하여는 대한민국법을 준거법으로 합니다.<br>
+②회사와 이용회원 간 발생한 분쟁에 관한 소송은 민사소송법 상의 관할법원에 제소합니다.<br><br>
+2 장 네이버페이 안전결제<br><br>
+제 32 조 (목적)<br>
+본 장은 회사가 제공하는 네이버 안전결제의 이용과 관련하여 회사와 안전결제 판매회원과의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다<br><br>
+제 33 조 (서비스 종류와 이용료)<br>
+①본 장에 따라 회사가 제공하는 네이버페이 안전결제는 전자지급결제대행 및 결제대금 보호서비스로 구성됩니다.<br>
+②회사는 안전결제 판매회원과 이용회원이 상품 거래할 때 네이버페이 안전결제를 이용할 수 있도록 제공하는 것이며, 개별 안전결제 판매회원이 서비스에 등록한 상품과 관련해서 일체의 책임을 지지 않습니다.<br>
+③회사는 업무상 또는 기술상 특별한 지장이 없는 한 연중무휴, 1일 24시간 서비스 제공을 원칙으로 하지만, 정기점검이나 시스템의 업그레이드가 필요한 날이나 시간에 서비스를 일시 중단할 수 있으며, 예정되어 있는 작업으로 인해 서비스를 일시 중단하는 경우 판매자 센터 등을 통해 사전에 공지합니다.<br>
+④회사는 안전결제 판매회원에게 서비스이용료를 부과할 수 있으며, 서비스이용료의 구체적인 사항 및 요율 등을 서비스안내 페이지 등을 통해 공지합니다.<br>
+⑤회사는 서비스 이용료를 안전결제 판매회원에게 지급해야 하는 정산대금에서의 공제, 환불정산액의 차감 등으로 징수할 수 있으며, 회사와 안전결제 판매회원간의 협의 또는 회사의 내부적인 정책 등에 따라 수수료 및 징수 방법을 다르게 정할 수 있습니다.<br>
+⑥회사는 필요한 경우 네이버페이 안전결제 서비스가 적용되는 제휴 사이트 및 서비스이용료 등을 신설, 변경할 수 있으며, 신설 또는 변경사항은 네이버페이 서비스 공지사항을 통하여 공지합니다.<br><br>
+제 34 조 (안전결제 판매회원의 금지행위)<br>
+①안전결제 판매회원은 다음 각 호에 해당하는 행위를 하여서는 아니 되며 이를 위반한 경우 회사는 제48조에 따라 서비스의 이용을 정지하거나 제49조에 따라 이용계약을 해지할 수 있습니다.<br>
+1.일반사항<br>
+가.서비스를 통해 음란정보, 거짓정보 등 유해한 정보를 게재하거나 링크하는 행위<br>
+나.범죄행위와 결부되는 모든 행위 및 기타 관계법령에 위반되는 행위<br>
+다.해킹, 컴퓨터 바이러스 유포, 서버 공격 등으로 타인과 회사에 해가 되는 경우<br>
+라.서비스의 안정적 운영을 방해할 목적으로 다량의 정보를 전송하거나 수신자의 의사에 반하여 광고성 정보를 지속적으로 전송하는 행위<br>
+마.통신판매 이외의 목적으로 서비스를 이용하는 행위<br>
+바.회사 서비스를 방해하거나 장애를 발생시킬 수 있는 모든 행위<br>
+사.이 약관에 따른 권리∙의무를 회사의 사전 서면 동의 없이 타인에게 양도, 증여하거나 이를 담보제공 하는 행위<br>
+2.판매관련 금지행위<br>
+가.물품 또는 용역을 허위로 가장하거나 가족 또는 지인 등 타인의 아이디를 이용하여 판매자 본인의 물품을 구매하는 등의 부정거래 행위<br>
+나.관련법령에 위반되는 상품을 판매하거나 판매 자격을 갖추지 아니하고 특정상품을 판매하는 행위<br>
+다.회사가 제공하는 쿠폰, 네이버페이 포인트 등을 부당하게 수취할 목적으로 오프라인이나 타사이트에서 발생한 거래를 회사의 결제시스템을 이용하기 위해 온라인으로 가장하여 거래하는 행위 또는 타사이트에서 발생한 거래 건을 재주문하여 발송하는 행위 등<br><br>
+제 35 조 (매매부적합 상품)<br>
+①회사는 안전결제 판매회원이 네이버페이 안전결제를 적용한 상품이 본 조에 따른 매매부적합상품 등 온라인상에서의 매매, 유통에 적합하지 않은 물품인 경우에는 직권으로 서비스 이용을 금지할 수 있으며 발생한 거래의 취소 및 이용정지를 할 수 있습니다<br>
+②회사는 등록된 물품이 법령 또는 약관에 위반되거나, 공서양속을 저해하거나 기타 탈법행위와 관련되거나 그러한 목적이 있는 경우 또는 회사의 정책상 필요에 의한 경우에는 직권으로 네이버페이 안전결제 이용을 금지 할 수 있으며 발생한 거래의 취소 및 회원 이용정지를 진행할 수 있습니다.<br>
+③다음 각 호의 매매부적합상품은 판매를 금하며, 매매부적합상품을 판매함에 따른 모든 책임은 해당 상품을 등록한 판매자회원이 부담합니다.<br>
+1.허위 또는 과장 광고를 통한 상품<br>
+2.지적재산권(상표권, 저작권 등) 등 타인의 권리를 침해하는 상품<br>
+3.관련 법령에서 유통을 금지하는 음란물 등<br>
+4.인증검사 등을 통과하지 못한 공산품 또는 전기, 통신용품<br>
+5.심의되지 않거나 불법 복제된 영상물, 음반, 게임물 등<br>
+6.장물이나 습득한 유실물<br>
+7.주류, 담배, 시력보정용 안경(수경, 선글라스 등 여가용 제품 포함), 콘택트렌즈, 선글라스, 군수품, 의약품 등 관련 법령에 의하여 통신판매가 금지되는 상품<br>
+8.관계기관으로부터 판매중지 또는 유보 결정(요청)이 있는 상품<br>
+9.기타 회사의 정책에 따라 취급이 금지되거나 공서양속에 반하는 상품<br><br>
+제 36 조 (상품의 배송)<br>
+①이용회원의 주문에 따른 결제가 완료되면, 안전결제 판매회원은 당해 주문 정보에 따라 상품이 파손되지 않도록 적절한 포장을 한 후 배송의 증명이나 추적이 가능한 물류대행(택배)업체에 배송을 위탁하여 배송하여야 합니다.<br>
+②안전결제 판매회원은 이용회원의 결제일로부터 3 영업일 이내에 상품의 발송을 완료하여야 하고, 판매관련 페이지에 송장번호 등의 발송 관련 정보를 입력하여 발송이 완료되었음을 증명하여야 합니다.<br>
+③안전결제 판매회원이 전항의 기한 내에 발송하지 못할 경우에는 판매관리 메뉴 내 발송지연 안내 기능을 이용하여 발송지연사유 및 발송예정일을 입력해야 하며, 발송지연 안내 처리를 하지 않거나, 발송지연 안내 처리시 입력한 발송예정일을 초과하는 경우 회사는 페널티 부여 등으로 불이익을 줄 수 있고, 구매자 취소 요청 시 해당 주문 건은 안전결제 판매회원의 승인 없이 환불처리 할 수 있습니다.<br>
+④이용회원의 귀책사유 없이, 안전결제 판매회원의 배송지 오류 등으로 인하여 이용회원이 상품을 정상적으로 수령하지 못한 경우 또는 상품의 배송과정에서 하자가 발생한 경우, 안전결제 판매회원은 그에 관한 모든 책임을 부담하여야 합니다.<br>
+⑤회사는 제3자와 업무제휴를 통해 배송상태 조회, 송장출력, 반품택배 네트워킹 서비스 등을 실시할 수 있습니다.<br>
+⑥안전결제 판매회원이 상품의 배송과 관련하여 이용회원과 분쟁이 발생한 경우 회사는 안전결제 판매회원에게 배송완료의 증빙을 요청할 수 있으며, 안전결제 판매회원은 회사의 요청이 있은 날로부터 7일 이내에 해당 자료를 제출하여야 합니다. 안전결제 판매회원이 전항의 증빙자료를 제출하지 않거나, 허위 배송정보의 입력으로 이용회원 및 회사에의 발생하는 손해 및 제반 문제에 대한 모든 책임은 안전결제 판매회원에게 있으며, 회사는 거래 취소 등을 진행 할 수 있습니다.<br>
+⑦안전결제 판매회원은 배송 방식을 배송의 트래킹이 되지 않는 직접전달 등으로 선택하여 발송할 수 있으나 배송의 증명 또는 배송의 추적이 되지 않아 클레임이 발생할 경우, 상품배송에 대한 증빙자료를 제시하여야 합니다.<br><br>
+제 37 조 (취소, 반품, 교환, 환불)<br>
+①안전결제 판매회원은 이용회원이 주문한 상품을 공급하기 곤란하다는 것을 알았을 때, 즉시 해당 사실을 이용회원 및 회사에 유선으로 통보하고 이용회원의 동의를 얻은 후 취소를 하여야 하며, 회사가 이용회원의 상품 대금 결제일로부터 3일 이내에 상품대금 환불 및 환불에 필요한 조치를 취할 수 있도록 하여야 합니다.<br>
+②안전결제 판매회원은 반품상품 수령일로부터 3영업일 이내에 환불 또는 환불에 필요한 조치를 취하여야 합니다. 만약 안전결제 판매회원이 3영업일 내에 아무런 조치를 취하지 않은 주문 건은 자동 환불 될 수 있습니다.<br>
+③안전결제 판매회원은 상품하자나 오배송 등 이용회원의 귀책사유 없는 반품 또는 교환의 경우 이용회원에게 해당 배송비를 부담시켜서는 안되며, 반품 배송비를 선 결제한 이용회원이 반품상품 발송 시 추가 부담한 착불 배송료는 이용회원의 요청에 따라 반환하여야 합니다.<br>
+④이용회원은 상품 배송완료일로부터 7일 이내에 반품요청을 할 수 있으며 안전결제 판매회원은 이용회원이 이 기간 내 반품이나 교환을 요청하는 경우 이용회원의 요청에 따라 반품 또는 교환을 해 주어야 합니다. 단, 이용회원의 귀책사유로 상품이 훼손된 경우, 사용이나 일부 소비로 인해 상품의 가치가 현저히 감소한 경우, 복제 가능한 상품의 포장을 훼손한 경우, 상품 판매 시 반품이나 교환의 제한을 명시적으로 고지한 경우 및 기타 법령에 의하여 반품이 제한되어 있는 경우는 예외로 합니다. 또한 상품이 표시 또는 광고 내용과 다를 경우에는 상품수령 후 90일 이내 또는 그 사실을 알게 된 날 또는 알 수 있었던 날로부터 30일 이내에 이용회원이 반품 또는 교환을 요청하는 경우, 안전결제 판매회원은 반품 또는 교환을 해주어야 합니다.<br>
+⑤안전결제 판매회원이 전자상거래등에서의소비자보호에관한법률이 정하는 범위에 따라 이용회원의 청약철회를 제한하고자 하는 경우, 상품페이지 등 이용회원이 쉽게 알 수 있는 곳에 반품제한 사유를 게재하여야 합니다.<br>
+⑥이용회원이 물류나 가구직배송 등 자체 배송한 상품의 경우 안전결제 판매회원은 최초의 배송 시에 이용회원에게 반품절차를 정확히 안내하여야 합니다.<br>
+⑦이용회원이 상품 수령 후 교환이나 환불을 요청하는 경우 안전결제 판매회원은 관련 법률에 의거하여 반품을 받은 후 교환이나 환불 또는 환불에 필요한 조치를 하며, 추가로 발생하는 비용은 교환이나 환불의 책임이 있는 측에서 부담합니다.<br>
+⑧안전결제 판매회원은 상품의 하자 또는 사용상의 안전성에 결함이 있는 경우 전량 리콜(수리, 교환, 환불)하여야 하며, 리콜에 따른 모든 비용을 부담하여야 합니다.<br><br>
+제 38 조 (정산)<br>
+①서비스를 통해 판매된 상품이 구매 확정되는 경우, 회사는 회사의 정산일정 및 정책에 따라 판매대금에서 서비스이용료, 회사에 대한 미납금 및 기타 채무금을 공제한 나머지 금액(이하 “정산대금’”)을 안전결제 판매회원에게 지급합니다.<br>
+②안전결제 판매회원은 회원가입 시점에 정산대금의 수령방법을 지정해야 합니다. 계좌입금을 수령방법으로 선택한 경우 안전결제 판매회원이 지정한 계좌의 예금주는 안전결제 판매회원과 동일인임을 원칙으로 합니다. 환불정산액을 수령방법으로 선택한 경우 안전결제 판매회원의 아이디에 적용되어 있는 환불정산액으로 정산대금이 지급됩니다.​​ 안전결제 판매회원의 탈퇴 이후에 발생한 정산대금은 안전결제 판매회원이 탈퇴하기 전 최종적으로 지정한 입금계좌로 지급됩니다.<br>
+③안전결제 판매회원은 환불정산액을 안전결제 판매회원이 지정한 계좌로 출금할 수 있습니다. 안전결제 판매회원이 환불정산액의 출금을 요청할 경우 회사는 1영업일 후에 이체합니다. 환불정산액의 운영 및 출금에 관한 세부적인 사항은 회사의 정책에 따릅니다.<br>
+④안전결제 판매회원이 회사가 지정하는 물품위치추적서비스를 통하여 배송하고 배송완료일(또는 서비스 이행)로부터 7일(7일 중 영업일 3일 미만인 경우 3영업일) 이내 이용회원으로부터 교환, 반품, 환불에 대한 의사가 없는 경우 회사는 자동구매확정 절차를 진행할 수 있으며, 자동구매확정 절차의 구체적인 사항은 사전에 공지를 통해 안내합니다. 다만, “구매회원”의 이의 제기 등 민원 등이 접수되는 경우 자동구매확정이 되지 않을 수 있습니다.<br>
+⑤안전결제 판매회원이 배송을 완료하였음에도 이용회원이 반품, 환불 등의 의사표시 없이 구매확정을 지연하는 경우, 안전결제 판매회원은 배송처리일로부터 7일 이후부터 구매확정을 요청할 수 있습니다. 이 경우 회사는 회사의 정책에 따른 자동구매확정 절차를 진행할 수 있습니다. 다만, "구매회원"의 이의 제기 등 민원 등이 접수되는 경우 자동구매확정이 되지 않을 수 있습니다.<br>
+⑥안전결제 판매회원이 정산대금 수령방법을 계좌입금으로 지정하였으나 계좌번호 오류, 시스템 오류, 이용정지등으로 인하여 이체에 실패하는 경우 회사는 안전결제 판매회원 계정에 환불정산액으로 정산대금을 지급함으로써 정산대금의 지급채무를 면합니다.<br>
+⑦회사는 세금계산서 발행 및 정산대금을 지급하기 위하여 주민등록번호(외국인인 경우 외국인등록번호. 이하, “주민등록번호 등”)의 수집 및 이용 등에 대한 동의를 요청할 수 있으며, 안전결제 판매회원이 이에 동의하지 않는 경우에는 환불정산액으로 정산대금을 지급함으로써 정산대금의 지급채무를 면합니다. 또한 회사는 안전결제 판매회원이 세금계산서 발행 등을 위한 주민등록번호 등의 수집 및 이용 등에 동의하지 않은 경우 동의 시점까지 안전결제 판매회원의 환불정산액 출금 신청을 제한할 수 있습니다.<br>
+⑧환불정산액의 출금청구권은 최종 적립, 충전, 사용한 때로부터 5년간 행사하지 아니하면 소멸시효가 완성됩니다.<br><br>
+제 39 조 (정산의 보류)<br>
+①회사는 안전결제 판매회원의 귀책사유로 인해 회사 및 이용회원에게 발생한 손해 등의 제비용을 판매대금 정산 시 공제할 수 있으며, 안전결제 판매회원과의 이용계약 종료 후 당해 안전결제 판매회원의 판매대금의 일정 비율에 해당하는 금액을 이용계약 종료일로부터 일정기간 동안 예치하여 동 기간 동안 이용회원으로부터의 환불, 교환 등 클레임 제기 시 관련 비용의 지급에 사용할 수 있습니다.<br>
+②회사는 장기간 배송지연 건을 자동구매확정 절차에 따라 종결하는 경우에도, 판매대금의 정산은 향후 이용회원의 환불 요청에 대비하여 일정기간 유보할 수 있습니다.<br>
+③안전결제 판매회원의 채권자의 신청에 의한 판매대금의 가압류, 압류 및 추심명령 등 법원의 결정이 있을 경우, 회사는 안전결제 판매회원과 채권자 간의 합의 또는 채무 액의 변제 등으로 동 결정이 해제될 때까지 판매대금의 정산을 중지할 수 있습니다.<br>
+④안전결제 판매회원이 본 약관의 규정을 위반하거나 위반한 것으로 의심될 만한 타당한 정황이 있는 경우 거래에 대한 처리, 취소 등을 위해 판매대금의 정산을 일정기간 보류 할 수 있습니다.<br>
+⑤본 조에 정한 외에도 법률의 규정에 의하거나 합리적인 사유가 있는 경우에는 회사는 안전결제 판매회원에게 통지하고 판매대금의 전부 또는 일부에 대한 정산을 일정 기간 유보하거나 회사가 안전결제 판매회원에게 가지는 채권과 상계할 수 있습니다.<br><br>
+제 40 조 (회사의 권리와 의무)<br>
+①회사는 이 약관에 따라 지속적이고 안정적인 서비스를 제공하는데 최우선의 노력을 다합니다.<br>
+②회사는 안전결제 판매회원으로부터 제기되는 불편사항 및 서비스의 문제점에 대해 정당하다고 판단되는 경우 우선적으로 해당 문제를 해결할 수 있으며, 신속한 해결이 곤란한 경우에는 안전결제 판매회원에게 그 사유와 처리절차를 안내합니다.<br>
+③회사는 안전결제 판매회원이 서비스에 등록한 상품정보 등을 이 약관에 따른 서비스 범위 및 서비스 자체의 홍보 목적 등으로 사용할 수 있으며, 필요한 경우 수정∙편집하여 활용할 수 있습니다.<br>
+④회사는 안전결제 판매회원이 서비스를 이용하여 발생하는 광고 및 매출효과 등의 정보를 통계자료 작성 및 안전결제 판매회원이 이용하는 회사의 다른 서비스에의 적용 등의 목적으로 활용할 수 있습니다.<br>
+⑤회사는 안전결제 판매회원의 서비스 이용과 관련한 자료를 수사기관의 수사목적의 요청 및 기타 공공기관이 관련 법률에 따른 절차를 통해 요청하는 경우 안전결제 판매회원의 동의 없이 해당 기관에 제공할 수 있습니다.<br>
+⑥회사는 안전결제 판매회원이 서비스에 등록한 상품 및 그 정보 등이 불법정보에 해당한다고 판단되거나, 방송통신심의위원회 등 관련기관으로부터 요청이 있는 경우 또는 안전결제 판매회원이 서비스를 이 약관 이 외의 목적으로 사용한다고 판단되는 경우 안전결제 판매회원에 대한 사전 통보 없이 해당 정보를 삭제할 수 있습니다.<br>
+⑦회사는 안정적인 서비스 제공을 위해 거래액 등을 기준으로 안전결제 판매회원 별로 판매상품수(판매 중 및 판매대기 상품을 모두 포함)의 한도를 정할 수 있으며 이에 대한 자세한 내용은 운영정책에서 정합니다.<br><br>
+제 41 조 (패널티 및 자격 정지)<br>
+①회사는 서비스를 통한 거래의 안전성과 신뢰성을 제고하기 위하여 이 약관에서 정한 바에 따라 안전결제 판매회원의 회원자격을 정지하거나 서비스의 이용을 제한할 수 있습니다.<br>
+1.페널티에 따른 회원 자격정지 및 불이익 제공<br>
+2.부정거래 또는 매매불가상품등록 등 또는 기타 위법, 부당행위에 따른 이용정지<br>
+②회사는 안전결제 판매회원이 본 약관, 회사의 운영정책 및 관련법령을 위반하거나, 타인의 권리를 침해하는 행위 또는 그러한 위법•부당한 행위가 있는 것으로 의심될 만한 상당한 이유가 있는 경우 안전결제 판매회원의 회원자격을 정지할 수 있습니다.<br>
+③서비스 이용제한, 회원 자격정지, 불이익제공의 구체적인 기준 등에 대해서는 운영정책에서 정합니다.<br><br>
+제 42 조 (이용계약의 종료)<br>
+①회사는 다음 각 호의 사유가 발생한 경우, 안전결제 판매회원에게 전자우편, 유선안내 등으로 해지 사유를 밝혀 해지의사를 통지합니다. 이 경우 회사는 해지를 하기 전에 상당한 기간을 정하여 안전결제 판매회원에게 이의 신청의 기회를 부여합니다. 다만, 본 항 제1호 및 제2호의 경우와 이 약관 및 운영정책에서 정하는 사유가 있을 경우에는 별도의 이의 신청 기간을 부여하지 않을 수 있습니다.<br>
+1.본 약관 및 회사의 운영정책을 위반하거나 회사로부터 그 시정을 요구 받은 후 7일 이내에 이를 시정하지 아니한 경우<br>
+2.압류 및 가압류 등 금융기관의 거래정지, 회생 및 파산절차의 개시, 영업정지 및 취소 등의 행정처분, 주요 자산에 대한 보전처분, 영업양도 및 합병 등으로 이용계약의 이행이 불가능한 경우<br>
+3.관련 법령을 위반하거나 안전결제 판매회원의 책임 있는 사유로 인하여 회사가 명예 실추 등 유/무형적 손해를 입은 경우<br>
+4.제6조 제2항의 승낙거부 사유가 있음이 확인된 경우<br>
+5.기타 회사가 판단한 합리적인 사유에 의거하여 이용계약의 해지가 필요하다고 인정 할 경우<br>
+②안전결제 판매회원이 이 약관에 의한 이용계약을 해지하고자 하는 경우, 해지사유를 기재하여 회사가 정하는 방법에 따라 회원 탈퇴를 요청하여야 합니다. 만약 현재 진행 중인 거래, 문의, 또는 민원이 있는 경우에는 탈퇴 신청이 불가능하며, 안전결제 판매회원이 해당 사항을 처리 완료한 후 탈퇴 및 이용계약 해지가 가능합니다.<br>
+③이용계약의 해지에도 불구하고 안전결제 판매회원은 해지 시까지 완결되지 않은 주문건의 배송, 교환, 환불에 필요한 조치를 취하여야 하며, 해지 이전에 이미 판매한 상품과 관련하여 발생한 안전결제 판매회원의 책임과 관련된 조항은 그 효력을 유지합니다.<br>
+④본 조에 의한 이용계약의 해지는 기 발생한 양당사자의 권리관계 및 손해배상 청구권에 영향을 미치지 아니합니다.<br><br>
+제 43 조 (준용규정)<br>
+①본 장에서 정의 되지 않은 사항은 본 약관 제 1장의 내용을 준용하며 본 약관 1장의 내용과 본 장의 내용이 상충 하는 경우 본 장의 내용을 따릅니다.<br>
+②안전결제 판매회원은 본 장에 따라 서비스를 이용함에 있어 전자상거래등에서의소비자보호에관한법률 상 각 종 표시광고 및 고지의무, 청약철회(취소, 반품, 교환), 배송, 분쟁처리, 개인정보보호, 구매 권유 광고 시 준수사항 등 소비자 보호를 위한 각 종 규정을 준수해야 하며, 회사가 해당 규정에 따라 소비자와의 분쟁해결 등을 위해 요청하는 사항이 있는 경우 적극 협조해야 합니다.<br><br>
+
+[부칙]<br>
+- 공지 일자 : 2019년 09월 30일<br>
+- 적용 일자 : 2019년 11월 1일<br><br>
+네이버페이 서비스와 관련하여 궁금하신 사항이 있으시면 <a href="https://help.pay.naver.com/index.help" class="point_color">고객센터</a>(대표번호: 1588-3819)로 문의 주시기 바랍니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree3" name="chkAgree" class="chk_terms"><label for="chkAgree3">네이버페이 이용약관에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">네이버파이낸셜 전자금융거래 이용약관<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 네이버파이낸셜 전자금융거래 이용약관 -->
+제1장 총칙<br><br> 제 1조 (목적)<br> 본 약관은 네이버㈜(이하 "회사"라 합니다)가 제공하는 선불전자지급수단의 발행 및 관리서비스, 전자지급결제대행서비스 및 결제대금예치서비스(이하 통칭하여 "전자금융거래서비스"라 합니다)를 "회원"이 이용함에 있어, "회사"와 "회원" 간 권리, 의무 및 "회원"의 서비스 이용절차 등에 관한 사항을 규정하는 것을 그 목적으로 합니다.<br><br>                            제2조 (정의)<br> ① 본 약관에서 정한 용어의 정의는 아래와 같습니다. <br> 1. “전자금융거래”라 함은 "회사"가 "전자적 장치"를 통하여 전자금융업무를 제공하고, "회원"이 "회사"의 종사자와 직접 대면하거나 의사소통을 하지 아니하고 자동화된 방식으로 이를 이용하는 거래를 말합니다.<br> 2. “전자지급거래”라 함은 자금을 주는 자가 “회사”로 하여금 전자지급수단을 이용하여 자금을
+받는 자에게 자금을 이동하게 하는 “전자금융거래”를 말합니다.<br> 3. “전자적 장치”라 함은 “전자금융거래”정보를 전자적 방법으로 전송하거나 처리하는 데 이용되는 장치로서 현금자동지급기, 자동입출금기, 지급용단말기, 컴퓨터, 전화기 그 밖에 전자적 방법으로 정보를 전송하거나 처리하는 장치를 말합니다.<br> 4. “접근매체”라 함은 “전자금융거래”에 있어서 “거래지시”를 하거나 이용자 및 거래내용의
+진실성과 정확성을 확보하기 위하여 사용되는 수단 또는 정보로서 “전자금융거래서비스”를 이용하기 위하여 “회사”에 등록된 아이디 및 비밀번호, 기타 “회사”가 지정한 수단을 말합니다.<br> 5. “아이디”란 “회원”의 식별과 서비스 이용을 위하여 “회원”이 설정하고 “회사”가 승인한 숫자와 문자의 조합을 말합니다. 6. “비밀번호”라 함은 “회원”의 동일성 식별과 “회원” 정보의 보호를 위하여 “회원”이
+설정하고 “회사”가 승인한 숫자와 문자의 조합을 말합니다.<br> 7. “회원”이라 함은 본 약관에 동의하고 본 약관에 따라 “회사”가 제공하는 “전자금융거래서비스”를 이용하는 자를 말합니다.<br> 8. “거래지시”라 함은 “회원”이 본 약관에 따라 “회사”에게 “전자금융거래”의 처리를 지시하는 것을 말합니다.<br> 9. “오류”라 함은 “회원”의 고의 또는 과실 없이 “전자금융거래”가 본 약관
+또는 “회원”의 “거래지시”에 따라 이행되지 아니한 경우를 말합니다.<br> ② 본 조 및 본 약관의 다른 조항에서 정의한 것을 제외하고는 전자금융거래법 등 관련 법령에 정한 바에 따릅니다.<br><br> 제3조 (약관의 명시 및 변경)<br> ① "회사"는 "회원"이 "전자금융거래"를 하기 전에 본 약관을 서비스 페이지에 게시하고 본 약관의 중요한 내용을 확인할 수 있도록 합니다.<br> ② "회사"는
+"회원"의 요청이 있는 경우 전자문서의 전송(전자우편을 이용한 전송을 포함합니다)의 방식에 의하여 본 약관의 사본을 "회원"에게 교부합니다.<br> ③ "회사"가 본 약관을 변경하는 때에는 그 시행일 1월 전에 변경되는 약관을 금융거래정보 입력화면 또는 서비스 홈페이지에 게시함으로써 "회원"에게 공지합니다. 다만, 법령의 개정으로 인하여 긴급하게 약관을 변경한 때에는 변경된 약관을 서비스 이용 초기화면
+등에 1개월 이상 게시하고 “회원”에게 사후 통지합니다.<br> ④ 이용자는 변경에 동의하지 아니한 경우 제3항의 고지나 통지를 받은 날로부터 30일 이내에 계약을 해지할 수 있으며, 계약해지의 의사표시를 하지 아니한 경우에는 변경에 동의한 것으로 봅니다.<br><br> 제4조 (거래내용의 확인)<br> ① "회사"는 서비스 페이지의 "내 정보" 조회 화면을 통하여 "회원"의 거래내용("회원"의
+"오류정정 요구사실 및 처리결과에 관한 사항"을 포함합니다)을 확인할 수 있도록 하며, "회원"이 거래내용에 대해 서면교부를 요청하는 경우에는 요청을 받은 날로부터 2주 이내에 모사전송, 우편 또는 직접 교부의 방법으로 거래내용에 관한 서면을 교부합니다.<br> ② "회사"는 제1항에 따른 "회원"의 거래내용 서면교부 요청을 받은 경우 전자적 장치의 운영장애, 그 밖의 이유로 거래내용을 제공할 수
+없는 때에는 즉시 "회원"에게 전자문서 전송(전자우편을 이용한 전송을 포함합니다)의 방법으로 그러한 사유를 알려야 하며, 전자적 장치의 운영장애 등의 사유로 거래내용을 제공할 수 없는 기간은 제1항의 거래내용에 관한 서면의 교부기간에 산입하지 아니합니다. <br> ③ 제1항의 대상이 되는 거래내용 중 대상기간이 5년인 것은 다음 각호와 같습니다. <br> 1. 거래계좌의 명칭 또는 번호<br> 2.
+전자금융거래의 종류 및 금액<br> 3. 전자금융거래상대방을 나타내는 정보<br> 4. 전자금융거래일시<br> 5. "전자적 장치"의 종류 및 "전자적 장치"를 식별할 수 있는 정보<br> 6. "회사"가 "전자금융거래"의 대가로 받은 수수료<br> 7. "회원"의 출금 동의에 관한 사항<br> 8. 해당 "전자금융거래"와 관련한 "전자적 장치"의 접속기록<br> 9. "전자금융거래"의 신청 및
+조건의 변경에 관한 사항<br> 10. 건당 거래금액이 1만원을 초과하는 전자금융거래에 관한 기록<br> ④ 제1항의 대상이 되는 거래내용 중 대상기간이 1년인 것은 다음 각호와 같습니다.<br> 1. 전자지급수단 이용과 관련된 거래승인에 관한 기록<br> 2. "회원"의 오류정정 요구사실 및 처리결과에 관한 사항<br> 3. 기타 금융위원회가 고시로 정한 사항<br> 4. 건당 거래금액이 1만원
+이하인 소액 전자금융거래에 관한 기록<br> ⑤ "회원"이 제1항에서 정한 서면교부를 요청하고자 할 경우 다음의 주소 및 전화번호로 요청할 수 있습니다. <br><br> 네이버페이
+<br> ① 주소: 강원도 춘천시 퇴계로 89 강원전문건설회관<br> ② 이메일주소: helpcustomer@naver.com<br> ③ 전화번호: 1588-3819<br><br> 제5조 ("거래지시"의 철회 등)<br> "회원"이 "회사"의 "전자금융거래서비스"를 이용하여 전자지급거래를 한 경우, "회원"은 지급의 효력이 발생하기 전까지 본 약관에서 정한 바에 따라 제4조 제5항에 기재된 연락처로
+전자문서의 전송(전자우편을 이용한 전송을 포함합니다) 또는 서비스 페이지 내 철회에 의한 방법으로 "거래지시"를 철회할 수 있습니다. 단, 각 서비스 별 "거래지시" 철회의 효력 발생시기는 본 약관 제15조, 제20조 및 제25조에서 정한 바에 따릅니다.<br><br> 제6조 ("오류"의 정정 등)<br> ① "회원"은 "전자금융거래서비스"를 이용함에 있어 "오류"가 있음을 안 때에는 "회사"에
+대해 그 정정을 요구할 수 있으며, "회사"는 "회원"의 정정 신청이 있는 경우 이를 조사하여 "오류"가 있는 경우 정정 절차를 진행하고 정정요구를 받은 날로부터 2주 이내에 그 결과를 "회원"에게 알려 드립니다.<br> ② "회사"는 스스로 "전자금융거래"에 "오류"가 있음을 안 때에도 이를 즉시 조사하여 처리한 후 그 결과를 2주 이내에 문서로 “회원”에게 알려 드립니다. 다만, "회원"의 주소가
+분명하지 아니하거나 "회원"이 요청한 경우에는 전화 또는 전자우편 등의 방법으로 알릴 수 있습니다.<br><br> 제7조 ("전자금융거래" 기록의 생성 및 보존)<br> ① “회사”는 “회원”이 이용한 전자금융거래의 내용을 추적, 검색하거나 그 내용에 오류가 발생한 경우에 이를 확인하거나 정정할 수 있는 기록을 생성하여 보존합니다.<br> ② 제1항의 규정에 따라 "회사"가 보존하여야 하는 기록의
+종류 및 보존방법은 제4조 제3항에 따릅니다.<br><br> 제8조 ("전자금융거래"정보의 제공금지)<br> ① "회사"는 "전자금융거래서비스"를 제공함에 있어서 취득한 "회원"의 인적 사항, "회원"의 계좌, "접근매체" 및 "전자금융거래"의 내용과 실적에 관한 정보 또는 자료를 법령에 의하거나 "회원"의 동의를 얻지 아니하고 제3자에게 제공, 누설하거나 업무 상 목적 외에 사용하지 아니합니다.<br>                            ② "회사"는 "회원"이 안전하게 "전자금융거래서비스"를 이용할 수 있도록 "회원"의 개인정보보호를 위하여 개인정보처리방침을 운용합니다. "회사"의 개인정보처리방침은 "회사"의 홈페이지 또는 서비스 페이지에 링크된 화면에서 확인할 수 있습니다.<br><br> 제9조 ("회사"의 책임)<br> ① "회사"는 "접근매체"의 위조나 변조로 발생한 사고(단, "회사"가 "접근매체"의 발급 주체이거나 사용,
+관리 주체인 경우), 계약체결 또는 "거래지시"의 전자적 전송이나 처리과정에서 발생한 사고로 인하여 "회원"에게 손해가 발생한 경우에는 그 손해를 배상할 책임을 부담합니다.<br> ② "회사"는 제1항에도 불구하고 다음 각호의 경우에는 그 책임의 전부 또는 일부를 "회원"이 부담하게 할 수 있습니다. <br> 1. "회원"이 "접근매체"를 제3자에게 대여하거나 그 사용을 위임한 경우 또는 양도나
+담보의 목적으로 제공한 경우<br> 2. 제3자가 권한 없이 "회원"의 "접근매체"를 이용하여 "전자금융거래"를 할 수 있음을 알았거나 쉽게 알 수 있었음에도 불구하고 "접근매체"를 누설하거나 노출 또는 방치한 경우<br> 3. 법인("중소기업기본법" 제2조 제2항에 의한 소기업을 제외합니다)인 "회원"에게 손해가 발생한 경우로서 "회사"가 사고를 방지하기 위하여 보안절차를 수립하고 이를 철저히
+준수하는 등 합리적으로 요구되는 충분한 주의의무를 다한 경우<br> ③ "회사"는 전자금융거래를 위한 전자적 장치 또는 '정보통신망 이용촉진 및 정보보호 등에 관한 법률' 제 2조 제 1항 제 1호에 따른 정보통신망에 침입하여 거짓이나 그 밖의 부정한 방법으로 획득한 접근매체의 이용으로 발생한 사고로 인하여 이용자에게 그 손해가 발생한 경우에는 그 손해를 배상할 책임이 있습니다.<br> ④ "회사"는
+컴퓨터 등 정보통신설비의 보수점검, 교체의 사유가 발생하여 전자금융서비스의 제공을 일시적으로 중단할 경우에는 "회사"의 홈페이지 또는 서비스 페이지를 통하여 이용자에게 중단 일정 및 중단 사유를 사전에 공지합니다.<br><br> 제10조 (분쟁처리 및 분쟁조정)<br> ① "회원"은 "회사"의 서비스 페이지 하단에 게시된 분쟁처리 담당자에 대하여 "전자금융거래"와 관련한 의견 및 불만의 제기, 손해배상의
+청구 등의 분쟁처리를 요구할 수 있습니다<br> ② "회원"이 "회사"에 대하여 분쟁처리를 신청한 경우에는 "회사"는 15일 이내에 이에 대한 조사 또는 처리 결과를 "회원"에게 안내 합니다.<br> ③ "회원"은 "회사"의 분쟁처리결과에 대하여 이의가 있을 경우 "금융위원회의 설치 등에 관한 법률" 제51조의 규정에 따른 금융감독원의 금융분쟁조정위원회나 "소비자기본법" 제60조 제1항의 규정에
+따른 한국소비자원의 소비자분쟁조정위원회에 "회사"의 "전자금융거래서비스"의 이용과 관련한 분쟁조정을 신청할 수 있습니다.<br><br> 제11조 ("회사"의 안정성 확보 의무)<br> ”회사”는 전자금융거래가 안전하게 처리될 수 있도록 선량한 관리자로서의 주의를 다하며, "전자금융거래"의 안정성과 신뢰성을 확보할 수 있도록 "전자금융거래"의 종류 별로 전자적 전송이나 처리를 위한 인력, 시설, "전자적
+장치" 등의 정보기술부문 및 전자금융업무에 관하여 금융위원회가 정하는 기준을 준수합니다.<br><br> 제12조 (약관 외 준칙)<br> “회사”와 “회원” 사이에 개별적으로 합의한 사항이 이 약관에 정한 사항과 다를 때에는 그 합의사항을 이 약관에 우선하여 적용합니다. 본 약관에서 정하지 아니한 사항(용어의 정의 포함)에 대하여는 전자금융거래법, 여신전문금융업법 등 소비자보호에 관한 법령 및 개별
+약관에서 정한 바에 따릅니다.<br><br> 제13조 (관할)<br> 회사"와 "회원" 간에 발생한 분쟁에 관한 관할은 민사소송법에서 정한 바에 따릅니다.<br><br> 제2장 전자지급결제대행 서비스<br><br> 제14조 (정의)<br> 본 장에서 정하는 용어의 정의는 아래와 같습니다.<br> 1. "전자지급결제대행 서비스"라 함은 전자적 방법으로 재화 또는 용역(이하 이 약관에서 "재화 등"이라고
+합니다)의 구매에 있어서 지급결제 정보를 송신하거나 수신하는 것 또는 그 대가의 정산을 대행하거나 매개하는 서비스를 말합니다.<br> 2. "회원"이라 함은 본 약관에 동의하고 "회사"가 제공하는 "전자지급결제대행 서비스"를 이용하는 자를 말합니다.<br><br> 제15조 ("거래지시"의 철회)<br> ① "회원"이 "전자지급결제대행서비스"를 이용한 경우, 이용자는 "거래지시"된 금액의 정보에 대하여
+수취인의 계좌가 개설되어 있는 금융기관 또는 "회사"의 계좌의 원장에의 입금기록 또는 "전자적 장치"에의 입력이 끝나기 전까지 "거래지시"를 철회할 수 있습니다.<br> ② "회사"는 "회원"의 "거래지시"의 철회에 따라 지급거래가 이루어지지 않은 경우 수령한 자금을 "회원"에게 반환하여야 합니다.<br><br> 제16조 ("한도" 등)<br> “회사"의 정책 및 결제업체(이동통신사, 카드사 등)의
+기준에 따라 "회원"의 결제수단 별 월 누적 결제액 및 결제한도가 제한될 수 있습니다.<br><br> 제17조 ("접근매체"의 관리)<br> ① "회사"는 "전자지급결제대행 서비스" 제공 시 "접근매체"를 선정하여 "회원"의 신원, 권한 및 "거래지시"의 내용 등을 확인합니다.<br> ② "회원"은 "접근매체"를 사용함에 있어서 다른 법률에 특별한 규정이 없는 한 다음 각 호의 행위를 하여서는 아니
+됩니다. <br> 1. "접근매체"를 양도하거나 양수하는 행위<br> 2. "접근매체"를 대여하거나 사용을 위임하는 행위<br> 3. "접근매체"를 질권 기타 담보 목적으로 하는 행위<br> 4. 1호부터 3호까지의 행위를 알선하는 행위<br> ③ "회원"은 자신의 "접근매체"를 제3자에게 누설 또는 노출하거나 방치하여서는 안되며, "접근매체"의 도용이나 위조 또는 변조를 방지하기 위하여 충분한
+주의를 기울여야 합니다.<br> ④ "회사"는 "회원"으로부터 "접근매체"의 분실이나 도난 등의 통지를 받은 때에는 그 때부터 제3자가 그 "접근매체"를 사용함으로 인하여 "회원"에게 발생한 손해를 배상할 책임이 있습니다.<br><br> 제3장 결제대금예치서비스<br><br> 제18조 (정의)<br> 본 장에서 사용하는 용어의 정의는 다음과 같습니다.<br> 1. “결제대금예치서비스”라 함은 서비스
+페이지에서 이루어지는 선불식 통신판매에 있어서, “회사”가 “소비자”가 지급하는 결제 대금을 예치하고 배송이 완료되는 등 구매가 확정된 후 “재화 등”의 대금을 “판매자”에게 지급하는 서비스를 말합니다.<br> 2. “선불식 통신판매”라 함은 “소비자”가 “재화 등”을 공급받기 전에 미리 대금의 전부 또는 일부를 지급하는 방식의 통신판매를 말합니다.<br> 3. “판매자”라 함은 본 약관에 동의하고
+“회사”가 운영하는 서비스에 입점하여 통신판매를 하는 자를 말합니다.<br> 4. “소비자”라 함은 본 약관에 동의하고 “회사”의 서비스에 입점한 “판매자”로부터 “재화 등”을 구매하는 자로서 전자상거래 등에 서의 소비자보호에 관한 법률 제2조 제5호의 요건에 해당하는 자를 말합니다.<br> 5. “이용자”라 함은 본 조 제3호 및 제4호의 “판매자”와 “소비자”를 말합니다.<br><br> 제19조
+(예치된 결제대금의 지급방법)<br> ① “소비자”(그 “소비자”의 동의를 얻은 경우에는 “재화 등”을 공급받을 자를 포함한다. 이하 제2항 및 제3항에서 같습니다)는 “재화 등”을 공급받은 사실을 “재화 등”을 공급받은 날부터 3영업일 이내에 “회사”에 통보하여야 합니다.<br> ② “회사”는 “소비자”로부터 “재화 등”을 공급받은 사실을 통보 받을 경우 “회사”가 정한 기일 내에 판매자에게 결제대금을
+지급합니다.
+<br> ③ “회사”는 “소비자”가 “재화 등”을 공급받은 날부터 3영업일이 지나도록 정당한 사유의 제시 없이 그 공급받은 사실을 “회사”에 통보하지 아니하는 경우에 “소비자”의 동의 없이 “판매자”에게 결제대금을 지급할 수 있습니다.<br> ④ “회사”가 “판매자”에게 결제대금을 지급하기 전에 “소비자”가 그 결제대금을 환급 받을 정당한 사유가 발생한 경우에는 그 결제대금을 “소비자”에게 환급합니다.
+<br><br> 제20조 (거래지시의 철회)<br> ① “이용자”가 “결제대금예치서비스”를 이용한 경우, “이용자”는 거래 지시된 금액의 정보가 수취인이 지정한 전자적 장치에 도달한 때까지 거래지시를 철회할 수 있습니다.<br> ② “회사”는 “이용자”의 거래지시의 철회에 따라 지급거래가 이루어지지 않은 경우 수령한 자금을 “이용자”에게 반환하여야 합니다.<br><br> 제21조 (준용규정)<br>                            제17조는 본 장에 준용합니다.<br> 제4장 선불전자지급수단의 발행 및 관리<br><br> 제22조 (정의)<br> 본 장에서 사용하는 용어의 정의는 다음과 같습니다.<br> 1. "선불전자지급수단"이라 함은 네이버페이 포인트 등 "회사"가 발행 당시 미리 "회원"에게 공지한 전자금융거래법 상 선불전자지급수단을 말합니다.<br> 2. "회원"이라 함은 본 약관에 동의하고 판매자로부터 “재화 등”을
+구매하고 선불전자지급수단을 결제수단으로 하여 그 대가를 지급하는 자를 말합니다.<br> 3. "판매자"라 함은 "선불전자지급수단"에 의한 거래에 있어서 "회원"에게 “재화 등”을 판매하는 자를 말합니다.<br><br> 제23조 ("접근매체"의 관리)<br> ① 제17조는 본 장에 준용합니다.<br><br> 제24조 (환급 등)<br> ① "회원"은 보유 중인 "선불전자지급수단"의 환급을 "회사"에 요구할 경우 환불수수료를 공제한 미상환 잔액에 대해 전액 환급받을 수 있습니다. 다만, "회원"이 다른 "회원"으로부터 선물 받은 "선불전자지급수단"은 선물 받은 금액이나 "회원"이 "회사"로부터 추가 적립 혜택을 받고 충전한 금액의 경우 [60]% 이상(선물 받은 금액이 1만원 이하인 경우 [80]% 이상)을 사용한 경우에 그 잔액 전액에 대해 환급받을 수 있으며,  상품 구매나 이벤트 등을 통하여 "회사"로부터 무상 제공받은 "선불전자지급수단"의 경우 환급 대상에서 제외됩니다.<br> ② 제1항에도 불구하고, 천재지변 등의 사유로 가맹점이 재화 또는 용역을 제공하기 곤란하여 선불전자지급수단을 사용하지 못하게 된 경우 또는 선불전자지급수단의 결함으로 가맹점이 재화 또는 용역을 제공하지 못하는 경우에는 선불전자지급수단에 기록된 잔액의 전부를 지급합니다.<br> ③ "회원"은 "회사"에서 정한 기한 및 이용방법에 따라 "선불전자지급수단"을 이용할 수 있으며, "회사"는 그 구체적 사항을 서비스 페이지를 통해 공지합니다.<br><br> 제25조 ("거래지시"의
+철회)
+<br> "회원"이 "선불전자지급수단"을 이용하여 자금을 지급하는 경우, "회원"은 거래 지시된 금액의 정보가 수취인이 지정한 "전자적 장치"에 도달하기 전까지 "거래지시"를 철회할 수 있습니다.<br><br> 제26조 ("선불전자지급수단"의 한도 등)<br> ① "회사"는 "선불전자지급수단"에 대해 실지명의 당 최고 200만원을 그 보유 한도로 합니다. 단 보유 한도는 “회사”의 정책에 따라 감액될
+수 있습니다.<br> ② 제16조는 본 장에 준용합니다.<br><br> 제27조 (소멸시효)<br> "선불전자지급수단"의 소멸시효는 마지막 적립, 충전일 또는 사용일로부터 10년이며, "회원"은 "회사"가 정한 소멸시효 내에서만 "선불전자지급수단"을 사용할 수 있습니다.<br><br> 제28조 (기타)<br> ① "회사"는 신유형 상품권 표준약관 제4조의 표시사항을 네이버페이 서비스페이지, 고객센터 등에
+표시합니다.<br> ② "회사"는 선불전자지급수단의 지급보증 또는 피해보상보험계약 대신 전자금융거래법에서 정한 준비금을 적립하였습니다.<br><br> &lt;부칙&gt;
+<br> 본 약관은 2019년 3월 21일부터 적용됩니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree4" name="chkAgree" class="chk_terms"><label for="chkAgree4">네이버파이낸셜 전자금융거래 이용약관에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">개인정보 수집 및 이용 동의<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 개인정보 수집 및 이용 동의-->
+네이버파이낸셜주식회사는 아래와 같이 개인정보를 수집 및 이용합니다.<br>
+<br> 1. 수집하는 개인정보 항목<br><br>
+네이버파이낸셜 서비스는 네이버 회원이 이용할 수 있으며, 서비스 가입 및 이용 과정에서 네이버 아이디, 이름, 생년월일, 성별, 프로필 정보, 암호화된 동일인 식별정보(CI), 중복가입확인정보(DI)와 DI 해시값, 내/외국인 여부, 이메일 주소, 휴대전화번호, 가입 통신사, IP 주소, 서비스 이용기록(가입일자, 네이버페이에 중복가입한 네이버 아이디 목록 등)을 네이버로부터 제공받아 수집합니다.<br>
+본인확인, 만14세 미만 아동의 법정대리인 동의 과정에서 이름, 생년월일, 성별, 중복가입확인정보(DI), 암호화된 동일인 식별정보(CI), 휴대전화번호 및 통신사(휴대전화 인증시), 내/외국인 정보, 만 14세 미만 아동의 경우 법정대리인 정보(법정대리인의 이름, 생년월일, 성별, 중복가입확인정보(DI), 휴대전화번호)를 수집합니다.<br>
+상품 또는 콘텐츠를 구매하는 경우 배송지 정보(배송상품 구매 시 : 수령인명, 주소, (휴대)전화번호, E쿠폰 구매 시 : 이름, 네이버 아이디 또는 휴대전화번호), 구매정보, 결제정보(환불 계좌정보,현금영수증 신청정보, 결제휴대전화번호, 가상카드번호 등)를 수집합니다. 해외 배송 상품 구매 시에는 개인통관고유번호를 수집합니다.<br>
+송금/계좌에 간편결제를 등록하는 경우 계좌정보(은행명, 예금주명, 계좌번호)를 수집합니다.<br>
+네이버페이 포인트를 50만원 이상 보유하는 경우 계좌번호를 수집합니다.<br>
+통합계좌조회 서비스를 이용하는 경우 은행명, 계좌번호, 잔액, 거래내역, 예금종류를 수집합니다.<br>
+통합카드조회 서비스를 이용하는 경우 카드사명, 카드명, 카드번호 일부, 카드 사용내역(승인내역, 취소내역, 청구내역, 결제방법, 한도금액, 포인트, 결제예정금액, 결제일, 결제계좌, 카드 이용일시, 승인번호, 가맹점정보)를 수집합니다.<br>
+송금/선물하기 서비스 이용하는 경우 받는 사람의 휴대전화번호, 네이버 아이디, 계좌번호(계좌번호 송금 시)를 수집합니다.<br>
+네이버페이 멤버십 서비스를 이용하는 경우 휴대전화번호, 통신사, 이메일주소를 수집합니다.<br>
+특정 금융거래정보의 보고 및 이용 등에 관한 법률 상의 고객확인 의무 수행을 위해 국적, 주소를 수집하며, 강화된 고객확인 의무 수행 시에는 실지명의(주민등록증(내국인), 외국인증록증, 국제운전면허증, 여권(외국인), 주민등록초본(미성년자)), 직업 또는 업종, 거래목적, 자금원천 정보를 수집합니다.<br>
+서비스 이용 과정에서 IP주소, 쿠키, 서비스 이용 기록, 기기정보, 위치정보가 수집될 수 있습니다.<br>
+그 외에 가맹점 회원 또는 제휴사로부터 네이버페이로 결제한 구매정보를 제공받고 있으며, 카드 간편결제 등록 시 카드사로부터 마스킹 처리된 카드번호를 제공받아 수집합니다.<br>
+<br>
+<br> 2. 개인정보의 수집 및 이용목적<br>
+<br>수집한 개인정보는 아래와 같이 회사에서 제공하는 서비스의 회원관리, 서비스 개발∙제공 및 향상, 안전한 서비스 이용환경 구축 등을 위해 이용합니다. 회사는 상품 및 서비스의 구매 또는 판매를 희망하는 이용자를 위해 콘텐츠 및 검색 서비스를 제공합니다. 또한 상품 및 콘텐츠의 구매와 판매를 위한 결제 서비스, 주문∙배송 서비스를 제공합니다.<br><br>
+・ 회원가입, 개인 식별, 본인 확인, 고객 상담, 분쟁 조정, 회원탈퇴 처리 등 회원관리를 위하여 개인정보를 이용합니다.<br>
+・ 상품 및 서비스의 구매 또는 판매에 따른 배송, 정산, 채권∙채무 계약의 이행 등을 위하여 개인정보를 이용합니다.<br>
+・ 서비스 이용에 필요한 계좌 확인 및 등록, 송금, 선물하기, 쿠폰∙QR 코드 및 바코드를 이용한 결제 등 간편 결제 및 송금 서비스 제공을 위하여 개인정보를 이용합니다.<br>
+・ 이용자에게 유용한 콘텐츠 제공과 검색 서비스 제공 등 기존 서비스(광고 포함)에 더하여, 인구통계학적 분석, 서비스 방문 및 이용기록의 분석, 지인 및 관심사에 기반한 이용자간 관계의 형성, 개인정보 및 관심사 등에 기반한 맞춤형 서비스 제공과 같이 기존 서비스를 개선하고, AI 기술 등을 결합한 신규 서비스 요소를 발굴하기 위하여 개인정보를 이용합니다.<br>
+・ 법령 및 이용약관을 위반하는 회원에 대한 이용 제한 조치, 부정 이용 행위를 포함하여 서비스의 원활한 운영에 지장을 주는 행위에 대한 방지 및 제재, 계정 도용 및 부정거래 방지, 약관 개정 등 고지사항 전달, 분쟁조정을 위한 기록 보존, 민원처리 등 이용자 보호 및 서비스 운영을 위하여 개인정보를 이용합니다.<br>
+・ 이벤트 정보 및 참여기회 제공, 광고성 정보 제공 등 마케팅 및 프로모션 소식을 전달하기 위하여 개인정보를 이용합니다.<br>
+・ 보안, 프라이버시, 안전 측면에서 이용자가 안심하고 이용할 수 있는 서비스 이용환경 구축을 위해 개인정보를 이용합니다.<br>
+<br> 3. 개인정보의 보유 및 이용기간<br>
+<br>이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 단, 아래의 정보에 대해서는 다음과 같은 이유로 명시한 기간동안 보관합니다.<br><br>
+(1) 회사 내부 방침에 의한 정보보유 사유<br>
+결제도용, 불법할인대출(일명 ‘카드깡’ )등 관련 법령 및 이용약관을 위반하는 네이버페이 부정거래기록(아이디, 이름, 휴대전화번호, 배송지 주소, IP주소, 쿠키, 기기정보)은 부정거래 방지 및 다른 선량한 이용자의 보호, 안전한 거래 환경 보장을 위하여 수집 시점으로부터 3년간 보관하고 파기합니다.<br><br>
+(2) 관련 법령에 의한 정보보유 사유<br>
+전자상거래 등에서의 소비자 보호에 관한 법률, 전자금융거래법, 통신비밀보호법 등 법령에서 일정기간 정보의 보관을 규정하는 경우는 아래와 같습니다. 회사는 이 기간 동안 법령의 규정에 따라 개인정보를 보관하며, 본 정보를 다른 목적으로는 절대 이용하지 않습니다.<br>
+・ 전자상거래 등에서의 소비자 보호에 관한 법률<br>
+&nbsp;&nbsp;계약 또는 청약철회 등에 관한 기록 : 5년<br>
+&nbsp;&nbsp;대금 결제 및 재화 등의 공급에 관한 기록 : 5년<br>
+&nbsp;&nbsp;소비자의 불만 또는 분쟁처리에 관한 기록 : 3년<br>
+&nbsp;&nbsp;표시/광고에 관한 기록 : 6개월<br>
+・ 전자금융거래법<br>
+&nbsp;&nbsp;전자금융에 관한 기록 : 5년 보관<br>
+・ 국세기본법, 법인세법<br>
+&nbsp;&nbsp;세법이 규정하는 모든 거래에 관한 장부 및 증빙서류 : 5년<br>
+・ 특정 금융거래정보의 보고 및 이용 등에 관한 법률<br>
+&nbsp;&nbsp;고객확인 정보 : 5년<br>
+・ 통신비밀보호법<br>
+&nbsp;&nbsp;로그인 기록 : 3개월<br><br>
+네이버 회원은 위 개인정보의 수집 및 이용 동의를 거부할 권리가 있으나, 거부 시 네이버파이낸셜에서 제공하는 서비스 가입 및 이용이 불가능합니다. 그 밖의 내용은 네이버파이낸셜 개인정보 처리방침을 따릅니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree5" name="chkAgree" class="chk_terms"><label for="chkAgree5">개인정보 수집 및 이용에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">개인정보 제공 동의(네이버)<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 개인정보 제공 동의(네이버) -->
+네이버 회원 계정으로 네이버파이낸셜 서비스를 이용하는 경우, 편리하고 안전한 네이버 서비스 제공을 위해 아래와 같이 네이버에 개인정보를 제공합니다.<br><br>
+1. 개인정보를 제공받는 자<br>
+네이버주식회사<br><br>
+2. 제공하는 개인정보 항목<br>
+네이버 아이디, 이름, 휴대전화번호, 이메일주소, 배송지 정보(배송상품 구매 시 : 수령인명, 주소, (휴대)전화번호, E쿠폰 구매 시 : 이름, 네이버 아이디 또는 휴대전화번호), 구매정보, 결제정보(환불 계좌정보,현금영수증 신청정보, 결제휴대전화번호, 가상카드번호 등), 네이버페이 포인트 잔액 및 사용내역, 고객 상담 내역, 서비스 이용기록 및 징계기록<br><br>
+3. 개인정보를 제공받는 자의 개인정보 이용목적<br>
+상품 또는 콘텐츠 판매 시 결제 수단으로 네이버페이 및 포인트 제공, 이용자 문의 사항 또는 민원 처리, 분쟁조정을 위한 기록 보존을 위해 개인정보를 이용합니다.<br>
+네이버 서비스 이용, 이벤트 참여 시 네이버페이 포인트 지급 등 서비스 이용에 따른 혜택 제공을 위해 개인정보를 이용합니다.<br>
+이용자에게 유용한 콘텐츠 제공과 검색 서비스 제공 등 기존 서비스(광고 포함)에 더하여, 인구통계학적 분석, 서비스 방문 및 이용기록의 분석, 지인 및 관심사에 기반한 이용자간 관계의 형성, 개인정보 및 관심사 등에 기반한 맞춤형 서비스 제공과 같이 기존 서비스를 개선하고, AI 기술 등을 결합한 신규 서비스 요소를 발굴하기 위하여 개인정보를 이용합니다.<br>
+이벤트 정보 및 참여기회 제공, 광고성 정보 제공 등 마케팅 및 프로모션 목적으로 개인정보를 이용합니다.<br>
+법령 및 이용약관을 위반하는 회원에 대한 이용 제한 조치, 부정 이용 행위를 포함하여 서비스의 원활한 운영에 지장을 주는 행위에 대한 방지 및 제재, 계정 도용 및 부정거래 방지, 약관 개정 등 고지사항 전달, 분쟁조정을 위한 기록 보존, 민원처리 등 이용자 보호 및 서비스 운영을 위하여 개인정보를 이용합니다.<br>
+보안, 프라이버시, 안전 측면에서 이용자가 안심하고 이용할 수 있는 서비스 이용환경 구축을 위해 개인정보를 이용합니다.<br><br>
+4. 개인정보를 제공받는 자의 개인정보 보유 및 이용기간<br>
+네이버 서비스 탈퇴 시 지체없이 삭제합니다. 단, 관계 법령의 규정에 의하여 일정 기간 보존이 필요한 경우에는 해당 기간만큼 보관 후 삭제합니다.<br><br>
+네이버 회원은 위 개인정보 제공 동의를 거부할 권리가 있으나, 거부 시 네이버페이를 이용한 상품 및 디지털 콘텐츠 구매가 불가능합니다. 그 밖의 내용은 네이버 개인정보 처리방침을 따릅니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree6" name="chkAgree" class="chk_terms"><label for="chkAgree6">개인정보 제공(네이버)에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">개인정보 제공 동의(판매자)<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 개인정보 제공 동의(판매자) -->
+네이버 회원 계정으로 네이버페이를 이용하여 네이버페이 가맹점에서 제공하는 상품 및 서비스를 구매하고자 할 경우, 네이버파이낸셜㈜는 거래 당사자간 원활한 의사소통 및 배송, 상담 등 거래이행을 위하여 필요한 최소한의 개인정보를 아래와 같이 제공하고 있습니다.<br><br>
+1. 개인정보를 제공받는 자<br>
+상품 및 서비스 판매자<br><br>
+2. 제공하는 개인정보 항목<br>
+이름(또는 별명), 네이버 아이디, 이메일 주소, (휴대)전화번호, 상품 구매정보, 상품 수령인 정보(배송상품: 수령인명, 주소, (휴대)전화번호 / E쿠폰: 이름, 네이버 아이디 또는 휴대전화번호)<br><br>
+3. 개인정보를 제공받는 자의 이용목적<br>
+판매자와 구매자의 원활한 거래 진행, 본인의사의 확인, 고객상담 및 불만처리/부정이용 방지 등의 고객관리, 물품배송, 새로운 상품/서비스 정보와 고지사항의 안내, 상품/서비스 구매에 따른 혜택 제공<br><br>
+4. 개인정보를 제공받는 자의 개인정보 보유 및 이용기간<br>
+개인정보 이용목적 달성 시까지 보존합니다. 단, 관계 법령의 규정에 의하여 일정 기간 보존이 필요한 경우에는 해당 기간만큼 보관 후 삭제합니다.<br><br>
+네이버 회원은 위 개인정보 제공 동의를 거부할 권리가 있으나, 거부 시 네이버페이를 이용한 상품 및 디지털 콘텐츠 구매가 불가능합니다. 그 밖의 내용은 네이버페이 가맹점의 자체 이용약관 및 개인정보처리방침에 따릅니다.	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree7" name="chkAgree" class="chk_terms"><label for="chkAgree7">개인정보 제공(판매자)에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">개인정보 제공 동의(금융사)<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 개인정보 제공 동의(금융사)-->
+네이버페이의 간편결제 서비스를 이용하기 위하여 카드와 계좌를 등록 및 이용할 경우, 본인확인 및 도용방지, 부정이용 방지 등 안전하고 편리한 결제 처리를 위하여 아래와 같이
+금융사에 개인정보를 제공합니다.<br><br>
+신한카드 간편결제<br>
+- 정보를 제공받는 자: 신한카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI, 거래정보<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+현대카드 간편결제<br>
+- 정보를 제공받는 자: 현대카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+삼성카드 간편결제<br>
+- 정보를 제공받는 자: 삼성카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+비씨카드 간편결제<br>
+- 정보를 제공받는 자: 비씨카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+KB국민카드 간편결제<br>
+- 정보를 제공받는 자: KB국민카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+롯데카드 간편결제<br>
+- 정보를 제공받는 자: 롯데카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+하나카드 간편결제<br>
+- 정보를 제공받는 자: 하나카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+NH농협카드 간편결제<br>
+- 정보를 제공받는 자: NH농협카드<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+씨티카드 간편결제<br>
+- 정보를 제공받는 자: 한국씨티은행<br>
+- 제공되는 정보: 가상카드번호, 카드사명, 생년월일, CI<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+계좌 간편결제(등록)<br>
+- 정보를 제공받는 자: 등록된 계좌의 귀속 은행, 케이에스넷/세틀뱅크 중 1개사<br>
+- 제공되는 정보: 생년월일, 계좌번호<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+계좌 간편결제(송금, 테스트입금)<br>
+- 정보를 제공받는 자: 신한은행<br>
+- 제공되는 정보: 은행명, 계좌번호<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+&lt;안내&gt; 결제 처리를 위한 개인정보 처리위탁<br>
+휴대전화, 무통장입금, 문화상품권 등을 이용하여 결제 시 안전하고 편리한 결제 처리를 위하여 아래의 결제대행사 등에 결제처리, 결제도용 방지 업무를 위탁 처리하고 있습니다.<br><br>
+휴대폰 결제<br>
+- 정보를 제공받는 자: 다날/KG모빌리언스 중 1개 사<br>
+- 제공되는 정보: 네이버 아이디, 휴대폰전화번호, IP 주소<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+휴대폰 간편결제<br>
+- 정보를 제공받는 자: KG모빌리언스<br>
+- 제공되는 정보: 네이버 아이디, 휴대전화번호, PIN번호, IP 주소<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지, 카드 간편결제 등록시 본인 확인<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+무통장입금 결제<br>
+- 정보를 제공받는 자 : 케이에스넷/세틀뱅크 중 1개사<br>
+- 제공되는 정보 : 네이버 아이디<br>
+- 제공되는 정보의 이용목적 : 결제처리<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+문화상품권 결제<br>
+- 정보를 제공받는 자 : KG이니시스/LG U+ 중 1개사<br>
+- 제공되는 정보 : 네이버 아이디, IP주소<br>
+- 제공되는 정보의 이용목적 : 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+해피머니상품권 결제<br>
+- 정보를 제공받는 자 : NHN KCP<br>
+- 제공되는 정보 : 네이버 아이디, IP 주소<br>
+- 제공되는 정보의 이용목적 : 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간 : 이용목적 달성 시 혹은 관계 법령에 따른 해당 기간 동안 보관함<br><br>
+틴캐시 결제<br>
+- 정보를 제공받는자 : 에듀박스<br>
+- 제공되는 정보 : 네이버 아이디, IP 주소<br>
+- 제공되는 정보의 이용목적: 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+티머니 결제<br>
+- 정보를 제공받는 자 : KG모빌리언스<br>
+- 제공되는 정보 : 네이버 아이디, 휴대폰 번호, 통신사, IP 주소<br>
+- 제공되는 정보의 이용목적 : 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간 : 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함<br><br>
+해외 신용카드 결제<br>
+- 정보를 제공받는 자 : KG올앳<br>
+- 제공되는 정보 : 네이버 아이디<br>
+- 제공되는 정보의 이용목적 : 결제처리, 결제도용 방지<br>
+- 제공되는 정보의 보관기간: 이용목적 달성 시 혹은 관계 법령에 따른 보관의무가 있을 경우, 해당 기간 동안 보관함	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree8" name="chkAgree" class="chk_terms"><label for="chkAgree8">결제정보 제공(금융사)에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">개인정보 제공 동의(금융결제원)<span class="essential">필수</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 개인정보 제공 동의(금융결제원)-->
+네이버 회원 계정으로 네이버페이를 이용하여 네이버페이 가맹점에서 제공하는 상품 및 서비스를 구매하고자 할 경우, 네이버파이낸셜㈜는 거래 당사자간 원활한 의사소통 및 배송, 상담 등 거래이행을 위하여 필요한 최소한의 개인정보를 아래와 같이 제공하고 있습니다.<br><br>
+1. 개인정보를 제공받는 자<br>
+금융결제원<br><br>
+2. 제공하는 개인정보 항목<br>
+이름, 생년월일, 휴대전화번호, 금융기관명 및 계좌번호, CI<br><br>
+3. 개인정보를 제공받는 자의 이용목적<br>
+제로페이 결제 및 취소, 대금 지불<br>
+출금이체 서비스 제공, 출금동의 확인, 출금이체 신규등록, 해지사실 통지<br><br>
+4. 개인정보를 제공받는 자의 개인정보 보유 및 이용기간<br>
+개인정보 이용목적 달성 시까지 보존합니다. 단, 관계 법령의 규정에 의하여 일정 기간 보존이 필요한 경우에는 해당 기간만큼 보관 후 삭제합니다.<br><br>
+네이버 회원은 위 개인정보 제공 동의를 거부할 권리가 있으나, 거부 시 네이버페이를 이용한 상품 및 디지털 콘텐츠 구매가 불가능합니다. 그 밖의 내용은 금융결제원 개인정보처리방침에 따릅니다.<br>	</div>
+	<div class="one_chk"><input type="checkbox" id="chkAgree9" name="chkAgree" class="chk_terms"><label for="chkAgree9">개인정보 제공(금융결제원)에 동의합니다.</label></div>
+
+	<h5 class="sub_tit">혜택/이벤트 정보 알림 수신 - 다양한 혜택 정보와 포인트 적립 이벤트 소식이 제공됩니다.<span class="essential">선택</span></h5>
+	<div class="txt_area">
+		<!-- TODO : 혜택/이벤트 알림 수신 - 발송수단 : SMS 메시지(톡톡/문자), 이메일 -->
+네이버파이낸셜의 다양한 혜택 정보를 받으실 수 있습니다.<br>
+포인트 적립되는 이벤트 소식을 받으실 수 있습니다.<br>
+수신 동의하신 사용자를 대상으로 특별한 적립 혜택이 제공될 예정입니다.<br>
+발송수단 : 네이버 알림  또는 문자 알림<br>
+설정 &gt; 내정보에서 언제든지 수신동의 또는 철회가 가능합니다.<br>	</div>
+	<div class="one_chk"><input type="checkbox" id="optionAgree" name="optionAgree" class="chk_terms"><label for="optionAgree">혜택/이벤트 정보 알림 수신에 동의합니다.</label></div>
+</div>
+<div class="all_chk">
+	<input type="checkbox" id="allCheckBottom" class="chk_terms"><label for="allCheckBottom"><strong>이용약관, 개인정보 수집, 네이버-네이버파이낸셜 간 개인정보 제공에 모두 동의합니다.</strong></label>
+	<p class="desc_all">모두 동의하기에는 선택 동의도 포함되어 있으며 개별적으로 동의를 선택하실 수 있습니다.</p>
+</div>
+<div class="btn_terms_area">
+	<a href="#" id="btnOk" class="btn_ok">동의</a><a href="#" id="btnCancel" class="btn_cancel">취소</a>
+</div>
+
+<input type="hidden" id="joinKey" value="15826365137960908714">
+<input type="hidden" id="returnKey" value="return15826365137960908714">
+
+<div class="dim_layer2" id="dimmedLayer" style="display:none"></div>
+<!-- [D] 레이어 팝업 > 혜택/이벤트 알림 수신 팝업 -->
+<!-- [D] .nf_layer 너비의 절반 값을 style="margin-left: *" 에 음수 값으로 넣어주세요. -->
+<div class="nf_layer alert_layer" id="optionAgreeLayer" style="margin-left:-250px;top:600px;display:none">
+	<strong class="tit_layer">
+		잠깐!<br>
+		혜택/이벤트 정보 알림 수신을 선택하지 않으셨습니다.
+	</strong>
+	<p class="desc_layer">
+		알림 수신 동의 시 특별한 포인트 적립 혜택이 제공됩니다.<br>
+		설정 &gt; 내정보에서 철회가 가능합니다.
+	</p>
+	<div class="btn_wrap">
+		<div class="cell">
+			<button type="button" id="btnNext" class="btn_layer">다음에 하기</button>
+		</div>
+		<div class="cell">
+			<button type="button" id="btnOptionAgree" class="btn_layer type_green">알림 수신하기</button>
+		</div>
+	</div>
+</div>
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //container -->   
+
+    <!-- footer -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="info_site">
+			<ul>
+                <li><a href="https://pay.naver.com/provision" target="_blank">네이버페이 이용약관</a><!--N=a:fot.agreement--></li>
+                <li><a href="https://pay.naver.com/provision?viewType=electronic" target="_blank">전자금융거래 이용약관</a><!--N=a:fot.ecagreemnet--></li>
+                <li><a href="https://pay.naver.com/policy/financial" target="_blank"><strong>개인정보처리방침</strong></a><!--N=a:fot.private--></li>
+                <li><a href="https://policy.naver.com/policy/youthpolicy.html" target="_blank">청소년보호정책</a><!--N=a:fot.youth--></li>
+                <li><a href="https://help.pay.naver.com" target="_blank">쇼핑&amp;페이 고객센터</a><!--N=a:fot.helpdesk--></li>
+			</ul>
+			<div class="s_center">
+				<dl>
+				<dt>고객센터 주소 </dt>
+				<dd>강원도 춘천시 퇴계로 89 강원전문건설회관</dd>
+				<dt>전화</dt>
+				<dd>1588-3819 (<a href="https://help.pay.naver.com/" target="_blank">전화전클릭</a><!--N=a:fot.beforecall-->)</dd>
+				<dd>1588-3816 (결제도용신고)</dd>
+				<dt>1:1문의</dt>
+				<dd><a href="https://help.pay.naver.com/faq/alias/naver-gu.help">바로가기</a></dd>
+				</dl>
+			</div>
+		</div>
+		<p class="f_marketing">네이버파이낸셜㈜은 전자결제서비스제공자 및 통신판매중개자이며 통신판매의 당사자가 아닙니다. 상품, 상품정보 및 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+		<address>
+			대표이사 : 최인혁
+			<span></span>
+			주소 : 경기도 성남시 분당구 불정로 6 네이버 그린팩토리 13561
+			<span></span>
+			사업자등록번호 : 524-86-01528
+		</address>
+		<div class="f_cr">
+			<em>©</em>
+			<a target="_blank" href="https://www.naverfincorp.com/">NAVER FINANCIAL Corp.</a>
+		</div>
+	</div>    
+	<!-- //footer -->
+	
+    <!-- //footer --> 
+    </div>
+    
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/jindo.all.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.Component.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.UIComponent.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.Timer.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.LayerManager.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.LayerPosition.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.DefaultTextValue.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.Rolling.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.Effect.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.Transition.js" charset="UTF-8"></script>	
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common.js" charset="UTF-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/jindo.Pagination.js" charset="UTF-8"></script>
+
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.event_delegator.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.variables.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.utility.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.layer.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.base.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/common/nmp.window.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/nmp.component.Base.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/nmp.component.FormHelper.js" charset="utf-8"></script>
+	<script type="text/javascript" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/component/nmp.component.AffiliateLayerLoader.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" charset="utf-8">
+		var returnUrl = '/home';
+
+</script>
+
+    <script type="text/javascript" charset="utf-8" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/jquery/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" language="javascript" src="https://ssl.pstatic.net/static.pay/u/c/static/202002241958/js/service/join/join.js"></script>
+<script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/202002131135/js/customer/layout.variable.real.js"></script>
+<script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/202002131135/js/customer/layout.gnb.js"></script>
+<script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/202002131135/js/customer/layout.lnb.js"></script>
+<script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/202002131135/js/customer/checkout.nclktag.js"></script>
+<script type="text/javascript" language="JavaScript" src="https://ssl.pstatic.net/static.checkout/layout/202002131135/js/common/lcslog-0.7.0.js"></script>
+
+
+</body></html>

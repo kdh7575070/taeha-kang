@@ -1,0 +1,18 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- static -->
+    <img src="{% static 'cat.jpg' %}" alt="로딩실패"> <!-- alt는 실패시 뜰 문구 -->
+    <!-- media -->
+    {% for animal in animals.all %}
+        <img src="{{animal.image.url}}" alt="실패">
+        <br>
+        {% endfor %}
+</body>
+</html>

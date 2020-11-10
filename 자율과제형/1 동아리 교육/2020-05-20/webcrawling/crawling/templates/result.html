@@ -1,0 +1,16 @@
+<h1>결과</h1>
+<br>
+{% for title, url in data %}
+<h5>뉴스제목</h5>
+{{title}}
+<br>
+<h5>뉴스url</h5>
+{{url}}
+<br>
+{% endfor %}
+
+<h2>단어 카운트: </h2>
+{% for word, num in dict %} <!-- 반복문 시작 -->
+{{word}} : {{num}}
+<br>
+{% endfor %} <!-- 반복문 닫기 -->

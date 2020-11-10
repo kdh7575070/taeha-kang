@@ -1,0 +1,9 @@
+<a href="{% url 'about' %}">ABOUT</a>
+<form action="{% url 'result' %}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <!-- fulltext는 입력받은 텍스트 -->
+    <!-- 텍스트 영역 크기조정 -->
+    <br>
+    <input type="submit" value="Count!"> 
+    <!-- 버튼에 카운트가 뜬다 -->
+</form>

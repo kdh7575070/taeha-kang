@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>instagram</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#heart").click(function(){
+                if($("#heart").hasClass("liked")){
+                    $("#heart").html('<i class="far fa-heart"></i>');
+                    $("#heart").removeClass("liked");
+                }else{
+                    $("#heart").html('<i class="fas fa-heart"></i>');
+                    $("#heart").addClass("liked");
+                }
+            });
+            $("#comment").click(function(){
+                alert('댓글 기능은 아직 구현되지 않았습니다.');
+            });
+            $("#message").click(function(){
+                alert('메세지 기능은 아직 구현되지 않았습니다.');
+            });
+            $("#bookmark").click(function(){
+                if($("#bookmark").hasClass("liked")){
+                    $("#bookmark").html('<i class="far fa-bookmark"></i>');
+                    $("#bookmark").removeClass("liked");
+                }else{
+                    $("#bookmark").html('<i class="fas fa-bookmark"></i>');
+                    $("#bookmark").addClass("liked");
+                }
+            });
+        });
+    </script>
+    <div class ="card">
+        
+        <header>        <!--<div class ="header"> 대신 제공되는 코드-->
+            <img src="profile.png" alt="likelion">
+            <strong>&nbsplikelion_knu</strong>
+        </header>                
+        <div class = "photo">
+            <img src="image.jpg" alt="image">
+        </div>
+        <div class = "article">
+            <section id="section1">
+                <span id="leftIcons">
+                    <button id="heart">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button id="comment">
+                        <i class="far fa-comment-dots"></i>
+                    </button>
+                    <button id="message">
+                        <i class="far fa-paper-plane"></i>
+                    </button>
+                </span>
+                <span id="rightIcons">
+                    <button id='bookmark'>
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </span>
+            </section>
+            <section id="section2">
+                <img src="profile.png" alt="profile">
+                <strong>&nbsplikelion_knu</strong>&nbsp외&nbsp<strong>100</strong>명이 이 게시물을 좋아합니다.
+                <!-- &nbsp는 띄어쓰기 -->
+            </section>
+            <section id="section3">
+            안녕하세요, 경북대학교 멋쟁이 사자처럼 대표 박훈입니다. 저는 멋쟁이 사자처럼에서 멋쟁이를 담당하고 있습니다.
+            </section>
+        </div>
+    </div>
+</body>
+</html>
