@@ -2,8 +2,7 @@
 2020.8.9 - 2020.9.28(해커톤당일) / 경북대학교 IT융복합관 / 멋쟁이사자처럼주관 / 우수상 수상 / 담당자 김은숙 053 - 950 - 7674 \
 프로젝트 역할, 세부일정, 수상증명, 발표자료, PPT슬라이드 등에 대한 더 자세한 사항은 아래 링크에 꼼꼼하게 정리해두었습니다. \
 https://www.notion.so/kangtaeha/LIKELION-X-SW-840c327fcd944ccaa5132179a309bdfc \
-해당 깃 레포지토리를 따로 첨부합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다. \
-https://github.com/kdh7575070/Taeha
+[해당 깃 레포지토리](https://github.com/kdh7575070/Taeha)를 따로 링크합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다. \
 
 ## 웹 페이지에 대한 설명
 ![120138698_3262325810511167_7051169438634279307_n](https://user-images.githubusercontent.com/67677983/99930892-09f00000-2d96-11eb-9fcb-234fced26507.jpg)
@@ -25,8 +24,7 @@ account/template : 로그인 회원가입 관련 html 모음\
 2020.10.7 - 2020.10.25(해커톤당일) / 온라인 / 멋쟁이사자처럼주관 / 은상 수상 / 담당자 멋쟁이사자처럼 대표 \
 프로젝트 역할, 세부일정, 수상증명, 발표자료, PPT슬라이드 등에 대한 더 자세한 사항은 아래 링크에 꼼꼼하게 정리해두었습니다. \
 https://www.notion.so/kangtaeha/LIKELION-X-LOTTE-41f85103eac3490a9749564270b2e2ae \
-해당 깃 레포지토리를 따로 첨부합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다. \
-https://github.com/seungdeok/webeatthelion
+[해당 깃 레포지토리](https://github.com/seungdeok/webeatthelion)를 따로 링크합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다. \
 
 ## 웹 페이지에 대한 설명
 ![vercel](https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG)
