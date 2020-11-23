@@ -6,9 +6,10 @@
 ## 웹 페이지에 대한 설명
 ![120138698_3262325810511167_7051169438634279307_n](https://user-images.githubusercontent.com/67677983/99930892-09f00000-2d96-11eb-9fcb-234fced26507.jpg)
 소상공인 공모전 플랫폼 웹사이트로 아이디어가 필요한 소상공인들이 다양한 형태로 공모전 게시물을 쓰면 대학생들이 아디이어를 제출할 수 있는 플랫폼입니다. 코드는 CRUD 위주로 구성되었습니다. \
-###실행 순서
+
+### 실행 순서
 [페이지 접속](https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd) > user페이지에서 회원가입 후 로그인 > 공모전 주최하기를 통해 공모전 주최 > 타인의 게시물에 아이디어 제출할 수 있음 > 본인의 게시물에 제출된 아이디어를 모아볼 수 있음 > 마이페이지에서 주최한 공모전, 좋아요를 클릭한 공모전, 제출한 아이디어를 확인 및 수정가능 > 댓글달기 및 키워드 검색, 카테고리 검색 가능 \
-pythonanywhere 이라는 django 배포 툴을 이용하여 직접 배포했습니다. [여기서 확인해주세요](http://kdh7575070.pythonanywhere.com) \
+pythonanywhere 이라는 django 배포 툴을 이용하여 제가 직접 서버에 배포했습니다. http://kdh7575070.pythonanywhere.com \
 *배포시 주요 사항을 [해당 노션 링크](https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd)에 팀원들과 정리했습니다.*
 
 ## 코드 살펴보기
@@ -25,7 +26,7 @@ account/template : 로그인 회원가입 관련 html 모음\
 ## 웹 페이지에 대한 설명
 ![vercel](https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG)
 고객이 택배를 주문하고, 주문한 택배를 QR코드를 인식해 반납하며, 물자 관리 현황을 시스템페이지로 확인하는 세 개의 web application 구현
-###실행 순서
+### 실행 순서
 *test 계정 - ID: admin@lottesuper.co.kr / PW: admin2020* \
 [user](https://webeatthelion-userweb.vercel.app/) 페이지에서 test 계정 로그인 > 배송하기 클릭 > 에코배송 선택 > 배송주소(개인 이메일)입력 > 배송완료(개인 이메일로 발송된 QR코드 확인,시스템에서 '배송완료'되었음을 확인가능) > [qr scanner](https://webeatthelion.seungdeok.vercel.app/scan) 페이지에서 QR코드 스캔하기 > [user](https://webeatthelion-userweb.vercel.app/mypage) 마이페이지에서 포인트 반납택배개수 증가 확인 > [system](https://webeatthelion.seungdeok.vercel.app/) 페이지에서 '점포대기'로 뜨는 것을 확인 \
 Github appplication vercel을 통해 node.js코드를 간편하게 배포했습니다. \
