@@ -6,13 +6,13 @@
 ## phase 1.
 KNUmovieDB라고 하는 IMDB를 표방한 영화 데이터 사이트를 만들기 위해서, 필요한 conceptual model을 완성합니다.\
 erwin이라는 전문 프로그램을 통해 er model을 그렸습니다.\
-<img src="https://user-images.githubusercontent.com/67677983/99939675-f51f6680-2dad-11eb-8679-20103621a040.jpg" width="480">\
+<img src="https://user-images.githubusercontent.com/67677983/99939675-f51f6680-2dad-11eb-8679-20103621a040.jpg" width="300">
 
 ## phase 2.
 완성된 er model을 relational model으로 매핑시킨 뒤에 SQL를 사용하여 물리적 데이터베이스를 정의, 정의된  데이터베이스에  실제  데이터를 적재합니다. \
 DMBS는 Postgrads를 썼고 임의의 대량 데이터를 생성한 뒤 sql파일에 dml형식으로 짜두고, 전체 파일을 실행시킴으로써 데이터를 일괄적으로 데이터베이스에 삽입했습니다. \
 이후 교수님이 요구하신 20개 정도의 매우 심화된 query문을 짰고 queries 파일에 저장해두었습니다.
-![knuMovieDB_ERD_Team14](https://user-images.githubusercontent.com/67677983/99939700-fe103800-2dad-11eb-885d-fe05c7c323f0.png)
+<img src="https://user-images.githubusercontent.com/67677983/99939700-fe103800-2dad-11eb-885d-fe05c7c323f0.png" width="500">
 
 ## phase 3.
 따로 [레포지토리](https://github.com/kdh7575070/comp322)가 있어서 링크합니다. 꼭 클릭하여 이동해주십시오. *위에 push된 파일은 무시해주셔도 됩니다.* \
