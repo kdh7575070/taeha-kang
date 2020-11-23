@@ -12,11 +12,11 @@ https://github.com/kdh7575070/Taeha
 pythonanywhere 이라는 django 배포 툴을 이용하여 직접 배포했습니다. \
 http://kdh7575070.pythonanywhere.com \
 *(배포시 주요 사항을 해당 링크에 팀원들과 정리했습니다. \
-https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd )* \
+https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd )*
 
 ## 코드 살펴보기
 contest/template : 주요 html 모음\
--- base(nav바 및 주요 컨테이너), create-(작성화면), edit-(수정하면), -Post(공모전관련), -Idea(아이디어관련), -Page(마이페이지Segments) --
+-- base(nav바 및 주요 컨테이너), create-(작성화면), edit-(수정하면), -Post(공모전관련), -Idea(아이디어관련), -Page(마이페이지Segments) -- \
 account/template : 로그인 회원가입 관련 html 모음\
 구체적인 코드에 대한 설명은 이곳에 담기는 너무 길어 인터뷰때 말씀드릴 수 있습니다.
 
@@ -30,7 +30,7 @@ https://github.com/seungdeok/webeatthelion
 
 ## 웹 페이지에 대한 설명
 ![vercel](https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG)
-
+고객이 택배를 주문하고, 주문한 택배를 QR코드를 인식해 반납하며, 물자 관리 현황을 시스템페이지로 확인하는 세 개의 web application 구현\ 
 *test 계정 \
 ID: admin@lottesuper.co.kr \
 PW: admin2020* \
