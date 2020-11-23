@@ -1,11 +1,11 @@
 #  과제에 대한 간단한 소개
 ### 1. 오라클 db 설치
 ### 2. sqlplus 실습
-<img src="https://user-images.githubusercontent.com/67677983/99945495-0ff6d880-2db8-11eb-81b6-975317201d13.PNG" width="600">
+<img src="https://user-images.githubusercontent.com/67677983/99945495-0ff6d880-2db8-11eb-81b6-975317201d13.PNG" width="600">\
 ### 3. ER diagram 짜기
-<img src="https://user-images.githubusercontent.com/67677983/99945522-1be29a80-2db8-11eb-8ebd-da00df132b60.png" width="400">
+<img src="https://user-images.githubusercontent.com/67677983/99945522-1be29a80-2db8-11eb-8ebd-da00df132b60.png" width="400">\
 ### 4. ER to Relational model 짜기
-<img src="https://user-images.githubusercontent.com/67677983/99945536-2309a880-2db8-11eb-96ab-e0f023fa16dd.jpg" width="400">
+<img src="https://user-images.githubusercontent.com/67677983/99945536-2309a880-2db8-11eb-96ab-e0f023fa16dd.jpg" width="400">\
 ### 5. sql plus를 통한 physical db 구축 [여기](https://github.com/kdh7575070/taeha-kang/tree/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab5/lab5-2015112806.sql)
 #### 코드리뷰
     CREATE TABLE DEPARTMENT(
@@ -120,6 +120,6 @@ Statement 객체 생성
 Total hours를 구현하는 프로시져를 생성한다. 프로시져를 통해 일련의 쿼리를 함수화 할 수 있다.
 
 ### 8. jsp를 통해 웹 구현
-<img src="https://user-images.githubusercontent.com/67677983/99945688-67954400-2db8-11eb-95a6-5edd73d394ae.PNG" width="600">
+<img src="https://user-images.githubusercontent.com/67677983/99945688-67954400-2db8-11eb-95a6-5edd73d394ae.PNG" width="600">\
 ### 9. jsp를 통해 웹 구현
 <img src="https://user-images.githubusercontent.com/67677983/99945692-69f79e00-2db8-11eb-96d2-9697a53e17c9.PNG" width="400">
