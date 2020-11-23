@@ -1,4 +1,4 @@
-# 실습 과제에 대한 간단한 소개 - 모두 직접 작성한 코드입니다
+# 실습 과제에 대한 간단한 소개 - 모두 C로 직접 작성한 코드입니다
 
 ### 1장
 ds1([배열포인터)](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/1%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%20%EC%8B%A4%EC%8A%B5/ds1-hw-1/src/ds1-hw-1.c) \
