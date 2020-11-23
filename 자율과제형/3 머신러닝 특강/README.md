@@ -7,7 +7,7 @@ tensorflow version == 1.11 \
 keras version == 2.2.2
 
 ### src2-5. 1주차에 해당하는 내용입니다.
-python와 matplotlib, pandas와 numpy에 관한 내용을 전반적으로 학습했고, 웹에서 데이터를 크롤링, 스크레이핑 하여 데이터를 가져오는 기술에 대해서도 학습했습니다.
+python와 matplotlib, pandas와 numpy에 관한 내용을 전반적으로 학습했고, 웹에서 데이터를 크롤링, 스크레이핑 하여 데이터를 가져오는 기술에 대해서도 학습했습니다.\
 아래 예제는 영화 순위 정보를 크롤링해서 보여주는 예제입니다. 
 
 #### 코드리뷰
@@ -57,7 +57,7 @@ python와 matplotlib, pandas와 numpy에 관한 내용을 전반적으로 학습
 [src4/scraping.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/3%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%ED%8A%B9%EA%B0%95/src4/scraping.py)
 
 ### src6-10. 2주차에 해당하는 내용입니다.
-본격적으로 tensorflow의 다양한 activation function error function, gradient algorithm을 이용해 csv파일을 머신러닝 합니다. 
+본격적으로 tensorflow의 다양한 activation function error function, gradient algorithm을 이용해 csv파일을 머신러닝 합니다. \
 아래 예제는 SVM을 이용해서 잎 수, 넓이 등의 feature를 통해 붓꽃의 종류를 예측하는 아주 보편적인 예제입니다.
 
 #### 코드리뷰
@@ -98,8 +98,8 @@ python와 matplotlib, pandas와 numpy에 관한 내용을 전반적으로 학습
 [src6/iris-train2.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/3%20%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%ED%8A%B9%EA%B0%95/src6/iris-train2.py)
 
 ### src11-15. 3주차에 해당하는 내용입니다.
-keras를 이용해서 심층 신경망을 활용해 csv파일을 딥러닝 합니다. 
-아래 예제는 컨벌루셔널 뉴럴넷을 통해 이미지를 학습하여 textset을 101개의 클래스중 하나로 예측하는 아주 보편적인 예제입니다.
+keras를 이용해서 심층 신경망을 활용해 csv파일을 딥러닝 합니다. \
+아래 예제는 컨벌루셔널 뉴럴넷을 통해 이미지를 학습하여 textset을 101개의 클래스중 하나로 예측하는 아주 보편적인 예제입니다.\
 loss functiond으로는 'binary_crossentropy'를 optimizer로 'rmsprop'를 사용했으며 CNN과 Maxpooling layer에 두번 통과시킨 후 드롭아웃을 거쳐 softmax로 classification합니다. 
 
 #### 코드리뷰
