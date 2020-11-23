@@ -38,5 +38,5 @@ while문 안에서 입력을 받아 입력에 따라 딜레이 속도가 조절�
             dir = -1;
     }
 hello 메세지를 움직이는 코드. 양쪽 벽에 부딪히면 튕겨서 반대방향으로 이동한다.\
-<img width="800" alt="Screen Shot 2020-11-06 at 11 44 19 PM" src="https://user-images.githubusercontent.com/67677983/99944195-cad1a700-2db5-11eb-94c8-f322b9d38846.png">
-수행결과 hello가 양옆으로 이동하면서 입력에 따라 속도가 증가/감소한다
+<img width="800" alt="Screen Shot 2020-11-06 at 11 44 19 PM" src="https://user-images.githubusercontent.com/67677983/99944195-cad1a700-2db5-11eb-94c8-f322b9d38846.png"> \
+수행결과 hello가 양옆으로 이동하면서 입력에 따라 속도가 증가/감소한다.
