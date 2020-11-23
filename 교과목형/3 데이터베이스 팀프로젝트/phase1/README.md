@@ -1,4 +1,4 @@
-#7개의 Entity(Movie, Genre, Actor, Rating, Episode, Version, Account)를 구성했습니다. 
+# 7개의 Entity(Movie, Genre, Actor, Rating, Episode, Version, Account)를 구성했습니다. 
 
 ## 1. Movie
 모든 영상물은 movie_id 라는 unique한 key attribute을 가집니다. 그외 attribute에는 movie_title은 제목을, type은 드라마,영화,다큐멘터리 와 같은 종류를, series_number은 만약 시리즈물의 경우 그 번호를, isAdult는 성인영화 여부를, start_year과 end_year은 각각 기준 실제 상영 시작 년도와 끝 년도를 기록합니다. 이외에도 multi-value attribute으로 directors을 저장하며, average_rating과 num_likes는 각각 Rated_by relationship의 rating, like attribute로 부터 계산되는 derived attibutes가 있습니다.
