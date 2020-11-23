@@ -30,3 +30,31 @@ ds21(힙정렬 / 기수정렬)
 ### 8장
 ds22(해싱-[char]선형조사)\
 ds23(해싱-[int]랜덤조사 / 해싱-[char]체이닝)
+
+## 코드 뜯어보기
+# 1장 - ds4 성능측정코드 - 소팅알고리즘의 성능을 층정해보는 코드
+
+     for (n=0; n<=2000; n += step){
+		long repetitions = 0;
+		start = clock();
+
+		do
+		{
+			repetitions++;
+
+			for(i=0; i<n;i++)
+				a[i] = n-1;
+
+			sort(a,n);
+
+		}while (clock()-start<1000); //1초동안반복해서돌림
+		
+		duration = ((double)(clock() - start))/CLOCKS_PER_SEC; //총걸린시간 - 1초 돌렸으니까 다 일초나오겠지
+		duration /= repetitions; 
+
+reptitions(몇번 반복했는지)으로 나누면 1번에 몇초 걸렸는지 평균이 나옴
+
+		printf("%6ld   %9ld   %f\n", n, repetitions, duration);
+		fprintf(fpOut, "%6ld   %9ld   %f\n", n, repetitions, duration);
+		if (n == 100) step = 100;
+최종결과
