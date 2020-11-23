@@ -44,3 +44,47 @@ lotte-hackathon/utils : qr코드 인식에 관한 api가 담겨있어 lotte-hack
 lotte-hackathon/styles : css 작업이 이루어지는 공간입니다.\
 lotte-hackathon-user/pages/index.js : 유저(로그인 및 마이페이지) 화면에 관련된 프론트, 백엔드 코드입니다.\
 *구체적인 코드에 대한 설명은 이곳에 담기는 너무 길어 인터뷰때 말씀드릴 수 있습니다.*
+
+# 세 번째 - 산호세주립대학 실리콘밸리 소프트웨어개발 수업 및 해커톤
+2020.7.20 - 2020.8.14 / 산호세주립대학 / 담당자 IT4호관 이은주 010 - 7407 - 9480 \
+프로젝트 역할, 세부일정, 수상증명, 발표자료, PPT슬라이드 등에 대한 더 자세한 사항은 [이 노션 링크](https://www.notion.so/kangtaeha/SJSU-Silicon-Valley-SW-Project-a68a7515cb4c4f349c793f87e15657d0)에 꼼꼼하게 정리해두었습니다. \
+[해당 깃 레포지토리](https://github.com/moonmola/MBTIclub)를 따로 링크합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다.
+
+## 어플리케이션에 대한 설명
+[![Video Label](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/AZLe6kdm4Lo)\
+*이미지를 클릭하시면 동영상이 등장합니다.*\
+MBTI에 관심이 많은 젊은 층을 타겟으로 한 커뮤니티 플랫폼 앱으로 로그인은 구글 API를 통해 구현했고, 카카오톡 공유하기 기능의 API, 채팅 관련 API를 사용했으며, \
+메인 서비스는 총 다섯가지 탭(1. 홈, 2. 추천, 3. 게시판, 4. 알림메시지와 채팅, 5. 마이페이지)으로 구성됩니다.
+
+## 코드 살펴보기
+### 제가 구현한 [4번 탭- 알람메세지](https://github.com/moonmola/MBTIclub/blob/master/app/src/main/java/com/example/mbticlub/Frag4.java)에 대한 리뷰
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.frag4,container,false);
+
+        ViewPager vp = view.findViewById(R.id.kviewpager);
+        VPAdapter adapter = new VPAdapter(getFragmentManager());
+        vp.setAdapter(adapter);
+
+        TabLayout tab = view.findViewById(R.id.tab);
+        tab.setupWithViewPager(vp);
+
+        ArrayList<Integer> images = new ArrayList<Integer>();
+        images.add(R.drawable.ic_not);
+        images.add(R.drawable.ic_cha);
+
+        for(int i=0; i<2; i++) tab.getTabAt(i).setIcon(images.get(i));
+
+        return view;
+    }
+    // Activity가 처음 실행될 때 호출되는 함수로 VPAdapter를 통해 두개의 Fragment(내부의 또 다른 탭)와 연결됨
+### 4번 탭 안의 [첫번째 탭](https://github.com/moonmola/MBTIclub/blob/master/app/src/main/java/com/example/mbticlub/BlankFragment.java)에 대한 리뷰
+    board_list = (ListView) view.findViewById(R.id.board_list);
+
+        List<String> board_data = new ArrayList<>();
+        final ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), R.layout.memolist_type, board_data);
+        board_list.setAdapter(adapter);
+
+        board_data.add("[Report Alert]\nYour report is under review");
+        board_data.add("[Comments /Anything]\nNick : Thank you:)");
+        board_data.add("[Friend Request]\nName : Open Cluster (INTJ)");
+    //arraylist 배열을 만들어 그 안에 스트링 형태로 알람 메시지 리스트를 만들기
