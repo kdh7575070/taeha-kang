@@ -4,7 +4,7 @@
 [해당 깃 레포지토리](https://github.com/kdh7575070/Taeha)를 따로 링크합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다.
 
 ## 웹 페이지에 대한 설명
-![120138698_3262325810511167_7051169438634279307_n](https://user-images.githubusercontent.com/67677983/99930892-09f00000-2d96-11eb-9fcb-234fced26507.jpg)
+<img src="https://user-images.githubusercontent.com/67677983/99930892-09f00000-2d96-11eb-9fcb-234fced26507.jpg" width="800">
 소상공인 공모전 플랫폼 웹사이트로 아이디어가 필요한 소상공인들이 다양한 형태로 공모전 게시물을 쓰면 대학생들이 아디이어를 제출할 수 있는 플랫폼입니다. 코드는 CRUD 위주로 구성되었습니다.\
 *pythonanywhere 이라는 django 배포 툴을 이용하여 제가 직접 서버에 배포했습니다. http://kdh7575070.pythonanywhere.com \
 배포시 주요 사항을 [해당 노션 링크](https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd)에 팀원들과 정리했습니다.*
@@ -25,7 +25,7 @@ account/template : 로그인 회원가입 관련 html 모음\
 [해당 깃 레포지토리](https://github.com/seungdeok/webeatthelion)를 따로 링크합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다.
 
 ## 웹 페이지에 대한 설명
-![vercel](https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG)
+<img src="https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG" width="800">
 고객이 택배를 주문하고, 주문한 택배를 QR코드를 인식해 반납하며, 물자 관리 현황을 시스템페이지로 확인하는 세 개의 web application 구현\
 *Github appplication vercel을 통해 node.js코드를 간편하게 배포했습니다.\
 [user](https://webeatthelion-userweb.vercel.app/) : 고객님이 로그인을 하고 에코 배송을 선택할 수 있는 페이지 입니다. \
