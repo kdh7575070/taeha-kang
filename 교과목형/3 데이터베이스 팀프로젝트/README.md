@@ -6,7 +6,8 @@
 ## phase 1.
 KNUmovieDB라고 하는 IMDB를 표방한 영화 데이터 사이트를 만들기 위해서, 필요한 conceptual model을 완성합니다.\
 erwin이라는 전문 프로그램을 통해 er model을 그렸습니다.
-![IMDB](https://user-images.githubusercontent.com/67677983/99939675-f51f6680-2dad-11eb-8679-20103621a040.jpg = 250x250)
+<img src="https://user-images.githubusercontent.com/67677983/99939675-f51f6680-2dad-11eb-8679-20103621a040.jpg" width="48">
+![IMDB](https://user-images.githubusercontent.com/67677983/99939675-f51f6680-2dad-11eb-8679-20103621a040.jpg)
 
 ## phase 2.
 완성된 er model을 relational model으로 매핑시킨 뒤에 SQL를 사용하여 물리적 데이터베이스를 정의, 정의된  데이터베이스에  실제  데이터를 적재합니다. \
