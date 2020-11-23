@@ -4,7 +4,7 @@
 [해당 깃 레포지토리](https://github.com/moonmola/MBTIclub)를 따로 링크합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다.
 
 ## 어플리케이션에 대한 설명
-<iframe width="640" height="360" src="https://youtu.be/AZLe6kdm4Lo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
+[![Video Label](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/AZLe6kdm4Lo)
  
 ## 약간의 코드리뷰
 
