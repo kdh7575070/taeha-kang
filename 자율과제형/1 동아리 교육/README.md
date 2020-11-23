@@ -1,11 +1,11 @@
 # 동아리에서 교육을 받으며 작성한 코드들입니다.
 ## django를 사용하여 학습했습니다.
-python version == 3.8.6
-django version == 3.1.0
+python version == 3.8.6 \
+django version == 3.1.0 \
 *7/13, 7/16 은 용량문제로 commit 과정에서 오류가 발생하여 알집하여 첨부했습니다.*
 
 ## 실행 manual
-myvenv가 있는 directory에서 가상환경 실행 source myvenv/Scripts/activate
+myvenv가 있는 directory에서 가상환경 실행 source myvenv/Scripts/activate \
 managy.py가 있는 directory에서 python manage.py runserver
 
 ### [5/8](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-08/main.html) 프론트엔드 - HTML, CSS 사용해서 인스타그램 카드 만들기
@@ -114,7 +114,7 @@ managy.py가 있는 directory에서 python manage.py runserver
     def __str__(self):
         return self.title #자기이름을 admin사이트 제목으로 보여주는 함수
     
-    //Blog class를 만들어 게시물 data를 받았을때 database에 삽입할 양식을 지정하는 과정 - migrate, makemigrations 명령어를 통해 sqlite db를 생성한다.
+    //Blog class를 만들어 게시물 data를 database에 삽입할 양식을 지정하는 과정 - makemigrations, migrate 명령어로 sqlite db를 생성한다.
 [models.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-22/blogproject/blog/models.py)
 
     # create하는 함수
@@ -170,7 +170,7 @@ managy.py가 있는 directory에서 python manage.py runserver
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     #모아줄 위치
     
-    //Setting.py 에 설정 한 후 python manage.py collectstatic를 이용해서 static파일을 한꺼번에 모아 static 폴더를 생성한다 - 배포를 위한 작업임
+    //Setting.py를 위와같이 수정 후 collectstatic 를 이용해서 static파일을 한꺼번에 모아 static 폴더를 생성한다 - 배포를 위한 작업임
     
 ### 7/13 CRUD복습, 앱을 두개로 나누고 url을 한 파일에 묶는 팁
 
