@@ -19,25 +19,25 @@
         PRIMARY KEY(Dnumber),
         UNIQUE(Dname)
      );
-TABLE 만들기
+    --TABLE 만들기
 
     INSERT INTO EMPLOYEE VALUES ('John', 'B', 'Smith', '123456789', TO_DATE('1965-01-09', 'yyyy-mm-dd'), '731 Fondren, Houston, TX', 'M', 30000, '333445555', 5);
     INSERT INTO EMPLOYEE VALUES ('Franklin', 'T', 'Wong', '333445555', TO_DATE('1968-01-19', 'yyyy-mm-dd'), '368 Voss, Houstom, TX', 'F', 40000, '888665555', 5);
     INSERT INTO EMPLOYEE VALUES ('Alicia', 'J', 'Zelaya', '999887777', TO_DATE('1968-01-19', 'yyyy-mm-dd'), '3321 Castle, Spring, TX', 'F', 25000, '987654321', 4);
-DATA 삽입
+    --DATA 삽입
 
     select Fname, Minit, Lname from Project, Works_on, Employee where DNO=5 and Salary >= 10000 and Pname = 'ProductZ' and Pno = Pnumber and Essn = ssn order by Lname ASC;
     select Dname, Ssn, Lname from Employee, Department where Address like '%Dallas%' and Dnumber = Dno and Super_ssn = '987654321';
     select Lname, Hours from Employee, Works_on, Project where Pname = 'ProductX' and Pno = Pnumber and Ssn = Essn order by Hours DESC;
     select Lname, Fname, Hours from Employee, Works_on, Project where Pname = 'Computerization' and Pno = Pnumber and Hours >= 10 and Ssn = Essn order by Hours ASC;
     select Fname, Relationship from Dependent, Employee where Essn = Ssn and Super_ssn = '333445555';
-질의
+    --질의
 
     update Project p set p.Plocation = 'Houston' where Dnum = 5;
     select * from Project where Dnum = '5';
     update Employee e set e.Super_ssn = NULL where Ssn = '123456789';
     select * from Employee where Ssn = '123456789';
-업데이트
+    --업데이트
     
 ### 6. jdbc를 통해 범용 어플리케이션 구축 [여기](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab6/Lab6JDBC.java)
 #### 코드리뷰
@@ -56,11 +56,11 @@ DATA 삽입
           System.err.println("Cannot get a connection: " + ex.getMessage());
           System.exit(1);
         }
-드라이버연결
+    --드라이버연결
 
     conn.setAutoCommit(false);
     stmt = conn.createStatement();
-Statement 객체 생성
+    --Statement 객체 생성
 
     StringBuffer sb = new StringBuffer();
 			sb.append("CREATE TABLE DEPARTMENT(Dname VARCHAR(15) NOT NULL,");
@@ -73,7 +73,7 @@ Statement 객체 생성
 			res = stmt.executeUpdate(sql);
 			if(res ==0)
 				System.out.println("Table DEPARTMENT was successfully created.");
-테이블 생성
+    --테이블 생성
 
     while((line = bufReader.readLine()) != null){
             	if(line.charAt(0)=='$'){
@@ -89,7 +89,7 @@ Statement 객체 생성
     	            	    	sql += "'"+array[2]+"', ";
     	            	    	sql += "TO_DATE('"+array[3]+"', 'yyyy-mm-dd'))";
     	            	        break;
-파일로부터 데이터 받아와서 INSERT
+    --파일로부터 데이터 받아와서 INSERT
 
     sql = "(select MIN(Salary) from EMPLOYEE E, DEPENDENT where E.Sex = 'M' and  Relationship = 'Spouse' and Essn = Ssn) union (select MIN(Salary) from EMPLOYEE E, DEPENDENT where E.Sex = 'F' and Relationship = 'Spouse' and Essn = Ssn)";
 			ResultSet rs = stmt.executeQuery(sql);
@@ -97,7 +97,7 @@ Statement 객체 생성
 				int salary 	    = rs.getInt(1);
 				System.out.println("Salary = " + salary);
 			}
-질의 날리기
+    --질의 날리기
 
 ### 7. 프로시져 생성 [여기](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab7/lab7-1.sql)
 #### 코드리뷰
@@ -120,7 +120,7 @@ Statement 객체 생성
            EXIT WHEN C1%NOTFOUND;
            DBMS_OUTPUT.PUT_LINE(department_num || '                 ' || records.Project_num || '              ' ||records.total_hours);
         END LOOP;
-Total hours를 구현하는 프로시져를 생성한다. 프로시져를 통해 일련의 쿼리를 함수화 할 수 있다.
+    --Total hours를 구현하는 프로시져를 생성한다. 프로시져를 통해 일련의 쿼리를 함수화 할 수 있다.
 
 ### 8. jsp를 통해 웹 구현
 <img src="https://user-images.githubusercontent.com/67677983/99945688-67954400-2db8-11eb-95a6-5edd73d394ae.PNG" width="600">
