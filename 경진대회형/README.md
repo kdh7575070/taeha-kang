@@ -6,7 +6,7 @@
 ## 웹 페이지에 대한 설명
 <img src="https://user-images.githubusercontent.com/67677983/99930892-09f00000-2d96-11eb-9fcb-234fced26507.jpg" width="800">
 
-소상공인 공모전 플랫폼 웹사이트로 아이디어가 필요한 소상공인들이 다양한 형태로 공모전 게시물을 쓰면 대학생들이 아디이어를 제출할 수 있는 플랫폼입니다. 코드는 CRUD 위주로 구성되었습니다.\
+소상공인 공모전 플랫폼 웹사이트로 아이디어가 필요한 소상공인들이 작성한 다양한 형태의 게시물에 대학생들이 아디이어를 제출할 수 있는 플랫폼입니다. 코드는 CRUD 위주로 구성되었습니다.\
 *pythonanywhere 이라는 django 배포 툴을 이용하여 제가 직접 서버에 배포했습니다. http://kdh7575070.pythonanywhere.com \
 배포시 주요 사항을 [해당 노션 링크](https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd)에 팀원들과 정리했습니다.*
 
@@ -28,7 +28,7 @@ account/template : 로그인 회원가입 관련 html 모음\
 ## 웹 페이지에 대한 설명
 <img src="https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG" width="800">
 
-고객이 택배를 주문하고, 주문한 택배를 QR코드를 인식해 반납하며, 물자 관리 현황을 시스템페이지로 확인하는 세 개의 web application 구현\
+고객이 택배를 주문하고, 주문한 택배를 QR코드를 인식해 반납하며, 물자 관리 현황을 시스템페이지로 확인하는 세 개의 web application 구현하였습니다.\
 *Github appplication vercel을 통해 node.js코드를 간편하게 배포했습니다.\
 [user](https://webeatthelion-userweb.vercel.app/) : 고객님이 로그인을 하고 에코 배송을 선택할 수 있는 페이지 입니다. \
 [system](https://webeatthelion.seungdeok.vercel.app/) : 택배박스의 위치 나 정보를 확인 가능한 DB 모델입니다. \
