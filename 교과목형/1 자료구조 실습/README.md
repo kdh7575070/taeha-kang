@@ -52,10 +52,12 @@ ds23([해싱-[int]랜덤조사](https://github.com/kdh7575070/taeha-kang/blob/ma
 		
 		duration = ((double)(clock() - start))/CLOCKS_PER_SEC; //총걸린시간 - 1초 돌렸으니까 다 일초나오겠지
 		duration /= repetitions; 
-reptitions(몇번 반복했는지)으로 나누면 1번에 몇초 걸렸는지 평균이 나옴
+//reptitions(몇번 반복했는지)으로 나누면 1번에 몇초 걸렸는지 평균이 나옴
 
 		printf("%6ld   %9ld   %f\n", n, repetitions, duration);
 		fprintf(fpOut, "%6ld   %9ld   %f\n", n, repetitions, duration);
 		if (n == 100) step = 100;
+//출력부
+#
 <img src="https://user-images.githubusercontent.com/67677983/99942315-d374ae00-2db2-11eb-972c-19377ad6ea32.PNG" width="800">
-최종결과
+최종결과화면
