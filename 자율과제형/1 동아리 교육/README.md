@@ -8,7 +8,7 @@ django version == 3.1.0 \
 myvenv가 있는 directory에서 가상환경 실행 source myvenv/Scripts/activate \
 managy.py가 있는 directory에서 python manage.py runserver
 
-### [5/8](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-08/main.html) 프론트엔드 - HTML, CSS 사용해서 인스타그램 카드 만들기
+### 5/8 프론트엔드 - HTML, CSS 사용해서 인스타그램 카드 만들기
 #### 코드리뷰
     $("#heart").click(function(){
                 if($("#heart").hasClass("liked")){
@@ -25,10 +25,11 @@ managy.py가 있는 directory에서 python manage.py runserver
         <i class="far fa-paper-plane"></i>
     </button>
     // 버튼에 아이콘 부여
+[main.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-08/main.html) \
 <img src="https://user-images.githubusercontent.com/67677983/99956937-3887ce00-2dca-11eb-8a27-013ed332e48f.PNG" width="400">
 이런 화면입니다.
 
-### [5/15](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-15/djangoproject/wordcount/views.py) 웹으로 워드를 입력받아 특정 단어가 몇개 사용되었는지 출력하는 워드카운터 만들어보기
+### 5/15 웹으로 워드를 입력받아 특정 단어가 몇개 사용되었는지 출력하는 워드카운터 만들어보기
 #### 코드리뷰
     <a href="{%url 'home' %}">Home</a>
     <h1>입력한 텍스트</h1>
@@ -60,7 +61,7 @@ managy.py가 있는 directory에서 python manage.py runserver
     //특정 단어를 counting해서 그 결과를 html으로 보내주는 함수
 [views.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-15/djangoproject/wordcount/views.py)
 
-### [5/20](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-20/webcrawling/crawling/views.py) 네이버 뉴스에서 특정 키워드가 등장하는 기사를 웹크롤링하는 프로그램 만들어보기
+### 5/20 네이버 뉴스에서 특정 키워드가 등장하는 기사를 웹크롤링하는 프로그램 만들어보기
 #### 코드리뷰
     <h1>결과</h1>
     {% for title, url in data %}
@@ -104,7 +105,7 @@ managy.py가 있는 directory에서 python manage.py runserver
     //특정 키워드를 검색 질의로 넣어 출력된 결과들을 data화 해서 html으로 보내주는 함수  
 [views.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-20/webcrawling/crawling/views.py)
 
-### [5/22](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-22/blogproject/blog/views.py) crud 만들기 base.html 지정 - 게시물을 읽고 쓰고 수정 삭제하는 기능
+### 5/22 crud 만들기 base.html 지정 - 게시물을 읽고 쓰고 수정 삭제하는 기능
 #### 코드리뷰
     class Blog(models.Model):
     title = models.CharField(max_length=200) //제목
@@ -155,7 +156,7 @@ managy.py가 있는 directory에서 python manage.py runserver
     //CRUD를 수행하는 함수들
 [views.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-22/blogproject/blog/views.py)
 
-### [7/9](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-07-09/static/staticproject/staticproject/settings.py) 미디어 파일들 static으로 변환
+### 7/9 미디어 파일들 static으로 변환
 #### 코드리뷰
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -171,7 +172,8 @@ managy.py가 있는 directory에서 python manage.py runserver
     #모아줄 위치
     
     //Setting.py를 위와같이 수정 후 collectstatic 를 이용해서 static파일을 한꺼번에 모아 static 폴더를 생성한다 - 배포를 위한 작업임
-    
+[settings.py](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-07-09/static/staticproject/staticproject/settings.py)
+
 ### 7/13 CRUD복습, 앱을 두개로 나누고 url을 한 파일에 묶는 팁
 
 ### 7/16 권한부여, 좋아요 댓글 기능
