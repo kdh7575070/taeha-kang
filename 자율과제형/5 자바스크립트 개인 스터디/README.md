@@ -1,4 +1,4 @@
-#1. 프로그래머스 js 강의
+# 1. 프로그래머스 js 강의
 강의를 독학하며 정리한 중요 내용들입니다.
 
 ### 코드 리뷰
@@ -29,9 +29,13 @@
 해당 html파일을 브라우저로 열면 실제로 동작하여 확인하실 수 있습니다.
 
 <img src="https://user-images.githubusercontent.com/67677983/99970808-b5717280-2ddf-11eb-806e-2a8b48549664.PNG" width="1000">
+
 [calc_perfect.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%9C%EC%9D%B8%20%EC%8A%A4%ED%84%B0%EB%94%94/%EC%8B%A4%EC%8A%B5/calc_perfect.html)
 
 <img src="https://user-images.githubusercontent.com/67677983/99970812-b6a29f80-2ddf-11eb-9a27-01d5a202c6d9.PNG" width="1000">
+
 [cal_v2.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%9C%EC%9D%B8%20%EC%8A%A4%ED%84%B0%EB%94%94/%EC%8B%A4%EC%8A%B5/cal_v2.html)
 
-## 상세 실습내용 정리
+### 코드리뷰 
+
+### 상세 실습내용 정리
