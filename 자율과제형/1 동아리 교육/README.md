@@ -25,7 +25,7 @@ managy.py가 있는 directory에서 python manage.py runserver
         <i class="far fa-paper-plane"></i>
     </button>
     // 버튼에 아이콘 부여
-[main.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-08/main.html) \
+[main.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EC%9E%90%EC%9C%A8%EA%B3%BC%EC%A0%9C%ED%98%95/1%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EA%B5%90%EC%9C%A1/2020-05-08/main.html)
 
 <img src="https://user-images.githubusercontent.com/67677983/99956937-3887ce00-2dca-11eb-8a27-013ed332e48f.PNG" width="400">
 이런 화면입니다.
