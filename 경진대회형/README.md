@@ -2,19 +2,23 @@
 2020.8.9 - 2020.9.28(해커톤당일) / 경북대학교 IT융복합관 / 멋쟁이사자처럼주관 / 우수상 수상 / 담당자 김은숙 053 - 950 - 7674 \
 프로젝트 역할, 세부일정, 수상증명, 발표자료, PPT슬라이드 등에 대한 더 자세한 사항은 아래 링크에 꼼꼼하게 정리해두었습니다. \
 https://www.notion.so/kangtaeha/LIKELION-X-SW-840c327fcd944ccaa5132179a309bdfc \
-또한 해당 프로젝트결과를 제가 직접 배포한 주소입니다. pythonanywhere라는 서비스를 이용했고 아래 링크를 통해서 확인해보실 수 있습니다. \
 해당 깃 레포지토리를 따로 첨부합니다. 하위 레포지토리에 올리려다가 push 과정에서 오류가 많아 링크를 올리는 점 양해부탁드립니다. \
 https://github.com/kdh7575070/Taeha
 
 ## 웹 페이지에 대한 설명
 ![120138698_3262325810511167_7051169438634279307_n](https://user-images.githubusercontent.com/67677983/99930892-09f00000-2d96-11eb-9fcb-234fced26507.jpg)
+소상공인 공모전 플랫폼 웹사이트로 아이디어가 필요한 소상공인들이 다양한 형태로 공모전 게시물을 쓰면 대학생들이 아디이어를 제출할 수 있는 플랫폼입니다. 코드는 CRUD 위주로 구성되었습니다. 
 실행 순서 : user페이지에서 회원가입 후 로그인 > 공모전 주최하기를 통해 공모전 주최 > 타인의 게시물에 아이디어 제출할 수 있음 > 본인의 게시물에 제출된 아이디어를 모아볼 수 있음 > 마이페이지에서 주최한 공모전, 좋아요를 클릭한 공모전, 제출한 아이디어를 확인 및 수정가능 > 댓글달기 및 키워드 검색, 카테고리 검색 가능 \
 pythonanywhere 이라는 django 배포 툴을 이용하여 직접 배포했습니다. \
-( 배포시 주요 사항을 해당 링크에 팀원들과 정리했습니다. https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd ) \
-http://kdh7575070.pythonanywhere.com
+http://kdh7575070.pythonanywhere.com \
+*(배포시 주요 사항을 해당 링크에 팀원들과 정리했습니다. \
+https://www.notion.so/jacky0831/pythonAnywhere-cb77c6813442449d9f5beb2104b78ffd )* \
 
 ## 코드 살펴보기
-
+contest/template : 주요 html 모음\
+-- base(nav바 및 주요 컨테이너), create-(작성화면), edit-(수정하면), -Post(공모전관련), -Idea(아이디어관련), -Page(마이페이지Segments) --
+account/template : 로그인 회원가입 관련 html 모음\
+구체적인 코드에 대한 설명은 이곳에 담기는 너무 길어 인터뷰때 말씀드릴 수 있습니다.
 
 # 두 번째 - 멋쟁이 사자처럼 X 롯데그룹 전국연합 해커톤 (은상 수상)
 2020.10.7 - 2020.10.25(해커톤당일) / 온라인 / 멋쟁이사자처럼주관 / 은상 수상 / 담당자 멋쟁이사자처럼 대표 \
@@ -25,6 +29,7 @@ https://github.com/seungdeok/webeatthelion
 
 ## 웹 페이지에 대한 설명
 ![vercel](https://user-images.githubusercontent.com/67677983/99930925-22f8b100-2d96-11eb-93f2-d9b3595a0294.PNG)
+
 *test 계정 \
 ID: admin@lottesuper.co.kr \
 PW: admin2020* \
@@ -41,3 +46,8 @@ https://webeatthelion.seungdeok.vercel.app/scan \
 고객님이 그린 캡슐을 반납할 때 사용하는 QR 코드 스캔 페이지입니다.
 
 ## 코드 살펴보기
+lotte-hackathon/pages/index.js : system 화면에 관련된 프론트, 백엔드 코드입니다. \
+lotte-hackathon/utils : qr코드 인식에 관한 api가 담겨있어 lotte-hackathon/pages/scan/index.js 의 scanner 화면과 연동되는 코드입니다.\
+lotte-hackathon/styles : css 작업이 이루어지는 공간입니다.\
+lotte-hackathon-user/pages/index.js : 유저(로그인 및 마이페이지) 화면에 관련된 프론트, 백엔드 코드입니다.\ 
+구체적인 코드에 대한 설명은 이곳에 담기는 너무 길어 인터뷰때 말씀드릴 수 있습니다.
