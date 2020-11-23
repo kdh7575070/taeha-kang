@@ -1,4 +1,6 @@
-# taeha-kang sw2020 장학금 평가를 위한 repository
+# taeha-kang sw2020 장학금 평가를 위한 repository [2차]
+
+## 1차 때에 부족했던 부분을 최대한 보완해서 제출합니다. 이번에는 각 directory마다 상세한 README.md 파일을 작성해 두었으므로 꼼꼼히 확인해주시기를 부탁드립니다!
 
 1. [경진대회형](https://github.com/kdh7575070/taeha-kang/tree/main/경진대회형) \
 멋쟁이 사자처럼 주관의 두 가지의 외부 경진대회(해커톤)에 참여했습니다. \
