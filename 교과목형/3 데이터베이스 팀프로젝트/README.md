@@ -15,7 +15,7 @@ DMBS는 Postgrads를 썼고 임의의 대량 데이터를 생성한 뒤 sql파�
 <img src="https://user-images.githubusercontent.com/67677983/99939700-fe103800-2dad-11eb-885d-fe05c7c323f0.png" width="500">
 
 ## phase 3.
-따로 [레포지토리](https://github.com/kdh7575070/comp322)가 있어서 링크합니다. 꼭 클릭하여 이동해주십시오. *위에 push된 파일은 무시해주셔도 됩니다.* \
+따로 [레포지토리](https://github.com/kdh7575070/comp322)가 있어서 링크합니다. 클릭하여 이동해주십시오. \
 DB에 새로운 데이터를 넣는 것을 jdbc를 이용해서 어플리케이션화 했습니다.
 
 ### 코드리뷰 [MAIN함수에 대해서]
