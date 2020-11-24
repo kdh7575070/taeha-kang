@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="EUC-KR">
+    <title>COMP322 : Introduction to Databases</title>
+</head>
+<body>
+    <h2>Lab #9: Repeating Lab #5-3 via JSP</h2>
+    <form action ="response.jsp" method = "POST">
+	    <h4>Q1 : Search for employees satisfying the following conditions:</h4>
+	    Project name:
+    	<select name="pName">
+    		<option value = "ProductX" selected>ProductX</option>
+    		<option value = "ProductY">ProductY</option>
+    		<option value = "ProductZ">ProductZ</option>
+    		<option value = "Computerization">Computerization</option>
+    		<option value = "Reorganization">Reorganization</option>
+    		<option value = "Newbenefits">Newbenefits</option>
+    	</select>
+    	Department number:
+    	<select name="dNum">
+    		<option value = "1" selected>1</option>
+		    <option value = "4">4</option>
+		    <option value = "5">5</option>
+    	</select>
+    	Salary:
+    	<input type = "text" name = "salary" />
+	    <br />
+	    
+	    <h4>Q2 : Search for employees satisfying the following conditions:</h4>
+    	Supervisor's Ssn:
+    	<input type = "text" name = "sssn" />
+    	Address:
+    	<input type = "text" name = "address" />
+	    <br />
+	    
+	    <h4>Q3 : Search for employees working on: </h4>
+    	Project name:
+    	<select name="pName2">
+    		<option value = "ProductX" selected>ProductX</option>
+    		<option value = "ProductY">ProductY</option>
+    		<option value = "ProductZ">ProductZ</option>
+    		<option value = "Computerization">Computerization</option>
+    		<option value = "Reorganization">Reorganization</option>
+    		<option value = "Newbenefits">Newbenefits</option>
+    	</select>
+	    <br />
+	    
+	    <h4>Q4 : Search for employees working on: </h4>
+    	Project name:
+    	<select name="pName3">
+    		<option value = "ProductX" selected>ProductX</option>
+    		<option value = "ProductY">ProductY</option>
+    		<option value = "ProductZ">ProductZ</option>
+    		<option value = "Computerization">Computerization</option>
+    		<option value = "Reorganization">Reorganization</option>
+    		<option value = "Newbenefits">Newbenefits</option>
+    	</select>
+    	Working Hours:
+    	<input type = "text" name = "workinghours" />
+	    <br />
+	    
+	    <h4>Q5 : Search for a supervisee(s) and his/her dependent(s) with </h4>
+    	Supervisor's Ssn:
+    	<input type = "text" name = "sssn2" />
+	    <br />
+	    
+	    <br />
+	    <input type = "reset" value="Reset" />
+    	<input type = "submit" value="Submit" />
+	</form>
+</body>
+</html>
