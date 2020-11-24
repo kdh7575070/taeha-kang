@@ -124,6 +124,33 @@
 
 ### 8. jsp를 통해 웹 구현
 <img src="https://user-images.githubusercontent.com/67677983/99945688-67954400-2db8-11eb-95a6-5edd73d394ae.PNG" width="600">
+#### 코드리뷰
+    <h4>GET and POST Methods to Read Form Data</h4>
+    <form action ="getData.jsp" method = "POST">
+	<h4>Select which section you are taking</h4>
+	<input type = "checkbox" name = "course" value="COMP322001"/> COMP322001
+	<input type = "checkbox" name = "course" value="COMP322002"/> COMP322002
+	<input type = "checkbox" name = "course" value="COMP322003"/> COMP322003
+	    <input type = "checkbox" name = "course" value="COMP322004"/> COMP322004
+	    <input type = "checkbox" name = "course" value="none" checked = "checked"/> Nothing
+	    <input type = "submit" value="Submit"/>
+    //POST방식을 통해 submit 버튼 클릭시 jsp 파일에 입력받은 데이터를 넘겨준다 
+[main.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab8/WebContent/main.html)
+
+    <h2>--Received from main.html the data shown below--</h2>
+    <ul>
+	<li><p>My name is
+		<b><%= request.getParameter("first_name")%>
+		<%= request.getParameter("last_name")%>.</b>
+	</p></li>
+	<li><p>My student ID is
+		<b><%= request.getParameter("sID")%>.</b>
+	</p></li>
+	<li><p>I am taking
+		<b><%= request.getParameter("course")%> this semester.</b>
+	</p></li>
+    //html에서 입력한 데이터를 넘겨받아서 화면에 출력한다.
+[getData.jsp](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab8/WebContent/getData.jsp)
 
 ### 9. jsp를 통해 웹 구현
 <img src="https://user-images.githubusercontent.com/67677983/99945692-69f79e00-2db8-11eb-96d2-9697a53e17c9.PNG" width="400">
