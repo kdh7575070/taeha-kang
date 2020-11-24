@@ -122,8 +122,9 @@
         END LOOP;
     --Total hours를 구현하는 프로시져를 생성한다. 프로시져를 통해 일련의 쿼리를 함수화 할 수 있다.
 
-### 8. jsp를 통해 웹 구현
+### 8. jsp를 통해 웹 구현 연습
 <img src="https://user-images.githubusercontent.com/67677983/99945688-67954400-2db8-11eb-95a6-5edd73d394ae.PNG" width="600">
+
 #### 코드리뷰
     <h4>GET and POST Methods to Read Form Data</h4>
     <form action ="getData.jsp" method = "POST">
@@ -134,7 +135,7 @@
 	    <input type = "checkbox" name = "course" value="COMP322004"/> COMP322004
 	    <input type = "checkbox" name = "course" value="none" checked = "checked"/> Nothing
 	    <input type = "submit" value="Submit"/>
-    //POST방식을 통해 submit 버튼 클릭시 jsp 파일에 입력받은 데이터를 넘겨준다 
+    //POST방식을 통해 submit 버튼 클릭시 jsp 파일에 입력받은 데이터를 넘
 [main.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab8/WebContent/main.html)
 
     <h2>--Received from main.html the data shown below--</h2>
@@ -149,8 +150,73 @@
 	<li><p>I am taking
 		<b><%= request.getParameter("course")%> this semester.</b>
 	</p></li>
-    //html에서 입력한 데이터를 넘겨받아서 화면에 출력한다.
+    //html에서 입력한 데이터를 넘겨받아서 화면에 출력
 [getData.jsp](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab8/WebContent/getData.jsp)
 
-### 9. jsp를 통해 웹 구현
+### 9. jsp를 통해 웹 구현 - DB와 연동
 <img src="https://user-images.githubusercontent.com/67677983/99945692-69f79e00-2db8-11eb-96d2-9697a53e17c9.PNG" width="400">
+
+#### 코드리뷰
+    <form action ="response.jsp" method = "POST">
+	    <h4>Q1 : Search for employees satisfying the following conditions:</h4>
+	    Project name:
+    	<select name="pName">
+    		<option value = "ProductX" selected>ProductX</option>
+    		<option value = "ProductY">ProductY</option>
+    		<option value = "ProductZ">ProductZ</option>
+    		<option value = "Computerization">Computerization</option>
+    		<option value = "Reorganization">Reorganization</option>
+    		<option value = "Newbenefits">Newbenefits</option>
+    	</select>
+    	Department number:
+    	<select name="dNum">
+    		<option value = "1" selected>1</option>
+		<option value = "4">4</option>
+		<option value = "5">5</option>
+    	</select>
+    //Q1 -> 어떤 프로덕트에 참여한 인원중에서 부서번호가 x번인 사람을 찾는 것
+    //select-option tag를 이용해서 옵션중에 선택하는 view를 구현함
+    //POST방식을 통해 submit 버튼 클릭시 jsp 파일에 입력받은 데이터를 넘겨줌
+[view.html](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab9/WebContent/view.html)
+
+    <h4> ---- Q1 Result ---- </h4>
+    <%
+	String serverIP = "localhost";
+	String strSID = "orcl";	
+	String portNum = "1521";
+	String user = "test";
+	String pass = "test";
+	String url = "jdbc:oracle:thin:@"+serverIP+":"+portNum+":"+strSID;
+	
+	Connection conn = null;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	conn = DriverManager.getConnection(url,user,pass);
+	String query = "SELECT Fname, Minit, Lname"
+					+ " FROM Project, Works_on, Employee"
+					+ " WHERE Dno = " + request.getParameter("dNum")
+					+ " AND Salary >= " + request.getParameter("salary")
+					+ " AND Pname = '" + request.getParameter("pName") + "'"
+					+ " AND Pno = Pnumber AND Essn = ssn order by Lname ASC";
+	System.out.println(query);
+	pstmt = conn.prepareStatement(query);
+	rs = pstmt.executeQuery();
+
+        out.println("<table border =\"1\">");
+        ResultSetMetaData rsmd = rs.getMetaData();
+        int cnt = rsmd.getColumnCount();
+        for (int i=1; i <= cnt; i++){
+        	out.println("<th>"+rsmd.getColumnName(i)+"</th>");
+        }
+        while(rs.next()){
+            out.println("<tr>");
+    	    out.println("<td>"+rs.getString(1)+"</td>");
+    	    out.println("<td>"+rs.getString(2)+"</td>");
+    	    out.println("<td>"+rs.getString(3)+"</td>");
+       	    out.println("</tr>");
+        }
+        out.println("</table>");
+	//db와 연결해서 Post를 통해 넘겨받은 데이터를 토대로 db에 쿼리를 날리고 그결과를 getString을 통해 화면에 출력
+[response.jsp](https://github.com/kdh7575070/taeha-kang/blob/main/%EA%B5%90%EA%B3%BC%EB%AA%A9%ED%98%95/3%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EC%8B%A4%EC%8A%B5/lab9/WebContent/response.jsp)
+
